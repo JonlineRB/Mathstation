@@ -1,19 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
 public class Problem
 {
     private ProblemTerm statement;
     private int solution;
 
     public Problem(){
-        this.statement = new ProblemTerm();
+        this.statement = new TopProblemTerm();
         this.solution = this.statement.evaluate();
     }
 
-    public string toString()
+    public override string ToString()
     {
-        return "The problem statement is " + this.statement.toString() + "\nand the solution is " + this.solution;
+        return "The problem statement is " + this.statement.ToString() + "\nand the solution is " + this.solution;
     }
 }

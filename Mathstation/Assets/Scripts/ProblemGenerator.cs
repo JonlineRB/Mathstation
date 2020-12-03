@@ -7,7 +7,7 @@ public class ProblemGenerator : MonoBehaviour
     public Problem generateProblem()
     {
         Problem problem = new Problem();
-        Debug.Log(problem.toString());
+        Debug.Log(problem.ToString());
         return problem;
     }
 
