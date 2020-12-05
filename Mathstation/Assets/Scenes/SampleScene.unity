@@ -164,6 +164,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2dcdb18dd450e049b3d441316c9e321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: e710d91b16dbb8f40a33cb4cc5cf29e9, type: 3}
+  - {fileID: 21300000, guid: 075d86fac2759dc419cd0cbc0aa77d43, type: 3}
+  - {fileID: 21300000, guid: dbd401476bcb7e04390a299de7912555, type: 3}
+  - {fileID: 21300000, guid: 7772ff918d20ecb4e807dc39c11fe0e2, type: 3}
+  - {fileID: 21300000, guid: 4ac9e2711367f1f42828f1da4a7794db, type: 3}
+  - {fileID: 21300000, guid: c961e87b56232864fbd2b693927aade9, type: 3}
+  - {fileID: 21300000, guid: aaf1b92b2d634554393f4a55f3375fbf, type: 3}
+  - {fileID: 21300000, guid: aebd26930f9510e42a524a48dd1f4151, type: 3}
+  - {fileID: 21300000, guid: 33557681ac894804c968ce662d447c08, type: 3}
+  - {fileID: 21300000, guid: dd6366f8f86837145a30602d154e56a2, type: 3}
+  - {fileID: 21300000, guid: 33e4fdbd5dcf29942a4d5068e5a030fb, type: 3}
+  - {fileID: 21300000, guid: a0cce18de3887144e945f44744bcdd97, type: 3}
+  - {fileID: 21300000, guid: bf18d291bb9ab47498f64b0096ca9e2d, type: 3}
+  - {fileID: 21300000, guid: 09a9d3c93c926a14ab28409f26d7c272, type: 3}
+  - {fileID: 21300000, guid: a6a4374f313c1fc4fa7377d302b82a8f, type: 3}
+  - {fileID: 21300000, guid: 384e27f63cdb3e94bbbe35ae18677b26, type: 3}
+  - {fileID: 21300000, guid: 4505443ba5fe2b740ad035bdf572b4c0, type: 3}
+  symbol: {fileID: 7374666096106255378, guid: 9d3c6a618cd99644ab59ac9995f1eb62, type: 3}
+  numberSymbolContainer: {fileID: 8632051653867204313, guid: f45058a5a17056540aca539ae1185920, type: 3}
+  startXPosition: 400
+  stepSize: 10
 --- !u!114 &108031864
 MonoBehaviour:
   m_ObjectHideFlags: 0

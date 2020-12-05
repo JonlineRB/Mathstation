@@ -70,4 +70,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-Mathstation/Temp/UnityLockfile
+Mathstation/Temp/*
+Mathstation/Library/*
