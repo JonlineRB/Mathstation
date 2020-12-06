@@ -184,8 +184,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4505443ba5fe2b740ad035bdf572b4c0, type: 3}
   symbol: {fileID: 7374666096106255378, guid: 9d3c6a618cd99644ab59ac9995f1eb62, type: 3}
   numberSymbolContainer: {fileID: 8632051653867204313, guid: f45058a5a17056540aca539ae1185920, type: 3}
-  startXPosition: 400
-  stepSize: 10
+  startXPosition: -400
+  stepSize: 65
+  digitStepSize: 45
 --- !u!114 &108031864
 MonoBehaviour:
   m_ObjectHideFlags: 0
