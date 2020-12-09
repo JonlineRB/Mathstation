@@ -22,36 +22,6 @@ public class SpriteManager : MonoBehaviour
         foreach(string token in tokens){
             int spriteIndex = -1;
             switch(token){
-                // case "0":
-                //     spriteIndex = 0;
-                //     break;
-                // case "1":
-                //     spriteIndex = 1;
-                //     break;
-                // case "2":
-                //     spriteIndex = 2;
-                //     break;
-                // case "3":
-                //     spriteIndex = 3;
-                //     break;
-                // case "4":
-                //     spriteIndex = 4;
-                //     break;
-                // case "5":
-                //     spriteIndex = 5;
-                //     break;
-                // case "6":
-                //     spriteIndex = 6;
-                //     break;
-                // case "7":
-                //     spriteIndex = 7;
-                //     break;
-                // case "8":
-                //     spriteIndex = 8;
-                //     break;
-                // case "9":
-                //     spriteIndex = 9;
-                //     break;
                 case "Add":
                     spriteIndex = 10;
                     break;

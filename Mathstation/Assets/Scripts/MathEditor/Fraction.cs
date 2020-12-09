@@ -4,41 +4,27 @@ using UnityEngine;
 
 public class Fraction
 {
-    private int numerator;
-    private int denominator = 1;
+    private int numerator{get; set;}
+    private int denominator{get; set;}
 
     public Fraction(int numerator, int denominator)
     {
         this.numerator = numerator;
-        if(denominator == 0)
+        if(denominator == 0){
+            this.denominator = 1;
             return;
+        }
+            
         this.denominator = denominator;
-    }
-
-    public int getNumerator()
-    {
-        return this.numerator;
-    }
-
-    public void setNumerator(int numerator)
-    {
-        this.numerator = numerator;
-    }
-
-    public int getDenominator()
-    {
-        return this.denominator;
-    }
-
-    public void setDenominator(int denominator)
-    {
-        if(!(denominator == 0))
-            this.denominator = denominator;
     }
 
     public float evaluate()
     {
         return (float)numerator/(float)denominator;
+    }
+
+    public new string ToString(){
+        return "Frac("+this.numerator+","+this.denominator+")";
     }
 
 }
