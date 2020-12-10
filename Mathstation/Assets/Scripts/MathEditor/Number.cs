@@ -3,21 +3,88 @@ using UnityEngine;
 
 public class Number : TrivialStatement
 {
-    private int value{ get; set; }
+    private int numerator;
+    private int denominator = 1;
 
-    public int evaluate(){
-        return value;
+    public int getNumerator()
+    {
+        return this.numerator;
     }
 
-    public Number(int value){
-        this.value = value;
+    public void setNumerator(int numerator)
+    {
+        this.numerator = numerator;
     }
 
-    public Number(){
-        this.value = Random.Range(1,9);
+    public int getDenominator()
+    {
+        return this.denominator;
     }
 
-    public override string  ToString(){
-        return this.value.ToString();
+    public void setDenominator(int denominator)
+    {
+        this.denominator = denominator;
+    }
+
+
+    public Number evaluate()
+    {
+        return this;
+    }
+
+    public Number(int numerator)
+    {
+        this.numerator = numerator;
+    }
+
+    public Number(int numerator, int denominator)
+    {
+        this.numerator = numerator;
+        this.denominator = denominator;
+
+        //set smallest possible fraction possible equivalent values
+
+        //case: it's a whole number
+        if(this.numerator % this.denominator == 0){
+            this.numerator = this.numerator / this.denominator;
+            this.denominator = 1;
+        }
+
+        //case: common factor
+        else if(this.denominator % this.numerator == 0){
+            int factor = this.denominator / this.numerator;
+            this.numerator = this.numerator / factor;
+            this.denominator = this.denominator / factor;
+        }
+    }
+
+    public Number()
+    {
+        this.numerator = Random.Range(1, 9);
+    }
+
+    public override string ToString()
+    {
+        if (denominator == 1)
+            return this.numerator.ToString();
+        return "Frac(" + numerator + "/" + denominator + ")";
+    }
+
+    public bool Compare(int value)
+    {
+        if (denominator == 0)
+            return false;
+        if (value == 0 && numerator == 0)
+            return true;
+        if (denominator == 1)
+            return value == numerator;
+        return false;
+    }
+
+    public bool Compare(Number value)
+    {
+        if (value.getNumerator() == 0 && numerator == 0)
+        return true;
+        return(value.getNumerator() == numerator && value.getDenominator() == denominator);
     }
 }

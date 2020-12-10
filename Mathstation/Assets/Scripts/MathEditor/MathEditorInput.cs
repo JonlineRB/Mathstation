@@ -48,7 +48,7 @@ public class MathEditorInput : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Return)){
             StartCoroutine("restoreClickable");
-            gameObject.GetComponent<InputObject>().submit();
+            gameObject.GetComponent<InputObject>().Submit();
         }
     }
     

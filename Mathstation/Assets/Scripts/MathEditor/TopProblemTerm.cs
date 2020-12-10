@@ -12,7 +12,7 @@ public class TopProblemTerm : ProblemTerm
         this.operation = (MathOperations.Operations)Random.Range(0,4);
     }
 
-    public override int evaluate(){
+    public override Number evaluate(){
         return base.evaluate(this.operand_a, this.operand_b, this.operation);
     }
 

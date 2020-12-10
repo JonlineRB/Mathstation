@@ -24,13 +24,15 @@ public class InputObject : MonoBehaviour
         currentProblem = problem;
     }
 
-    public void submit(){
+    public void Submit(){
         if(solution == "")
             return;
         bool result;
-        // int actualSolution = gameObject.GetComponent<Problem>().getSolution();
-        int actualSolution = currentProblem.getSolution();
-        result = (int.Parse(solution) == actualSolution);
+        Number actualSolution = currentProblem.getSolution();
+        result = actualSolution.Compare(int.Parse(solution));
         Debug.Log("submitted. result is " + result);
+        if(result)
+            gameObject.GetComponent<EditorMaster>().Submition();
+        solution = "";
     }
 }

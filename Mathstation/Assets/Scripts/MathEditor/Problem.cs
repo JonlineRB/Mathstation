@@ -2,14 +2,14 @@
 public class Problem
 {
     private ProblemTerm statement{get; set;}
-    private int solution;
+    private Number solution;
 
-    public int getSolution()
+    public Number getSolution()
     {
         return this.solution;
     }
 
-    public void setSolution(int solution)
+    public void setSolution(Number solution)
     {
         this.solution = solution;
     }

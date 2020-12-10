@@ -11,9 +11,4 @@ public class ProblemGenerator : MonoBehaviour
         gameObject.GetComponent<InputObject>().setProblem(problem);
         return problem;
     }
-
-    void Start(){
-        Problem problem = generateProblem();
-        gameObject.GetComponent<SpriteManager>().SetSprites(problem.ToString(false));
-    }
 }

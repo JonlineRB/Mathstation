@@ -1,5 +1,5 @@
 ﻿
 public interface TrivialStatement
 {
-    int evaluate();
+    Number evaluate();
 }
