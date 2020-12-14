@@ -24,12 +24,20 @@ public class InputObject : MonoBehaviour
         currentProblem = problem;
     }
 
+    public void Fraction(){
+        if(!solution.Contains("/") && solution.Length > 0)
+            solution+="/";
+    }
+
     public void Submit(){
         if(solution == "")
             return;
         bool result;
         Number actualSolution = currentProblem.getSolution();
-        result = actualSolution.Compare(int.Parse(solution));
+        if(solution.Contains("/"))
+            result = actualSolution.Compare(new Number(int.Parse(solution.Split('/')[0]),int.Parse(solution.Split('/')[1])));
+        else
+            result = actualSolution.Compare(new Number(int.Parse(solution)));
         Debug.Log("submitted. result is " + result);
         if(result)
             gameObject.GetComponent<EditorMaster>().Submition();

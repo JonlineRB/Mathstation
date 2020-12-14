@@ -42,6 +42,10 @@ public class MathEditorInput : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Keypad9) || Input.GetKeyDown(KeyCode.Alpha9)){
             propagate(9);
         }
+        if(Input.GetKeyDown(KeyCode.F)){
+            StartCoroutine("restoreClickable");
+            gameObject.GetComponent<InputObject>().Fraction();
+        }
         if(Input.GetKeyDown(KeyCode.Backspace)){
             StartCoroutine("restoreClickable");
             gameObject.GetComponent<InputObject>().backspace();
