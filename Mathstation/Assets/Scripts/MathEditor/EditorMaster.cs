@@ -11,9 +11,7 @@ public class EditorMaster : MonoBehaviour
     {
 
         //generate initial problem
-        Problem problem = gameObject.GetComponent<ProblemGenerator>().generateProblem();
-        // gameObject.GetComponent<SpriteManager>().SetSprites(problem.ToString(false)); //removed due to poor sprite management. revise.
-        gameObject.GetComponent<TextManager>().SetProblem(problem);
+        generateProblem();
     }
 
     public void Submition(){
@@ -22,6 +20,12 @@ public class EditorMaster : MonoBehaviour
             return;
         }
         Debug.Log("problemCount is: " + problemCount);
-        gameObject.GetComponent<ProblemGenerator>().generateProblem();
+        generateProblem();
+    }
+
+    private Problem generateProblem(){
+        Problem problem = gameObject.GetComponent<ProblemGenerator>().generateProblem();
+        gameObject.GetComponent<TextManager>().SetProblem(problem);
+        return problem;
     }
 }
