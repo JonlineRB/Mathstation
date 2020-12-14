@@ -1,7 +1,13 @@
 ﻿
 public class Problem
 {
-    private ProblemTerm statement{get; set;}
+    private ProblemTerm problemPart;
+
+    public ProblemTerm getProblemPart()
+    {
+        return this.problemPart;
+    }
+
     private Number solution;
 
     public Number getSolution()
@@ -16,13 +22,13 @@ public class Problem
 
 
     public Problem(){
-        this.statement = new TopProblemTerm();
-        this.solution = this.statement.evaluate();
+        this.problemPart = new TopProblemTerm();
+        this.solution = this.problemPart.evaluate();
     }
 
     public string ToString(bool includeSolution)
     {
-        string result = this.statement.ToString();
+        string result = this.problemPart.ToString();
         if(includeSolution)
             result += " = " + this.solution;
         return result;

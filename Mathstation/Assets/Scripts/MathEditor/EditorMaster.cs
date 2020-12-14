@@ -13,6 +13,7 @@ public class EditorMaster : MonoBehaviour
         //generate initial problem
         Problem problem = gameObject.GetComponent<ProblemGenerator>().generateProblem();
         // gameObject.GetComponent<SpriteManager>().SetSprites(problem.ToString(false)); //removed due to poor sprite management. revise.
+        gameObject.GetComponent<TextManager>().SetProblem(problem);
     }
 
     public void Submition(){

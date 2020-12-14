@@ -83,8 +83,6 @@ public class Number : TrivialStatement
 
     public bool Compare(Number value)
     {
-        if (value.getNumerator() == 0 && numerator == 0)
-        return true;
-        return(value.getNumerator() == numerator && value.getDenominator() == denominator);
+        return((float)value.getNumerator() / (float)value.getDenominator() == (float)numerator / (float)denominator);
     }
 }
