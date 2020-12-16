@@ -71,7 +71,27 @@ public static class MathOperations
     }
 
     public static Number Divide(Number a, Number b){
+        if(GameObject.FindObjectOfType<Policy>().isRemainderDivision()){
+            Number result;
+            result = new Number(a.getNumerator() / b.getNumerator());
+            result.setRemainder(a.getNumerator() % b.getNumerator());
+        }
         return new Number(a.getNumerator() * b.getDenominator(), a.getDenominator() * b.getNumerator());
+    }
+
+    public static Operations GenerateOperation(Policy policy){
+        if(policy.isIncludeMultiplication() && policy.isIncludeDivision())
+            return (Operations)Random.Range(0,4);
+        else if(policy.isIncludeMultiplication() && !policy.isIncludeDivision())
+            return (Operations)Random.Range(0,3);
+        else if(!policy.isIncludeMultiplication() && policy.isIncludeDivision()){
+            int random = Random.Range(0,3);
+            if(random == 2)
+                random = 3;
+            return (Operations)random;
+        }
+        else 
+            return (Operations)Random.Range(0,2);
     }
 
 }

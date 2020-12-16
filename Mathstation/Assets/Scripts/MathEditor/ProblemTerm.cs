@@ -1,4 +1,6 @@
-﻿
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 public class ProblemTerm
 {
     public Number evaluate(TrivialStatement a, TrivialStatement b, MathOperations.Operations op){

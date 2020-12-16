@@ -34,11 +34,6 @@ public class InputObject : MonoBehaviour
             solution = "-" + solution;
         else
             solution = solution.Split('-')[1];
-
-        // if(solution[0] == '-')
-        //     solution = solution.Split('-')[1];
-        // else
-        //     solution = "-" + solution;
     }
 
     public void Submit(){

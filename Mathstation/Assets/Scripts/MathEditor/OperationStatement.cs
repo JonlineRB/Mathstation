@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class OperationStatement :  ProblemTerm, TrivialStatement
 {
@@ -9,7 +11,8 @@ public class OperationStatement :  ProblemTerm, TrivialStatement
     public OperationStatement(){
         this.operand_a = new Number();
         this.operand_b = new Number();
-        this.operation = (MathOperations.Operations)Random.Range(0,4);
+        Policy policy = GameObject.FindObjectOfType<Policy>();
+        this.operation = MathOperations.GenerateOperation(policy);
     }
 
     public override Number evaluate(){

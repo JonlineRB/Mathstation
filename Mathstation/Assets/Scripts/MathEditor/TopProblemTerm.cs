@@ -9,7 +9,8 @@ public class TopProblemTerm : ProblemTerm
     public TopProblemTerm(){
         this.operand_a = TrivialStatementFactory.generateStatement();
         this.operand_b = TrivialStatementFactory.generateStatement();
-        this.operation = (MathOperations.Operations)Random.Range(0,4);
+        Policy policy = GameObject.FindObjectOfType<Policy>();
+        this.operation = MathOperations.GenerateOperation(policy);
     }
 
     public override Number evaluate(){

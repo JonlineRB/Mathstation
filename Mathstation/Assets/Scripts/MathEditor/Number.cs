@@ -5,6 +5,18 @@ public class Number : TrivialStatement
 {
     private int numerator;
     private int denominator = 1;
+    private int remainder = 0;
+
+    public int getRemainder()
+    {
+        return this.remainder;
+    }
+
+    public void setRemainder(int remainder)
+    {
+        this.remainder = remainder;
+    }
+
 
     public int getNumerator()
     {
@@ -35,6 +47,7 @@ public class Number : TrivialStatement
     public Number(int numerator)
     {
         this.numerator = numerator;
+        this.numerator = this.PolicyProof(numerator,GameObject.FindObjectOfType<Policy>());
     }
 
     public Number(int numerator, int denominator)
@@ -56,18 +69,35 @@ public class Number : TrivialStatement
             this.numerator = this.numerator / factor;
             this.denominator = this.denominator / factor;
         }
+
+        this.numerator = this.PolicyProof(numerator,GameObject.FindObjectOfType<Policy>());
     }
 
     public Number()
     {
-        this.numerator = Random.Range(1, 9);
+        this.numerator = Random.Range(1,9);
+        Policy policy = GameObject.FindObjectOfType<Policy>();
+        if(policy.isIncludeFractions())
+            this.denominator = Random.Range(1,9);
+
+        this.numerator = this.PolicyProof(numerator,GameObject.FindObjectOfType<Policy>());
     }
 
     public override string ToString()
     {
         if (denominator == 1)
             return this.numerator.ToString();
+        else if(this.remainder!=0)
+            return this.numerator.ToString() + "(" + this.remainder.ToString() + ")";
         return "Frac(" + numerator + "/" + denominator + ")";
+        
+    }
+
+    private int PolicyProof(int numerator, Policy policy){
+        if(!policy.isNegativeValues() && numerator<0){
+            numerator=0;
+        }
+        return numerator;
     }
 
     public bool Compare(int value)
