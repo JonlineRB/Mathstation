@@ -75,6 +75,7 @@ public static class MathOperations
             Number result;
             result = new Number(a.getNumerator() / b.getNumerator());
             result.setRemainder(a.getNumerator() % b.getNumerator());
+            return result;
         }
         return new Number(a.getNumerator() * b.getDenominator(), a.getDenominator() * b.getNumerator());
     }

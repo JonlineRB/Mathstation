@@ -85,10 +85,10 @@ public class Number : TrivialStatement
 
     public override string ToString()
     {
-        if (denominator == 1)
-            return this.numerator.ToString();
-        else if(this.remainder!=0)
+        if(this.remainder!=0)
             return this.numerator.ToString() + "(" + this.remainder.ToString() + ")";
+        else if(denominator == 1)
+            return this.numerator.ToString();
         return "Frac(" + numerator + "/" + denominator + ")";
         
     }
