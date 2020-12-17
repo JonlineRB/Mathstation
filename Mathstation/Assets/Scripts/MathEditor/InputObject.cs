@@ -25,8 +25,9 @@ public class InputObject : MonoBehaviour
     }
 
     public void Fraction(){
-        if(!solution.Contains("/") && solution.Length > 0)
+        if(!solution.Contains("/") && !solution.Contains("R") && solution.Length > 0)
             solution+="/";
+            Debug.Log("Solution is: " + solution);
     }
 
     public void Negative(){
@@ -34,6 +35,13 @@ public class InputObject : MonoBehaviour
             solution = "-" + solution;
         else
             solution = solution.Split('-')[1];
+        Debug.Log("Solution is: " + solution);
+    }
+
+    public void Remainder(){
+        if(!solution.Contains("R") && !solution.Contains("/") && solution.Length > 0)
+            solution+="R";
+        Debug.Log("Solution is: " + solution);
     }
 
     public void Submit(){
@@ -43,6 +51,11 @@ public class InputObject : MonoBehaviour
         Number actualSolution = currentProblem.getSolution();
         if(solution.Contains("/"))
             result = actualSolution.Compare(new Number(int.Parse(solution.Split('/')[0]),int.Parse(solution.Split('/')[1])));
+        else if(solution.Contains("R")){
+            Number number = new Number(int.Parse(solution.Split('R')[0]));
+            number.setRemainder(int.Parse(solution.Split('R')[1]));
+            result = actualSolution.Compare(number);
+        }
         else
             result = actualSolution.Compare(new Number(int.Parse(solution)));
         Debug.Log("submitted. result is " + result);
