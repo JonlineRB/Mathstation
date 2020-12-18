@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Policy : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Policy : MonoBehaviour
     private bool includeFractions;
     [SerializeField]
     private bool singleOperation;
+    [SerializeField]
+    private GameObject policyTextObject;
 
     public bool isSingleOperation()
     {
@@ -93,12 +96,18 @@ public class Policy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        string result = "";
+        if(remainderDivision)
+            result += "Remainder Division\n";
+        else if(includeDivision)
+            result += "Fraction Division\n";
+        if(negativeValues)
+            result += "Negative Values\n";
+        else
+            result += "No Negative Values\n";
+        if(includeFractions)
+            result += "Includes Fractions\n";
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        policyTextObject.GetComponent<Text>().text = result;
     }
 }
