@@ -79,10 +79,14 @@ public class InputObject : MonoBehaviour
         Debug.Log("submitted. result is " + result);
         if(result){
             gameObject.GetComponent<EditorMaster>().Submition();
+            StopAllCoroutines();
             StartCoroutine("FeedbackCorrect");
         }
-        else
+        else{
+            StopAllCoroutines();
             StartCoroutine("FeedbackWrong");
+        }
+            
             
         solution = "";
         PushTextObject("");
