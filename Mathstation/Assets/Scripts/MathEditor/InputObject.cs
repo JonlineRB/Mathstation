@@ -9,6 +9,16 @@ public class InputObject : MonoBehaviour
     private Problem currentProblem;
     [SerializeField]
     GameObject textObject;
+    [SerializeField]
+    private Sprite feedbackIdle;
+    [SerializeField]
+    private Sprite feedbackCorrect;
+    [SerializeField]
+    private Sprite feedbackWrong;
+    [SerializeField]
+    private GameObject feedbackObject;
+    [SerializeField]
+    private float feedbackChangeTime;
 
     public void concatinateSolution(int value){
         solution += value.ToString();
@@ -67,8 +77,13 @@ public class InputObject : MonoBehaviour
         else
             result = actualSolution.Compare(new Number(int.Parse(solution)));
         Debug.Log("submitted. result is " + result);
-        if(result)
+        if(result){
             gameObject.GetComponent<EditorMaster>().Submition();
+            StartCoroutine("FeedbackCorrect");
+        }
+        else
+            StartCoroutine("FeedbackWrong");
+            
         solution = "";
         PushTextObject("");
     }
@@ -80,5 +95,17 @@ public class InputObject : MonoBehaviour
     public void ClearEverything(){
         solution = "";
         PushTextObject(solution);
+    }
+
+    IEnumerator FeedbackWrong(){
+        feedbackObject.GetComponent<Image>().sprite = feedbackWrong;
+        yield return new WaitForSeconds(feedbackChangeTime);
+        feedbackObject.GetComponent<Image>().sprite = feedbackIdle;
+    }
+
+    IEnumerator FeedbackCorrect(){
+        feedbackObject.GetComponent<Image>().sprite = feedbackCorrect;
+        yield return new WaitForSeconds(feedbackChangeTime);
+        feedbackObject.GetComponent<Image>().sprite = feedbackIdle;
     }
 }
