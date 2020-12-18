@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InputObject : MonoBehaviour
 {
     private string solution = "";
-
     private Problem currentProblem;
+    [SerializeField]
+    GameObject textObject;
 
     public void concatinateSolution(int value){
         solution += value.ToString();
         Debug.Log("Solution is: " + solution);
+        PushTextObject(solution);
     }
 
     public void backspace(){
@@ -18,6 +21,7 @@ public class InputObject : MonoBehaviour
             return;
         solution = solution.Remove(solution.Length-1);
         Debug.Log("Solution is: " + solution);
+        PushTextObject(solution);
     }
 
     public void setProblem(Problem problem){
@@ -25,9 +29,11 @@ public class InputObject : MonoBehaviour
     }
 
     public void Fraction(){
-        if(!solution.Contains("/") && !solution.Contains("R") && solution.Length > 0)
+        if(!solution.Contains("/") && !solution.Contains("R") && solution.Length > 0){
             solution+="/";
             Debug.Log("Solution is: " + solution);
+        }
+            PushTextObject(solution);
     }
 
     public void Negative(){
@@ -36,12 +42,14 @@ public class InputObject : MonoBehaviour
         else
             solution = solution.Split('-')[1];
         Debug.Log("Solution is: " + solution);
+        PushTextObject(solution);
     }
 
     public void Remainder(){
         if(!solution.Contains("R") && !solution.Contains("/") && solution.Length > 0)
             solution+="R";
         Debug.Log("Solution is: " + solution);
+        PushTextObject(solution);
     }
 
     public void Submit(){
@@ -62,5 +70,15 @@ public class InputObject : MonoBehaviour
         if(result)
             gameObject.GetComponent<EditorMaster>().Submition();
         solution = "";
+        PushTextObject("");
+    }
+
+    private void PushTextObject(string value){
+        textObject.GetComponent<Text>().text = value;
+    }
+
+    public void ClearEverything(){
+        solution = "";
+        PushTextObject(solution);
     }
 }

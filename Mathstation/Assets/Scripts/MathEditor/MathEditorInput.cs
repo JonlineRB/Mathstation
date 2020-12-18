@@ -42,6 +42,8 @@ public class MathEditorInput : MonoBehaviour
             Backspace();
         if(Input.GetKeyDown(KeyCode.Return))
             Submit();
+        if(Input.GetKeyDown(KeyCode.Escape))
+            ClearEverything();
     }
 
     public void Negative(){
@@ -76,7 +78,11 @@ public class MathEditorInput : MonoBehaviour
 
     IEnumerator restoreClickable(){
         clickable = false;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.02f);
         clickable = true;
+    }
+
+    public void ClearEverything(){
+        gameObject.GetComponent<InputObject>().ClearEverything();
     }
 }
