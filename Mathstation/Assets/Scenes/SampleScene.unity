@@ -279,6 +279,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: textProblems
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: negativeValues
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: includeDivision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: singleOperation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: includeFractions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: remainderDivision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: includeMultiplication
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1402332396392457430, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: m_Sprite
       value: 

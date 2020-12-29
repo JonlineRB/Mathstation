@@ -15,7 +15,7 @@ public static class MathOperations
         }
 
         //if the denominators are multiples of each other
-        if (a.getDenominator() % b.getDenominator() == 0 || b.getDenominator() % b.getDenominator() == 0)
+        if (a.getDenominator() % b.getDenominator() == 0 || b.getDenominator() % a.getDenominator() == 0)
         {
             int common;
             int factor;
@@ -45,7 +45,7 @@ public static class MathOperations
         }
 
         //if the denominators are multiples of each other
-        if (a.getDenominator() % b.getDenominator() == 0 || b.getDenominator() % b.getDenominator() == 0)
+        if (a.getDenominator() % b.getDenominator() == 0 || b.getDenominator() % a.getDenominator() == 0)
         {
             int common;
             int factor;
