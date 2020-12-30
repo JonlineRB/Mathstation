@@ -20,6 +20,8 @@ public class Policy : MonoBehaviour
     [SerializeField]
     private bool singleOperation;
     [SerializeField]
+    private bool simplifyFractions;
+    [SerializeField]
     private GameObject policyTextObject;
 
     public bool isSingleOperation()
@@ -93,6 +95,16 @@ public class Policy : MonoBehaviour
         this.includeDivision = includeDivision;
     }
 
+    public bool isSimplifyFractions()
+    {
+        return this.simplifyFractions;
+    }
+
+    public void setSimplifyFractions(bool simplifyFractions)
+    {
+        this.simplifyFractions = simplifyFractions;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -102,7 +114,7 @@ public class Policy : MonoBehaviour
         else if(includeDivision)
             result += "Fraction Division\n";
         if(negativeValues)
-            result += "Negative Values\n";
+            result += "Negative Values Allowed\n";
         else
             result += "No Negative Values\n";
         if(includeFractions)

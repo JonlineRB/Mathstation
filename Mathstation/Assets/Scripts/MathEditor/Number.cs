@@ -47,7 +47,7 @@ public class Number : TrivialStatement
     public Number(int numerator)
     {
         this.numerator = numerator;
-        this.numerator = this.PolicyProof(numerator, GameObject.FindObjectOfType<Policy>());
+        this.numerator = this.CatchNegative(numerator, GameObject.FindObjectOfType<Policy>());
     }
 
     public Number(int numerator, int denominator)
@@ -72,7 +72,23 @@ public class Number : TrivialStatement
             this.denominator = this.denominator / factor;
         }
 
-        this.numerator = this.PolicyProof(numerator, GameObject.FindObjectOfType<Policy>());
+        Policy policy = GameObject.FindObjectOfType<Policy>();
+        this.numerator = this.CatchNegative(numerator, policy);
+
+        //simplify according to policy
+        if(policy.isSimplifyFractions()){
+            if(this.numerator % this.denominator == 0){
+                this.numerator = this.numerator / this.denominator;
+                this.denominator = 1;
+                Debug.Log("Ding simplify top down " + this.numerator);
+            }
+            else if(this.denominator % this.numerator == 0){
+                this.denominator = this.denominator / this.numerator;
+                this.numerator = 1;
+                Debug.Log("Ding simplify bottom up " + this.denominator);
+            }
+            
+        }
     }
 
     public Number()
@@ -82,7 +98,23 @@ public class Number : TrivialStatement
         if (policy.isIncludeFractions())
             this.denominator = Random.Range(1, 9);
 
-        this.numerator = this.PolicyProof(numerator, GameObject.FindObjectOfType<Policy>());
+        this.numerator = this.CatchNegative(numerator, GameObject.FindObjectOfType<Policy>());
+
+        //simplify according to policy
+        if(policy.isSimplifyFractions()){
+            if(this.numerator % this.denominator == 0){
+                this.numerator = this.numerator / this.denominator;
+                this.denominator = 1;
+                Debug.Log("Ding simplify top down " + this.numerator);
+            }
+            else if(this.denominator % this.numerator == 0){
+                this.denominator = this.denominator / this.numerator;
+                this.numerator = 1;
+                Debug.Log("Ding simplify bottom up " + this.denominator);
+            }
+            
+        }
+
     }
 
     public override string ToString()
@@ -95,7 +127,7 @@ public class Number : TrivialStatement
 
     }
 
-    private int PolicyProof(int numerator, Policy policy)
+    private int CatchNegative(int numerator, Policy policy)
     {
         if (!policy.isNegativeValues() && numerator < 0)
         {

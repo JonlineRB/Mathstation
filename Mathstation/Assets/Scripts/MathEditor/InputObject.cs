@@ -22,7 +22,7 @@ public class InputObject : MonoBehaviour
 
     public void concatinateSolution(int value){
         solution += value.ToString();
-        Debug.Log("Solution is: " + solution);
+        // Debug.Log("Solution is: " + solution);
         PushTextObject(solution);
     }
 
@@ -30,7 +30,7 @@ public class InputObject : MonoBehaviour
         if(solution == "")
             return;
         solution = solution.Remove(solution.Length-1);
-        Debug.Log("Solution is: " + solution);
+        // Debug.Log("Solution is: " + solution);
         PushTextObject(solution);
     }
 
@@ -41,7 +41,7 @@ public class InputObject : MonoBehaviour
     public void Fraction(){
         if(!solution.Contains("/") && !solution.Contains("R") && solution.Length > 0){
             solution+="/";
-            Debug.Log("Solution is: " + solution);
+            // Debug.Log("Solution is: " + solution);
         }
             PushTextObject(solution);
     }
@@ -51,7 +51,7 @@ public class InputObject : MonoBehaviour
             solution = "-" + solution;
         else
             solution = solution.Split('-')[1];
-        Debug.Log("Solution is: " + solution);
+        // Debug.Log("Solution is: " + solution);
         PushTextObject(solution);
     }
 
