@@ -64,14 +64,6 @@ public class Number : TrivialStatement
             this.denominator = 1;
         }
 
-        //case: common factor
-        else if (this.denominator % this.numerator == 0)
-        {
-            int factor = this.denominator / this.numerator;
-            this.numerator = this.numerator / factor;
-            this.denominator = this.denominator / factor;
-        }
-
         Policy policy = GameObject.FindObjectOfType<Policy>();
         this.numerator = this.CatchNegative(numerator, policy);
 

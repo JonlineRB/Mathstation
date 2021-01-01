@@ -39,10 +39,14 @@ public class InputObject : MonoBehaviour
     }
 
     public void Fraction(){
-        if(!solution.Contains("/") && !solution.Contains("R") && solution.Length > 0){
-            solution+="/";
+        if(solution.Length == 0 || solution.Contains("R") || solution[solution.Length-1]=='-')
+            return;
+        if(solution[solution.Length-1] == '/')
+            return;
+        else if(solution.Split('/').Length -1 >= 2)
+            return;
+        solution+="/";
             // Debug.Log("Solution is: " + solution);
-        }
             PushTextObject(solution);
     }
 
@@ -58,7 +62,7 @@ public class InputObject : MonoBehaviour
     public void Remainder(){
         if(!solution.Contains("R") && !solution.Contains("/") && solution.Length > 0)
             solution+="R";
-        Debug.Log("Solution is: " + solution);
+        // Debug.Log("Solution is: " + solution);
         PushTextObject(solution);
     }
 
@@ -67,8 +71,33 @@ public class InputObject : MonoBehaviour
             return;
         bool result;
         Number actualSolution = currentProblem.getSolution();
-        if(solution.Contains("/"))
-            result = actualSolution.Compare(new Number(int.Parse(solution.Split('/')[0]),int.Parse(solution.Split('/')[1])));
+        if(solution.Contains("/")){
+            int count = solution.Split('/').Length -1;
+            //case: only 1 fraction symbol
+            if(count == 1){
+                Debug.Log("DING count = 1");
+                result = actualSolution.Compare(new Number(int.Parse(solution.Split('/')[0]),int.Parse(solution.Split('/')[1])));
+            }
+                
+            else{
+                // Debug.Log("DING count = else");
+                int factor = solution.Contains("-") ? -1 : 1;
+                // Debug.Log("-- factor is: " + factor);
+                Number basePart = new Number(int.Parse(solution.Split('/')[0]));
+                // Debug.Log("--basePart is: " + basePart.ToString());
+                int numerator = int.Parse(solution.Split('/')[1]) * factor;
+                Debug.Log("--numerator is: " + numerator);
+                int denominator = int.Parse(solution.Split('/')[2]);
+                Debug.Log("--denominator is: " + denominator);
+                Number fractionPart = new Number(numerator, denominator);
+                Debug.Log("--fracionPart is: " + fractionPart.ToString());
+                Number sum = MathOperations.Add(basePart, fractionPart);
+                Debug.Log("--the solution is " + sum.ToString());
+                result = actualSolution.Compare(MathOperations.Add(
+                    new Number(int.Parse(solution.Split('/')[0]) * factor), new Number(int.Parse(solution.Split('/')[1]) * factor, int.Parse(solution.Split('/')[2]))));
+            }
+        }
+            
         else if(solution.Contains("R")){
             Number number = new Number(int.Parse(solution.Split('R')[0]));
             number.setRemainder(int.Parse(solution.Split('R')[1]));
