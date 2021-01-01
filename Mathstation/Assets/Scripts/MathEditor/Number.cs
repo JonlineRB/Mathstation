@@ -63,12 +63,12 @@ public class Number : TrivialStatement
             if(this.numerator % this.denominator == 0){
                 this.numerator = this.numerator / this.denominator;
                 this.denominator = 1;
-                Debug.Log("Ding simplify top down " + this.numerator);
+                // Debug.Log("Ding simplify top down " + this.numerator);
             }
             else if(this.denominator % this.numerator == 0){
                 this.denominator = this.denominator / this.numerator;
                 this.numerator = 1;
-                Debug.Log("Ding simplify bottom up " + this.denominator);
+                // Debug.Log("Ding simplify bottom up " + this.denominator);
             }
             
         }
