@@ -51,6 +51,9 @@ public class InputObject : MonoBehaviour
     }
 
     public void Negative(){
+        Policy policy = GameObject.FindObjectOfType<Policy>();
+        if(!policy.isNegativeValues())
+            return;
         if(!solution.Contains("-"))
             solution = "-" + solution;
         else
