@@ -32,7 +32,7 @@ public class MathEditorInput : MonoBehaviour
             propagate(8);
         if(Input.GetKeyDown(KeyCode.Keypad9) || Input.GetKeyDown(KeyCode.Alpha9))
             propagate(9);
-        if(Input.GetKeyDown(KeyCode.Minus))
+        if(Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.KeypadMinus))
             Negative();
         if(Input.GetKeyDown(KeyCode.F))
             Fraction();
@@ -40,7 +40,7 @@ public class MathEditorInput : MonoBehaviour
             Remainder();
         if(Input.GetKeyDown(KeyCode.Backspace))
             Backspace();
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             Submit();
         if(Input.GetKeyDown(KeyCode.Escape))
             ClearEverything();

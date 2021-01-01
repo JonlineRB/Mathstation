@@ -80,19 +80,16 @@ public class InputObject : MonoBehaviour
             }
                 
             else{
-                // Debug.Log("DING count = else");
                 int factor = solution.Contains("-") ? -1 : 1;
-                // Debug.Log("-- factor is: " + factor);
                 Number basePart = new Number(int.Parse(solution.Split('/')[0]));
-                // Debug.Log("--basePart is: " + basePart.ToString());
                 int numerator = int.Parse(solution.Split('/')[1]) * factor;
-                Debug.Log("--numerator is: " + numerator);
+                // Debug.Log("--numerator is: " + numerator);
                 int denominator = int.Parse(solution.Split('/')[2]);
-                Debug.Log("--denominator is: " + denominator);
+                // Debug.Log("--denominator is: " + denominator);
                 Number fractionPart = new Number(numerator, denominator);
-                Debug.Log("--fracionPart is: " + fractionPart.ToString());
+                // Debug.Log("--fracionPart is: " + fractionPart.ToString());
                 Number sum = MathOperations.Add(basePart, fractionPart);
-                Debug.Log("--the solution is " + sum.ToString());
+                // Debug.Log("--the solution is " + sum.ToString());
                 result = actualSolution.Compare(MathOperations.Add(
                     new Number(int.Parse(solution.Split('/')[0]) * factor), new Number(int.Parse(solution.Split('/')[1]) * factor, int.Parse(solution.Split('/')[2]))));
             }

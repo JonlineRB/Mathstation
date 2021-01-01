@@ -305,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: simplifyFractions
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: includeMultiplication

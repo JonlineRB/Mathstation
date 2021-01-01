@@ -55,15 +55,6 @@ public class Number : TrivialStatement
         this.numerator = numerator;
         this.denominator = denominator;
 
-        //set smallest possible fraction possible equivalent values
-
-        //case: it's a whole number
-        if (this.numerator % this.denominator == 0)
-        {
-            this.numerator = this.numerator / this.denominator;
-            this.denominator = 1;
-        }
-
         Policy policy = GameObject.FindObjectOfType<Policy>();
         this.numerator = this.CatchNegative(numerator, policy);
 
