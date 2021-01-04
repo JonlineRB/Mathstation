@@ -106,7 +106,7 @@ public class Number : TrivialStatement
             return this.numerator.ToString() + "(" + this.remainder.ToString() + ")";
         else if (denominator == 1)
             return this.numerator.ToString();
-        return "Frac(" + numerator + "/" + denominator + ")";
+        return "F(" + numerator + "/" + denominator + ")";
 
     }
 
