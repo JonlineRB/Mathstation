@@ -7,7 +7,7 @@ public class EditorMaster : MonoBehaviour
 {
 
     [SerializeField]
-    public int problemCount = 3;
+    public int problemCount;
     // Start is called before the first frame update
 
     [SerializeField]
