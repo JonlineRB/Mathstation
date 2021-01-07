@@ -10,6 +10,11 @@ public class FightMaster : MonoBehaviour
     private int life = 3;
     [SerializeField]
     private GameObject opponent;
+    public float energy = 0;
+    [SerializeField]
+    private int MaxEnergy;
+    [SerializeField]
+    private float nrg_charge_rate;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +29,12 @@ public class FightMaster : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.D)){
             DecrementLife();
         }
+    }
 
+    void FixedUpdate(){
+        if(energy < MaxEnergy)
+            energy += nrg_charge_rate * Time.deltaTime;
+        energy = Mathf.Clamp(energy, 0, (float)MaxEnergy);
     }
 
     //events
