@@ -15,6 +15,9 @@ public class FightMaster : MonoBehaviour
     private int MaxEnergy;
     [SerializeField]
     private float nrg_charge_rate;
+    [SerializeField]
+    private GameObject sidePanel;
+    private bool lightSidePanel = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,10 @@ public class FightMaster : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.D)){
             DecrementLife();
         }
+        if(energy==100 && lightSidePanel){
+            sidePanel.GetComponent<SidePanel>().toCharged();
+            lightSidePanel = false;
+        }
     }
 
     void FixedUpdate(){
@@ -42,6 +49,15 @@ public class FightMaster : MonoBehaviour
         if(--life<=0)
             Debug.Log("Game Over!");
         Debug.Log("Life is: " + life);
+    }
+
+    public bool consumeEnergyCharge(){
+        if(energy==100){
+            energy = 0;
+            lightSidePanel = true;
+            return true;
+        }
+            return false;
     }
 
     public void callEditor(){
