@@ -84,13 +84,12 @@ public class InputObject : MonoBehaviour
                 
             else{
                 int factor = solution.Contains("-") ? -1 : 1;
-                Number basePart = new Number(int.Parse(solution.Split('/')[0]));
-                int numerator = int.Parse(solution.Split('/')[1]) * factor;
-                int denominator = int.Parse(solution.Split('/')[2]);
-                Number fractionPart = new Number(numerator, denominator);
+                Number basePart = new Number(int.Parse(solution.Split('/')[0]));//-7
+                int numerator = int.Parse(solution.Split('/')[1]) * factor;//-7
+                int denominator = int.Parse(solution.Split('/')[2]);//8
+                Number fractionPart = new Number(numerator, denominator);// -7/8
                 Number sum = MathOperations.Add(basePart, fractionPart);
-                result = actualSolution.Compare(MathOperations.Add(
-                    new Number(int.Parse(solution.Split('/')[0]) * factor), new Number(int.Parse(solution.Split('/')[1]) * factor, int.Parse(solution.Split('/')[2]))));
+                result = actualSolution.Compare(sum);
             }
         }
             
