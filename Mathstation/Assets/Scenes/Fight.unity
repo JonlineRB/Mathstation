@@ -446,7 +446,7 @@ MonoBehaviour:
   opponent: {fileID: 0}
   energy: 0
   MaxEnergy: 100
-  nrg_charge_rate: 10
+  nrg_charge_rate: 40
   sidePanel: {fileID: 1694763814}
 --- !u!114 &900787604
 MonoBehaviour:
@@ -466,138 +466,6 @@ MonoBehaviour:
   fullHeart: {fileID: 2837582297273543808, guid: 51b9ae1817e3c85439fec2b85fd9d933, type: 3}
   emptyHeart: {fileID: 2837582297273543808, guid: 93cf498e93fc7124494046d2f53fa0b7, type: 3}
   maxHearts: 3
---- !u!1 &955844734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 955844736}
-  - component: {fileID: 955844735}
-  - component: {fileID: 955844737}
-  - component: {fileID: 955844738}
-  - component: {fileID: 955844739}
-  m_Layer: 0
-  m_Name: Rockstorm_RockStage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &955844735
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955844734}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fb92381a106b29a4b81347a69a6b7994, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 12.8, y: 12.8}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &955844736
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955844734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.28272, y: 0.28272, z: 0.28272}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &955844737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955844734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1db0fdf8d3797840920ebab17e1a673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  listener: {fileID: 0}
---- !u!58 &955844738
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955844734}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 5.62
---- !u!114 &955844739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955844734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f524d27dcae1d0143976a9c80095f96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: fb92381a106b29a4b81347a69a6b7994, type: 3}
-  - {fileID: 21300000, guid: e2bd40a9c9f68ce47a3be76750ed46e3, type: 3}
-  - {fileID: 21300000, guid: 5888bef11afb4b6498101a578a49fe92, type: 3}
-  stone: {fileID: 2833643141234570214, guid: 49b8cfc1c019bb14b8916480c283e6aa, type: 3}
-  amt_stones_generated: 6
 --- !u!1 &992060844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,3 +1057,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightGame: {fileID: 900787599}
+--- !u!1001 &6381558357772139388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1037885924262981828, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: component
+      value: 
+      objectReference: {fileID: 1982660423}
+    - target: {fileID: 6381558357103735554, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_Name
+      value: Rockstorm_RockStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1037885924262981828, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}

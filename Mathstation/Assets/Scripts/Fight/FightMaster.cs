@@ -5,8 +5,6 @@ using UnityEngine;
 public class FightMaster : MonoBehaviour
 {
     [SerializeField]
-    private GameObject mathEditor;
-    [SerializeField]
     private int life = 3;
     [SerializeField]
     private GameObject opponent;
@@ -60,22 +58,13 @@ public class FightMaster : MonoBehaviour
             return false;
     }
 
-    public void callEditor(){
-        GameObject.Instantiate(mathEditor);
-    }
-
-    public void mathSuccess(){
-    }
-
-    public void mathFail(){
-
-    }
-
     public void winGame(){
 
     }
 
-    public void mainMenu(){}
+    public void mainMenu(){
+        
+    }
 
     
 }
