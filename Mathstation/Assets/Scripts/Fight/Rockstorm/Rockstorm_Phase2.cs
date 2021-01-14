@@ -5,7 +5,9 @@ using UnityEngine;
 public class Rockstorm_Phase2 : MonoBehaviour
 {
     [SerializeField]
-    private float inter_rock_interval;
+    private float interRockInterval;
+    [SerializeField]
+    private GameObject rocksToThrow;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class Rockstorm_Phase2 : MonoBehaviour
 
     IEnumerator ThrowRocks(){
         while(true){
-            yield return new WaitForSeconds(inter_rock_interval);
+            yield return new WaitForSeconds(interRockInterval);
             //Spawn a damaging rock
             Debug.Log("Rock Spawned");
         }
