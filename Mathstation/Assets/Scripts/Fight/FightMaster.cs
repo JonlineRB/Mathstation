@@ -16,10 +16,13 @@ public class FightMaster : MonoBehaviour
     [SerializeField]
     private GameObject sidePanel;
     private bool lightSidePanel = true;
+    [SerializeField]
+    private GameObject heartManager;
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<HeartManager>().setHearts(2);
+        heartManager.GetComponent<HeartManager>().SetMaxHearts(life);
+        heartManager.GetComponent<HeartManager>().SetHearts(life);
     }
 
     // Update is called once per frame
@@ -44,8 +47,11 @@ public class FightMaster : MonoBehaviour
 
     //events
     public void DecrementLife(){
-        if(--life<=0)
+        if(--life<=0){
             Debug.Log("Game Over!");
+            return;
+        }
+        heartManager.GetComponent<HeartManager>().SetHearts(life);
         Debug.Log("Life is: " + life);
     }
 
@@ -63,7 +69,7 @@ public class FightMaster : MonoBehaviour
     }
 
     public void mainMenu(){
-        
+
     }
 
     

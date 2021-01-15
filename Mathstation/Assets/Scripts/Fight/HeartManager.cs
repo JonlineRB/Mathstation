@@ -1,25 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeartManager : MonoBehaviour
 {
 
     [SerializeField]
-    private int heightQuotient;
+    private GameObject[] hearts;
     [SerializeField]
-    private int widthQuotient;
-    private int height = Screen.height;
-    private int width = Screen.width;
+    private Sprite fullHeart;
     [SerializeField]
-    private float horizontalMargin;
-    [SerializeField]
-    private GameObject fullHeart;
-    [SerializeField]
-    private GameObject emptyHeart;
-    [SerializeField]
-    private int maxHearts;
-    // Start is called before the first frame update
+    private Sprite emptyHeart;
     void Start()
     {
         
@@ -31,22 +23,19 @@ public class HeartManager : MonoBehaviour
         
     }
 
-    public void setHearts(int hearts){
-        if(hearts>maxHearts)
-            return;
-
-        // int empties = maxHearts - hearts;
-        for(int i = 0; i < maxHearts; i++){
-            int height = Screen.height;
-            int width = Screen.width;
-            GameObject heart;
-            if(i< hearts)
-                heart = GameObject.Instantiate(fullHeart, gameObject.transform);
+    public void SetHearts(int value){
+        for(int i = 0; i < hearts.Length; i++){
+            if(i<value)
+                hearts[i].GetComponent<Image>().sprite = fullHeart;
             else
-                heart = GameObject.Instantiate(emptyHeart, gameObject.transform);
-            heart.GetComponent<RectTransform>().position = new Vector3(width/widthQuotient + i * horizontalMargin, height - (height / heightQuotient), 0);
+                hearts[i].GetComponent<Image>().sprite = emptyHeart;
         }
+    }
 
-
+    public void SetMaxHearts(int value){
+        for(int i = 0; i < hearts.Length; i++){
+            if(i >= value)
+                hearts[i].SetActive(false);
+        }
     }
 }

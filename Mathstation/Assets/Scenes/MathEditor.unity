@@ -297,6 +297,34 @@ PrefabInstance:
       propertyPath: textBasedTextObject
       value: 
       objectReference: {fileID: 1347784334}
+    - target: {fileID: 108031870, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: problemCount
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: negativeValues
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: includeDivision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: singleOperation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: includeFractions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: remainderDivision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: includeMultiplication
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6340798705914388710, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
