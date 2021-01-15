@@ -8,6 +8,8 @@ public class Rockstorm_Phase2 : MonoBehaviour
     private float interRockInterval;
     [SerializeField]
     private GameObject rocksToThrow;
+    [SerializeField]
+    private float radius;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +22,17 @@ public class Rockstorm_Phase2 : MonoBehaviour
         
     }
 
+    void SpawnRock(){
+        int deg = Random.Range(0,360);
+        Vector3 position = new Vector3(Mathf.Sin(deg), Mathf.Cos(deg), 0) * radius;
+        GameObject.Instantiate(rocksToThrow, position, Quaternion.identity);
+    }
+
     IEnumerator ThrowRocks(){
         while(true){
             yield return new WaitForSeconds(interRockInterval);
             //Spawn a damaging rock
-            Debug.Log("Rock Spawned");
+            SpawnRock();
         }
     }
 }

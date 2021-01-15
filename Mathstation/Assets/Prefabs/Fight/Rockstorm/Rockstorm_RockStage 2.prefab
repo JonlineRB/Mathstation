@@ -112,4 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d966a551a698034ebc122c47c60da46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inter_rock_interval: 0.6
+  interRockInterval: 2
+  rocksToThrow: {fileID: 9167177743232048977, guid: cb7783eb47f8aeb4a8d0f96ababdb580, type: 3}
+  radius: 3
