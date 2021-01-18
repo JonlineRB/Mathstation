@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rockstorm_Phase2 : MonoBehaviour
+public class Rockstorm_Phase2 : Rockstorm_Superclass
 {
     [SerializeField]
     private float interRockInterval;
@@ -11,8 +11,9 @@ public class Rockstorm_Phase2 : MonoBehaviour
     [SerializeField]
     private float radius;
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
+        base.Start();
         StartCoroutine(ThrowRocks());
     }
 
@@ -28,11 +29,23 @@ public class Rockstorm_Phase2 : MonoBehaviour
         GameObject.Instantiate(rocksToThrow, position, Quaternion.identity);
     }
 
+    
+
     IEnumerator ThrowRocks(){
         while(true){
             yield return new WaitForSeconds(interRockInterval);
             //Spawn a damaging rock
             SpawnRock();
         }
+    }
+
+    public override void Damage()
+    {
+        Debug.Log("Phase 2 DMG");
+    }
+
+    public override void Destroy()
+    {
+        Debug.Log("Phase 2 Destroy");
     }
 }
