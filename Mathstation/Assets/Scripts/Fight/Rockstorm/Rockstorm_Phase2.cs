@@ -46,9 +46,4 @@ public class Rockstorm_Phase2 : Rockstorm_Superclass
         if(CheckConsumeEnergy())
             StopAllCoroutines();
     }
-
-    public override void Destroy()
-    {
-        Debug.Log("Phase 2 Destroy");
-    }
 }
