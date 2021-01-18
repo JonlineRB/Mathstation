@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rockstorm_Rock : MonoBehaviour
+public class Rockstorm_Rock : Rockstorm_Superclass
 {
     [SerializeField]
     private Sprite[] sprites;
@@ -26,7 +26,7 @@ public class Rockstorm_Rock : MonoBehaviour
         
     }
 
-    public void Damage(){
+    public override void Damage(){
         clicks++;
         if(clicks<sprites.Length){
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[clicks];
@@ -51,11 +51,7 @@ public class Rockstorm_Rock : MonoBehaviour
         GameObject.Destroy(gameObject);
     }
 
-    public void RecieveMathDamage(){
+    public new void RecieveMathDamage(){
         Destroy();
-    }
-
-    void OnMouseDown(){
-        Damage();
     }
 }
