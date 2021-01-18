@@ -15,6 +15,8 @@ public class RockstormPhase2Rock : MonoBehaviour
     private Color targetColor;
     private Color initialColor;
     private Color lerpColorValue;
+    [SerializeField]
+    private GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,7 @@ public class RockstormPhase2Rock : MonoBehaviour
     IEnumerator Consume(){
         yield return new WaitForSeconds(timer);
         GameObject.FindObjectOfType<FightMaster>().DecrementLife();
+        GameObject.Instantiate(explosion, transform.position, Quaternion.identity);
         GameObject.Destroy(gameObject);
     }
 

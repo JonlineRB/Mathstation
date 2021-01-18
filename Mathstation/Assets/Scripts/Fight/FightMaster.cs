@@ -51,6 +51,7 @@ public class FightMaster : MonoBehaviour
     //events
     public void DecrementLife(){
         if(--life<=0){
+            heartManager.GetComponent<HeartManager>().SetHearts(0);
             Debug.Log("Game Over!");
             return;
         }
