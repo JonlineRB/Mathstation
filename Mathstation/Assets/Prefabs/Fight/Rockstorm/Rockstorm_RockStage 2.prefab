@@ -118,7 +118,6 @@ MonoBehaviour:
   interRockInterval: 2
   rocksToThrow: {fileID: 9167177743232048977, guid: cb7783eb47f8aeb4a8d0f96ababdb580, type: 3}
   radius: 3
-  nextPhase: {fileID: 6381558357103735554, guid: 2e8f5a9200157b94996d918e96c14003, type: 3}
 --- !u!114 &6047164006344490775
 MonoBehaviour:
   m_ObjectHideFlags: 0

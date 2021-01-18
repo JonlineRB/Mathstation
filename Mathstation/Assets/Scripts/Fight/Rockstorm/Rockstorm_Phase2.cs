@@ -10,8 +10,6 @@ public class Rockstorm_Phase2 : Rockstorm_Superclass
     private GameObject rocksToThrow;
     [SerializeField]
     private float radius;
-    [SerializeField]
-    private GameObject nextPhase;
     // Start is called before the first frame update
     new void Start()
     {
