@@ -43,7 +43,8 @@ public class Rockstorm_Phase2 : Rockstorm_Superclass
 
     public override void Damage()
     {
-        Debug.Log("Phase 2 DMG");
+        if(CheckConsumeEnergy())
+            StopAllCoroutines();
     }
 
     public override void Destroy()

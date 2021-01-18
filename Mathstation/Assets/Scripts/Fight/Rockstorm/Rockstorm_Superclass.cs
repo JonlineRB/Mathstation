@@ -30,11 +30,13 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
         Destroy();
     }
 
-    protected void CheckConsumeEnergy(){
+    protected bool CheckConsumeEnergy(){
         if(fightGame.GetComponent<FightMaster>().consumeEnergyCharge()){
             fightGame.GetComponent<FightMaster>().setPauseCharging();
             gameObject.GetComponent<MathCaller>().CallMathEditor();
             GetComponent<CircleCollider2D>().enabled = false;
+            return true;
         }
+        return false;
     }
 }

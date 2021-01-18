@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6381558357103735555}
   - component: {fileID: 6381558357103735806}
   - component: {fileID: 6930946781947879046}
+  - component: {fileID: 6047164006344490775}
   m_Layer: 0
   m_Name: Rockstorm_RockStage 2
   m_TagString: Untagged
@@ -116,3 +117,16 @@ MonoBehaviour:
   rocksToThrow: {fileID: 9167177743232048977, guid: cb7783eb47f8aeb4a8d0f96ababdb580, type: 3}
   radius: 3
   nextPhase: {fileID: 6381558357103735554, guid: 2e8f5a9200157b94996d918e96c14003, type: 3}
+--- !u!114 &6047164006344490775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381558357103735554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1524db8cc0c844f9cac58e5fc9ee0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
