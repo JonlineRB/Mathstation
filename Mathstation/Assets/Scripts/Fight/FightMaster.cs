@@ -18,6 +18,7 @@ public class FightMaster : MonoBehaviour
     private bool lightSidePanel = true;
     [SerializeField]
     private GameObject heartManager;
+    private bool pauseCharging = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,8 @@ public class FightMaster : MonoBehaviour
     }
 
     void FixedUpdate(){
+        if(pauseCharging)
+            return;
         if(energy < MaxEnergy)
             energy += nrg_charge_rate * Time.deltaTime;
         energy = Mathf.Clamp(energy, 0, (float)MaxEnergy);
@@ -58,6 +61,7 @@ public class FightMaster : MonoBehaviour
     public bool consumeEnergyCharge(){
         if(energy==100){
             energy = 0;
+            sidePanel.GetComponent<SidePanel>().toIdle();
             lightSidePanel = true;
             return true;
         }
@@ -70,6 +74,14 @@ public class FightMaster : MonoBehaviour
 
     public void mainMenu(){
 
+    }
+
+    public void setPauseCharging(){
+        pauseCharging = true;
+    }
+
+    public void releasePauseCharging(){
+        pauseCharging = false;
     }
 
     

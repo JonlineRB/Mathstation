@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rockstorm_Rock : MathDamage
+public class Rockstorm_Rock : MonoBehaviour
 {
     [SerializeField]
     private Sprite[] sprites;
@@ -13,10 +13,11 @@ public class Rockstorm_Rock : MathDamage
     private int amt_stones_generated;
     [SerializeField]
     private GameObject nextPhaseObject;
+    private GameObject fightGame;
     // Start is called before the first frame update
     void Start()
     {
-        
+        fightGame = GameObject.Find("FightGame");
     }
 
     // Update is called once per frame
@@ -33,8 +34,8 @@ public class Rockstorm_Rock : MathDamage
                 GameObject.Instantiate(stone, transform);
         }
         else{
-            if(GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge()){
-                // GameObject.Find("FightGame").GetComponent<FightMaster>().CallEditor();
+            if(fightGame.GetComponent<FightMaster>().consumeEnergyCharge()){
+                fightGame.GetComponent<FightMaster>().setPauseCharging();
                 gameObject.GetComponent<MathCaller>().CallMathEditor();
                 GetComponent<CircleCollider2D>().enabled = false;
             }
@@ -43,13 +44,14 @@ public class Rockstorm_Rock : MathDamage
     }
 
     void Destroy(){
+        fightGame.GetComponent<FightMaster>().releasePauseCharging();
         GameObject next_phase = GameObject.Instantiate(nextPhaseObject,Vector3.zero,Quaternion.identity);
         for(int i = 0; i < amt_stones_generated * 2 ; i++)
             GameObject.Instantiate(stone, next_phase.transform);
         GameObject.Destroy(gameObject);
     }
 
-    public new void RecieveMathDamage(){
+    public void RecieveMathDamage(){
         Destroy();
     }
 
