@@ -15,8 +15,6 @@ public class RockstormPhase2Rock : MonoBehaviour
     private Color targetColor;
     private Color initialColor;
     private Color lerpColorValue;
-    [SerializeField]
-    private float rotationRate;
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +37,6 @@ public class RockstormPhase2Rock : MonoBehaviour
         lerpColorValue = Color.Lerp(initialColor, targetColor, elapsedTime / timer);
         gameObject.GetComponent<SpriteRenderer>().color = lerpColorValue;
 
-        //rotate
-        transform.Rotate(new Vector3(0,0,rotationRate));
         elapsedTime += Time.deltaTime;
     }
 

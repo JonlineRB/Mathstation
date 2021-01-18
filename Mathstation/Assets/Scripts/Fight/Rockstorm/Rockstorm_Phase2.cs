@@ -7,9 +7,9 @@ public class Rockstorm_Phase2 : Rockstorm_Superclass
     [SerializeField]
     private float interRockInterval;
     [SerializeField]
-    private GameObject rocksToThrow;
+    protected GameObject rocksToThrow;
     [SerializeField]
-    private float radius;
+    protected float radius;
     // Start is called before the first frame update
     new void Start()
     {
@@ -23,7 +23,7 @@ public class Rockstorm_Phase2 : Rockstorm_Superclass
         
     }
 
-    void SpawnRock(){
+    protected virtual void SpawnRock(){
         int deg = Random.Range(0,360);
         Vector3 position = new Vector3(Mathf.Sin(deg), Mathf.Cos(deg), 0) * radius;
         GameObject.Instantiate(rocksToThrow, position, Quaternion.identity);
