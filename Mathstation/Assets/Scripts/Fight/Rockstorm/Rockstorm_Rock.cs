@@ -25,14 +25,8 @@ public class Rockstorm_Rock : Rockstorm_Superclass
             for(int i = 0; i < amt_stones_generated ; i++)
                 GameObject.Instantiate(stone, transform);
         }
-        else{
-            if(fightGame.GetComponent<FightMaster>().consumeEnergyCharge()){
-                fightGame.GetComponent<FightMaster>().setPauseCharging();
-                gameObject.GetComponent<MathCaller>().CallMathEditor();
-                GetComponent<CircleCollider2D>().enabled = false;
-            }
-                
-        }
+        else
+            CheckConsumeEnergy();
     }
 
     public override void Destroy(){

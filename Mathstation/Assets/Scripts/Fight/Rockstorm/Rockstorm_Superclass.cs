@@ -29,4 +29,12 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
     public void RecieveMathDamage(){
         Destroy();
     }
+
+    protected void CheckConsumeEnergy(){
+        if(fightGame.GetComponent<FightMaster>().consumeEnergyCharge()){
+            fightGame.GetComponent<FightMaster>().setPauseCharging();
+            gameObject.GetComponent<MathCaller>().CallMathEditor();
+            GetComponent<CircleCollider2D>().enabled = false;
+        }
+    }
 }
