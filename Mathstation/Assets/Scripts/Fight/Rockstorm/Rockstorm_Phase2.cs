@@ -10,6 +10,7 @@ public class Rockstorm_Phase2 : Rockstorm_Superclass
     protected GameObject rocksToThrow;
     [SerializeField]
     protected float radius;
+    protected List<GameObject> rocks = new List<GameObject>();
     // Start is called before the first frame update
     new void Start()
     {
@@ -26,7 +27,8 @@ public class Rockstorm_Phase2 : Rockstorm_Superclass
     protected virtual void SpawnRock(){
         int deg = Random.Range(0,360);
         Vector3 position = new Vector3(Mathf.Sin(deg), Mathf.Cos(deg), 0) * radius;
-        GameObject.Instantiate(rocksToThrow, position, Quaternion.identity);
+        GameObject rock = GameObject.Instantiate(rocksToThrow, position, Quaternion.identity);
+        rocks.Add(rock);
     }
 
     
@@ -41,7 +43,11 @@ public class Rockstorm_Phase2 : Rockstorm_Superclass
 
     public override void Damage()
     {
-        if(CheckConsumeEnergy())
+        if(CheckConsumeEnergy()){
             StopAllCoroutines();
+            foreach(GameObject rock in rocks){
+                GameObject.Destroy(rock);
+            }
+        }
     }
 }
