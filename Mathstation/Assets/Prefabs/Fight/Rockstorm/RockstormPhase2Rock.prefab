@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9167177743232048981}
   - component: {fileID: 9114299619819973247}
   - component: {fileID: 2004729944158333498}
+  - component: {fileID: -488713989675805935}
   m_Layer: 0
   m_Name: RockstormPhase2Rock
   m_TagString: Untagged
@@ -145,3 +146,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stone: {fileID: 2833643141234570214, guid: 49b8cfc1c019bb14b8916480c283e6aa, type: 3}
   amtOfStones: 6
+--- !u!114 &-488713989675805935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167177743232048977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f7a16a7396244eba18c4fc17a2a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyGainValue: 4

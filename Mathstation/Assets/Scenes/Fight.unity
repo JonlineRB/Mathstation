@@ -375,7 +375,7 @@ MonoBehaviour:
   opponent: {fileID: 0}
   energy: 0
   MaxEnergy: 100
-  nrg_charge_rate: 10
+  nrg_charge_rate: 6
   sidePanel: {fileID: 1694763814}
   heartManager: {fileID: 1437290442}
 --- !u!1 &992060844
