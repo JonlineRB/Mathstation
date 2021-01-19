@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6381558357103735806}
   - component: {fileID: 6930946781947879046}
   - component: {fileID: 6047164006344490775}
+  - component: {fileID: 7540263063558257548}
   m_Layer: 0
   m_Name: Rockstorm_RockStage 2
   m_TagString: Untagged
@@ -131,3 +132,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+--- !u!114 &7540263063558257548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381558357103735554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda97dce7e800ea438a9c01562ea6a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stone: {fileID: 2833643141234570214, guid: 49b8cfc1c019bb14b8916480c283e6aa, type: 3}
+  amtOfStones: 6

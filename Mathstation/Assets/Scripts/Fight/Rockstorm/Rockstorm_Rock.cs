@@ -17,8 +17,7 @@ public class Rockstorm_Rock : Rockstorm_Superclass
         clicks++;
         if(clicks<sprites.Length){
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[clicks];
-            for(int i = 0; i < amt_stones_generated ; i++)
-                GameObject.Instantiate(stone, transform);
+            gameObject.GetComponent<ExplodeRocks>().Explode(transform.position);
         }
         else
             CheckConsumeEnergy();
