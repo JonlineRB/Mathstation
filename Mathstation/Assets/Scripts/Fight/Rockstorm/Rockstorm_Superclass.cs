@@ -24,6 +24,7 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
     }
 
     void OnMouseDown(){
+        gameObject.GetComponent<ExplodeRocks>().Explode(transform.position);
         Damage();
     }
 
