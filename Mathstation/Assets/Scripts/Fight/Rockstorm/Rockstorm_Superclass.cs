@@ -11,6 +11,8 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
     protected GameObject stone;
     [SerializeField]
     protected GameObject nextPhaseObject;
+    [SerializeField]
+    protected float energyGainValue;
     // Start is called before the first frame update
     protected void Start()
     {
@@ -25,6 +27,7 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
 
     void OnMouseDown(){
         gameObject.GetComponent<ExplodeRocks>().Explode(transform.position);
+        fightGame.GetComponent<FightMaster>().energyGain(energyGainValue);
         Damage();
     }
 

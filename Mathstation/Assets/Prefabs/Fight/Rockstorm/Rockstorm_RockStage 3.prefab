@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52160545b797b1c4e9f128ffcf826db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRate: 0.03
+  rotationRate: 0.07
 --- !u!1 &6381558357103735554
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stone: {fileID: 2833643141234570214, guid: 49b8cfc1c019bb14b8916480c283e6aa, type: 3}
   nextPhaseObject: {fileID: 0}
+  energyGainValue: 0
   interRockInterval: 1.5
   rocksToThrow: {fileID: 9167177743232048977, guid: cb7783eb47f8aeb4a8d0f96ababdb580, type: 3}
   radius: 3

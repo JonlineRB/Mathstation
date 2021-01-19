@@ -85,5 +85,9 @@ public class FightMaster : MonoBehaviour
         pauseCharging = false;
     }
 
+    public void energyGain(float value){
+        energy += value;
+        energy = Mathf.Clamp(energy, 0, (float)MaxEnergy);
+    }
     
 }

@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stone: {fileID: 2833643141234570214, guid: 49b8cfc1c019bb14b8916480c283e6aa, type: 3}
   nextPhaseObject: {fileID: 6381558357103735554, guid: 2e8f5a9200157b94996d918e96c14003, type: 3}
+  energyGainValue: 10
   interRockInterval: 2
   rocksToThrow: {fileID: 9167177743232048977, guid: cb7783eb47f8aeb4a8d0f96ababdb580, type: 3}
   radius: 3

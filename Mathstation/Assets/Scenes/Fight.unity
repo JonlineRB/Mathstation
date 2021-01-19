@@ -375,7 +375,7 @@ MonoBehaviour:
   opponent: {fileID: 0}
   energy: 0
   MaxEnergy: 100
-  nrg_charge_rate: 40
+  nrg_charge_rate: 10
   sidePanel: {fileID: 1694763814}
   heartManager: {fileID: 1437290442}
 --- !u!1 &992060844
@@ -1387,6 +1387,10 @@ PrefabInstance:
     - target: {fileID: 6381558357103735804, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735807, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: energyGainValue
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1037885924262981828, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
