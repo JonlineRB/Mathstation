@@ -24,6 +24,7 @@ public class FightMaster : MonoBehaviour
     {
         heartManager.GetComponent<HeartManager>().SetMaxHearts(life);
         heartManager.GetComponent<HeartManager>().SetHearts(life);
+        //begin dialogue
     }
 
     // Update is called once per frame

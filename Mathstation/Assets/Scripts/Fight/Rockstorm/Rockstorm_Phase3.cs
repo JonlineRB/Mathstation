@@ -13,4 +13,9 @@ public class Rockstorm_Phase3 : Rockstorm_Phase2
         GameObject rock = GameObject.Instantiate(rocksToThrow, position, Quaternion.identity, rocksCenter.transform);
         rocks.Add(rock);
     }
+
+    public override void Destroy(){
+        Debug.Log("Win!");
+        base.Destroy();
+    }
 }

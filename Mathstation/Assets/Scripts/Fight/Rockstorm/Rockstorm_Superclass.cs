@@ -33,7 +33,7 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
 
     public abstract void Damage();
 
-    public void Destroy(){
+    public virtual void Destroy(){
         fightGame.GetComponent<FightMaster>().releasePauseCharging();
         GameObject next_phase;
         if(nextPhaseObject){
