@@ -18,13 +18,16 @@ public class FightMaster : MonoBehaviour
     private bool lightSidePanel = true;
     [SerializeField]
     private GameObject heartManager;
-    private bool pauseCharging = false;
+    private bool pauseCharging = true;
     // Start is called before the first frame update
     void Start()
     {
         heartManager.GetComponent<HeartManager>().SetMaxHearts(life);
         heartManager.GetComponent<HeartManager>().SetHearts(life);
         //begin dialogue
+        //make a script that calls dialogues
+        //call it here and call the first dialogue
+        gameObject.GetComponent<Dialogue_caller>().CallDialogue();
     }
 
     // Update is called once per frame
@@ -89,6 +92,14 @@ public class FightMaster : MonoBehaviour
     public void energyGain(float value){
         energy += value;
         energy = Mathf.Clamp(energy, 0, (float)MaxEnergy);
+    }
+
+    public void ActivateOpponent(){
+        opponent.GetComponent<Collider2D>().enabled = true;
+    }
+
+    public void setOpponent(GameObject newOpponent){
+        opponent = newOpponent;
     }
     
 }
