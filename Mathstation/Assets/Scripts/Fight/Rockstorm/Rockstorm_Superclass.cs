@@ -13,6 +13,8 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
     protected GameObject nextPhaseObject;
     [SerializeField]
     protected float energyGainValue;
+    [SerializeField]
+    protected GameObject dialogue;
     // Start is called before the first frame update
     protected void Start()
     {
@@ -26,6 +28,8 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
     }
 
     void OnMouseDown(){
+        if(gameObject.GetComponent<Lock>().isLocked())
+            return;
         gameObject.GetComponent<ExplodeRocks>().Explode(transform.position);
         fightGame.GetComponent<FightMaster>().energyGain(energyGainValue);
         Damage();
@@ -40,7 +44,10 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
             next_phase = GameObject.Instantiate(nextPhaseObject,Vector3.zero,Quaternion.identity);
             gameObject.GetComponent<ExplodeRocks>().Explode(transform.position);
             gameObject.GetComponent<ExplodeRocks>().Explode(transform.position);
+            fightGame.GetComponent<FightMaster>().setOpponent(next_phase);
         }
+        if(dialogue)
+            GameObject.Instantiate(dialogue, fightGame.transform);
         GameObject.Destroy(gameObject);
     }
 
@@ -52,7 +59,7 @@ public abstract class Rockstorm_Superclass : MonoBehaviour
         if(fightGame.GetComponent<FightMaster>().consumeEnergyCharge()){
             fightGame.GetComponent<FightMaster>().setPauseCharging();
             gameObject.GetComponent<MathCaller>().CallMathEditor();
-            GetComponent<CircleCollider2D>().enabled = false;
+            gameObject.GetComponent<Lock>().setLock(true);
             return true;
         }
         return false;

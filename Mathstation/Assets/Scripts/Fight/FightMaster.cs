@@ -95,7 +95,7 @@ public class FightMaster : MonoBehaviour
     }
 
     public void ActivateOpponent(){
-        opponent.GetComponent<Collider2D>().enabled = true;
+        opponent.GetComponent<Lock>().setLock(false);
     }
 
     public void setOpponent(GameObject newOpponent){

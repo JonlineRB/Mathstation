@@ -1410,8 +1410,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6381558357103735806, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6381558357103735807, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 7592765028555121788, guid: fead3d7e8f2c64c499c69b091fb1b39d, type: 3}
     - target: {fileID: 6381558357103735807, guid: 05d87e1386fd7024c91e05efa2ad8594, type: 3}
       propertyPath: m_Enabled
       value: 1
