@@ -118,7 +118,7 @@ MonoBehaviour:
   stone: {fileID: 2833643141234570214, guid: 49b8cfc1c019bb14b8916480c283e6aa, type: 3}
   nextPhaseObject: {fileID: 6381558357103735554, guid: c69de04b88dbb89458e90d33658d6030, type: 3}
   energyGainValue: 0
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 7592765028555121788, guid: 511463159c1bc6a4193f582506240cce, type: 3}
   sprites:
   - {fileID: 21300000, guid: fb92381a106b29a4b81347a69a6b7994, type: 3}
   - {fileID: 21300000, guid: e2bd40a9c9f68ce47a3be76750ed46e3, type: 3}
@@ -163,3 +163,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b559c4f50a83674f9a239533c13bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 1

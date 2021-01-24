@@ -15,7 +15,8 @@ public class Rockstorm_Phase3 : Rockstorm_Phase2
     }
 
     public override void Destroy(){
-        Debug.Log("Win!");
+        //initiate crumbling animation, call win at the end
+        fightGame.GetComponent<FightMaster>().winGame();
         base.Destroy();
     }
 }

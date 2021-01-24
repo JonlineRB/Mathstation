@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FightMaster : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class FightMaster : MonoBehaviour
     public void DecrementLife(){
         if(--life<=0){
             heartManager.GetComponent<HeartManager>().SetHearts(0);
-            Debug.Log("Game Over!");
+            SceneManager.LoadScene("LoseScene");
             return;
         }
         heartManager.GetComponent<HeartManager>().SetHearts(life);
@@ -74,7 +75,7 @@ public class FightMaster : MonoBehaviour
     }
 
     public void winGame(){
-
+        SceneManager.LoadScene("WinScene");
     }
 
     public void mainMenu(){
