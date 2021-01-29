@@ -19,6 +19,7 @@ public class FightMaster : MonoBehaviour
     private bool lightSidePanel = true;
     [SerializeField]
     private GameObject heartManager;
+    [SerializeField]
     private bool pauseCharging = true;
     // Start is called before the first frame update
     void Start()
