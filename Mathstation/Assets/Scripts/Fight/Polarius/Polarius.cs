@@ -11,6 +11,14 @@ public class Polarius : MonoBehaviour
     private bool isVulnerable = false;
     [SerializeField]
     private Color shielded;
+    [SerializeField]
+    private Color vulnerable;
+    [SerializeField]
+    private int nrgGainValue;
+    [SerializeField]
+    private int shield;
+    [SerializeField]
+    private float vuln_time;
 
     void Start(){
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
@@ -22,8 +30,10 @@ public class Polarius : MonoBehaviour
     public bool orbShot(bool orbValue){
         bool result = (orbValue != isPositive);
         Debug.Log("Orb shot: " + result);
-        if(result)
-            StartCoroutine(FlashRed());
+        if(result){
+            DecrementShield();
+        }
+            
         else
             GameObject.Find("OrbParent").GetComponent<Rotate>().speedUp(20f);
         return result;
@@ -34,5 +44,29 @@ public class Polarius : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color=Color.red;
         yield return new WaitForSeconds(flashDuration);
         gameObject.GetComponent<SpriteRenderer>().color=og;
+    }
+
+    void OnMouseDown(){
+        if(!isVulnerable)
+            return;
+        GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgGainValue);
+    }
+
+    private void DecrementShield(){
+        if(--shield<=0){
+            isVulnerable = true;
+            gameObject.GetComponent<SpriteRenderer>().color = vulnerable;
+            //begin coroutine to reset
+            StartCoroutine(ResetShield());
+        }
+        else
+            StartCoroutine(FlashRed());
+    }
+
+    private IEnumerator ResetShield(){
+        yield return new WaitForSeconds(vuln_time);
+        isVulnerable = false;
+        gameObject.GetComponent<SpriteRenderer>().color = shielded;
+        shield = 3;
     }
 }
