@@ -22,4 +22,8 @@ public class Rotate : MonoBehaviour
         }
 
     }
+
+    public void speedUp(float value){
+        rotationRate += value;
+    }
 }

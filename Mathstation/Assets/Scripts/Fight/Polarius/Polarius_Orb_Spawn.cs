@@ -7,9 +7,18 @@ public class Polarius_Orb_Spawn : MonoBehaviour
     [SerializeField]
     private int amt_of_orbs;
     [SerializeField]
-    private GameObject orb_spawn;
+    private float radius;
+    [SerializeField]
+    private GameObject negOrb;
+    [SerializeField]
+    private GameObject posOrb;
     public void spawnOrbs(){
-        //spawb the prefab that has the orbs as children
-        GameObject.Instantiate(orb_spawn);
+        float slice = 360 / amt_of_orbs;
+        for(int i = 0; i < amt_of_orbs; i++){
+            if(i%2==1)
+                GameObject.Instantiate(posOrb, new Vector3( Mathf.Sin(slice*i * Mathf.PI / 180), Mathf.Cos(slice*i * Mathf.PI / 180),0) * radius, Quaternion.identity,transform);
+            else
+                GameObject.Instantiate(negOrb, new Vector3( Mathf.Sin(slice*i * Mathf.PI / 180), Mathf.Cos(slice*i * Mathf.PI / 180),0) * radius, Quaternion.identity,transform);
+        }
     }
 }
