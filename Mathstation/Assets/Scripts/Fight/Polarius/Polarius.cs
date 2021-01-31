@@ -22,12 +22,24 @@ public class Polarius : MonoBehaviour
     private float vuln_time;
     [SerializeField]
     private int life = 3;
+    [SerializeField]
+    private Sprite phase2;
+    [SerializeField]
+    private Sprite phase3Plus;
+    [SerializeField]
+    private Sprite phase3Minus;
+    [SerializeField]
+    private GameObject explosion;
+    private bool isAttacking = false;
+    [SerializeField]
+    private float attack_interval;
 
     void Start(){
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
         //delay here
         //spawn orbs
         GameObject.Find("OrbParent").GetComponent<Polarius_Orb_Spawn>().spawnOrbs();
+        StartCoroutine("AutoAttack");
     }
 
     public bool orbShot(bool orbValue){
@@ -36,8 +48,8 @@ public class Polarius : MonoBehaviour
             DecrementShield();
         }
             
-        // else
-            // GameObject.Find("OrbParent").GetComponent<Rotate>().speedUp(20f);
+        else
+            StartCoroutine("Attack");
         return result;
     }
 
@@ -49,6 +61,11 @@ public class Polarius : MonoBehaviour
     }
 
     void OnMouseDown(){
+        if(isAttacking){
+            isAttacking = false;
+            StopCoroutine("Attack");
+            gameObject.GetComponent<SpriteRenderer>().color = shielded;
+        }
         if(!isVulnerable)
             return;
         bool consumed = GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge();
@@ -75,19 +92,72 @@ public class Polarius : MonoBehaviour
     }
 
     private IEnumerator ResetShield(){
+        StopCoroutine("Attack");
+        StopCoroutine("AutoAttack");
         yield return new WaitForSeconds(vuln_time);
+        if(life==1){
+            isPositive = !isPositive;
+            switch(isPositive){
+                case true:
+                    gameObject.GetComponent<SpriteRenderer>().sprite = phase3Plus;
+                    break;
+                case false:
+                    gameObject.GetComponent<SpriteRenderer>().sprite = phase3Minus;
+                    break;
+            }
+        }
         isVulnerable = false;
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
         shield = 3;
         GameObject.Find("OrbParent").GetComponent<Polarius_Orb_Spawn>().Reset();
+        StartCoroutine("AutoAttack");
     }
 
 
     public void MathSuccess(){
-        if(--life <= 0){
-            SceneManager.LoadScene(3);
-        }
         GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
         gameObject.GetComponent<Collider2D>().enabled = true;
+
+       switch (--life) {
+           case 2:
+                //shift to phase 2
+                gameObject.GetComponent<SpriteRenderer>().sprite = phase2;
+                isPositive = false;
+                break;
+           case 1:
+                //shift to phase 3
+                gameObject.GetComponent<SpriteRenderer>().sprite = phase3Plus;
+                isPositive = true;
+                break;
+           case 0: 
+                SceneManager.LoadScene(3);
+                break;
+       }
     }
+
+    private IEnumerator Attack(){
+        isAttacking = true;
+        for(int i = 0; i < 7; i ++){
+            gameObject.GetComponent<SpriteRenderer>().color=Color.red;
+            yield return new WaitForSeconds(0.075f);
+            gameObject.GetComponent<SpriteRenderer>().color=shielded;
+            yield return new WaitForSeconds(0.075f);
+        }
+
+        GameObject.Instantiate(explosion, transform.position, Quaternion.identity);
+
+        GameObject.Find("FightGame").GetComponent<FightMaster>().DecrementLife();
+        
+        isAttacking = false;
+    }
+
+    private IEnumerator AutoAttack(){
+        while(true){
+        yield return new WaitForSeconds(attack_interval);
+        if(!isAttacking)
+            StartCoroutine("Attack");
+        }
+    }
+
+
 }

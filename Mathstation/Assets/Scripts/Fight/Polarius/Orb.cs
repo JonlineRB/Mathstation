@@ -12,8 +12,11 @@ public class Orb : MonoBehaviour
         if(result)
             // GameObject.Destroy(gameObject);
             gameObject.SetActive(false);
-        else
+        else{
             GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgDrain);
+            StartCoroutine(gameObject.GetComponent<FlashColor>().Flash());
+        }
+            
     }
     public void Swap(){
         isPositive = !isPositive;

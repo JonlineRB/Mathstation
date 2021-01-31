@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 37496632830365836}
   - component: {fileID: 37496632830365842}
   - component: {fileID: 37496632830365843}
+  - component: {fileID: -8408613459516719674}
   m_Layer: 0
-  m_Name: Orb
+  m_Name: OrbPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,3 +157,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPositive: 1
+--- !u!114 &-8408613459516719674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37496632830365838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f33113bf0992634ca75a1271a718b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0, b: 0, a: 1}
+  interval: 1
+  repeats: 1
