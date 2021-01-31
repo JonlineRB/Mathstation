@@ -26,4 +26,12 @@ public class Polarius_Orb_Spawn : MonoBehaviour
         foreach(Transform child in transform)
             child.gameObject.SetActive(true);
     }
+
+    public void NextPhase(){
+        //kill all kids! D:
+        foreach(Transform child in transform)
+            GameObject.Destroy(child.gameObject);
+        amt_of_orbs += 4;
+        spawnOrbs();
+    }
 }

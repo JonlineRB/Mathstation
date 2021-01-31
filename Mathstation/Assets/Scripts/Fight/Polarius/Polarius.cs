@@ -19,6 +19,8 @@ public class Polarius : MonoBehaviour
     [SerializeField]
     private int shield;
     [SerializeField]
+    private int maxShield;
+    [SerializeField]
     private float vuln_time;
     [SerializeField]
     private int life = 3;
@@ -70,6 +72,7 @@ public class Polarius : MonoBehaviour
             return;
         bool consumed = GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge();
         if(consumed){
+            StopCoroutine("AutoAttack");
             //disable stuff
             GameObject.Find("FightGame").GetComponent<FightMaster>().setPauseCharging();
             //call math editor
@@ -108,7 +111,7 @@ public class Polarius : MonoBehaviour
         }
         isVulnerable = false;
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
-        shield = 3;
+        shield = maxShield;
         GameObject.Find("OrbParent").GetComponent<Polarius_Orb_Spawn>().Reset();
         StartCoroutine("AutoAttack");
     }
@@ -117,6 +120,7 @@ public class Polarius : MonoBehaviour
     public void MathSuccess(){
         GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
         gameObject.GetComponent<Collider2D>().enabled = true;
+        GameObject.Find("OrbParent").GetComponent<Polarius_Orb_Spawn>().NextPhase();
 
        switch (--life) {
            case 2:
@@ -133,6 +137,8 @@ public class Polarius : MonoBehaviour
                 SceneManager.LoadScene(3);
                 break;
        }
+       maxShield += 2;
+       shield = maxShield;
     }
 
     private IEnumerator Attack(){
