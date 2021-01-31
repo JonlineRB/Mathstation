@@ -35,6 +35,7 @@ public class Polarius : MonoBehaviour
     private bool isAttacking = false;
     [SerializeField]
     private float attack_interval;
+    private bool doingMath = false;
 
     void Start(){
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
@@ -72,8 +73,8 @@ public class Polarius : MonoBehaviour
             return;
         bool consumed = GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge();
         if(consumed){
-            StopCoroutine("AutoAttack");
             //disable stuff
+            doingMath = true;
             GameObject.Find("FightGame").GetComponent<FightMaster>().setPauseCharging();
             //call math editor
             gameObject.GetComponent<Polarius_Mathcaller>().CallMathEditor();
@@ -139,6 +140,7 @@ public class Polarius : MonoBehaviour
        }
        maxShield += 2;
        shield = maxShield;
+       doingMath = false;
     }
 
     private IEnumerator Attack(){
@@ -160,7 +162,7 @@ public class Polarius : MonoBehaviour
     private IEnumerator AutoAttack(){
         while(true){
         yield return new WaitForSeconds(attack_interval);
-        if(!isAttacking)
+        if(!isAttacking && !doingMath)
             StartCoroutine("Attack");
         }
     }
