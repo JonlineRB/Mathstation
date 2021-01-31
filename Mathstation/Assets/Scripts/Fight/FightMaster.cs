@@ -16,7 +16,6 @@ public class FightMaster : MonoBehaviour
     private float nrg_charge_rate;
     [SerializeField]
     private GameObject sidePanel;
-    private bool lightSidePanel = true;
     [SerializeField]
     private GameObject heartManager;
     [SerializeField]
@@ -40,10 +39,11 @@ public class FightMaster : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.D)){
             DecrementLife();
         }
-        if(energy==100 && lightSidePanel){
+        if(energy==100){
             sidePanel.GetComponent<SidePanel>().toCharged();
-            lightSidePanel = false;
         }
+        else
+            sidePanel.GetComponent<SidePanel>().toIdle();
     }
 
     void FixedUpdate(){
@@ -69,7 +69,6 @@ public class FightMaster : MonoBehaviour
         if(energy==100){
             energy = 0;
             sidePanel.GetComponent<SidePanel>().toIdle();
-            lightSidePanel = true;
             return true;
         }
             return false;

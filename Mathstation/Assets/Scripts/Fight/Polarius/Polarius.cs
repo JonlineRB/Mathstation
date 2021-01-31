@@ -34,8 +34,8 @@ public class Polarius : MonoBehaviour
             DecrementShield();
         }
             
-        else
-            GameObject.Find("OrbParent").GetComponent<Rotate>().speedUp(20f);
+        // else
+            // GameObject.Find("OrbParent").GetComponent<Rotate>().speedUp(20f);
         return result;
     }
 
@@ -68,5 +68,6 @@ public class Polarius : MonoBehaviour
         isVulnerable = false;
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
         shield = 3;
+        GameObject.Find("OrbParent").GetComponent<Polarius_Orb_Spawn>().Reset();
     }
 }

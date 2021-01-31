@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c46dbdbe814db4394d6857cf79cd21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amt_of_orbs: 12
+  amt_of_orbs: 6
   radius: 3
   negOrb: {fileID: 3350861893102997579, guid: 253c0b63ba5363e479351ea28f9d8912, type: 3}
   posOrb: {fileID: 37496632830365838, guid: 070b9cf97efa8484193363425e75d419, type: 3}
