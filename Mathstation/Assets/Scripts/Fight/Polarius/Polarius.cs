@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Polarius : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Polarius : MonoBehaviour
     private int shield;
     [SerializeField]
     private float vuln_time;
+    [SerializeField]
+    private int life = 3;
 
     void Start(){
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
@@ -54,6 +57,7 @@ public class Polarius : MonoBehaviour
             GameObject.Find("FightGame").GetComponent<FightMaster>().setPauseCharging();
             //call math editor
             gameObject.GetComponent<Polarius_Mathcaller>().CallMathEditor();
+            gameObject.GetComponent<Collider2D>().enabled=false;
         }
         else
             GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgGainValue);
@@ -80,6 +84,10 @@ public class Polarius : MonoBehaviour
 
 
     public void MathSuccess(){
+        if(--life <= 0){
+            SceneManager.LoadScene(3);
+        }
         GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
+        gameObject.GetComponent<Collider2D>().enabled = true;
     }
 }
