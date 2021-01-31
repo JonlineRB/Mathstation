@@ -29,7 +29,6 @@ public class Polarius : MonoBehaviour
 
     public bool orbShot(bool orbValue){
         bool result = (orbValue != isPositive);
-        Debug.Log("Orb shot: " + result);
         if(result){
             DecrementShield();
         }
@@ -49,7 +48,15 @@ public class Polarius : MonoBehaviour
     void OnMouseDown(){
         if(!isVulnerable)
             return;
-        GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgGainValue);
+        bool consumed = GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge();
+        if(consumed){
+            //disable stuff
+            GameObject.Find("FightGame").GetComponent<FightMaster>().setPauseCharging();
+            //call math editor
+            gameObject.GetComponent<Polarius_Mathcaller>().CallMathEditor();
+        }
+        else
+            GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgGainValue);
     }
 
     private void DecrementShield(){
@@ -69,5 +76,10 @@ public class Polarius : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
         shield = 3;
         GameObject.Find("OrbParent").GetComponent<Polarius_Orb_Spawn>().Reset();
+    }
+
+
+    public void MathSuccess(){
+        GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
     }
 }
