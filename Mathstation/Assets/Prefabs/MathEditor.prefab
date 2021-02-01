@@ -4467,7 +4467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f07d00a0aae77b49a715cf255d08ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  problemCount: 3
+  problemCount: 2
   problemCountObject: {fileID: 1757521047}
   reportsTo: {fileID: 0}
 --- !u!114 &108031871
@@ -4482,11 +4482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe9320de1eec7347bba3c02efb7cf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainderDivision: 1
+  remainderDivision: 0
   negativeValues: 0
   textProblems: 0
-  includeMultiplication: 0
-  includeDivision: 1
+  includeMultiplication: 1
+  includeDivision: 0
   includeFractions: 0
   singleOperation: 1
   simplifyFractions: 0
