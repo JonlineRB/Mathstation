@@ -499,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582423937}
   - component: {fileID: 582423936}
+  - component: {fileID: 582423938}
   m_Layer: 0
   m_Name: Amp
   m_TagString: Untagged
@@ -571,6 +572,21 @@ Transform:
   m_Father: {fileID: 997878852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &582423938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582423935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f33113bf0992634ca75a1271a718b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0.1273585, b: 0.1273585, a: 1}
+  interval: 0.2
+  repeats: 4
 --- !u!1 &840958862
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +597,8 @@ GameObject:
   m_Component:
   - component: {fileID: 840958863}
   - component: {fileID: 840958864}
+  - component: {fileID: 840958866}
+  - component: {fileID: 840958865}
   m_Layer: 0
   m_Name: xButton
   m_TagString: Untagged
@@ -653,6 +671,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &840958865
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840958862}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.8, y: 12.8}
+    newSize: {x: 12.8, y: 12.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 5.23, y: -4.85}
+      - {x: 5.6299996, y: -4.41}
+      - {x: 5.73, y: -4.21}
+      - {x: 5.93, y: -4.04}
+      - {x: 6.02, y: -3.8}
+      - {x: 6.02, y: -3.1}
+      - {x: 6, y: -3.08}
+      - {x: 0, y: -3.08}
+      - {x: -0.02, y: -3.1}
+      - {x: -0.02, y: -4.5}
+      - {x: 0, y: -4.52}
+      - {x: 0.06, y: -4.71}
+      - {x: 0.35999998, y: -4.92}
+      - {x: 0.79999995, y: -5.22}
+      - {x: 4.5, y: -5.22}
+      - {x: 4.62, y: -5.13}
+      - {x: 4.64, y: -5.0299997}
+      - {x: 4.91, y: -5.04}
+--- !u!114 &840958866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840958862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f83b421752d6e4189295277de378d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isVButton: 0
+  v: {fileID: 0}
+  x: {fileID: 0}
 --- !u!1 &900787599
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +824,7 @@ MonoBehaviour:
   opponent: {fileID: 0}
   energy: 0
   MaxEnergy: 100
-  nrg_charge_rate: 4
+  nrg_charge_rate: 2
   sidePanel: {fileID: 1694763814}
   heartManager: {fileID: 1437290442}
   pauseCharging: 0
@@ -1139,6 +1215,7 @@ GameObject:
   - component: {fileID: 1324601610}
   - component: {fileID: 1324601612}
   - component: {fileID: 1324601613}
+  - component: {fileID: 1324601614}
   m_Layer: 0
   m_Name: QuizShow
   m_TagString: Untagged
@@ -1258,6 +1335,22 @@ MonoBehaviour:
   quiz: {fileID: 21300000, guid: ac9f8128a96339c44b2deee9a8d908bc, type: 3}
   initDuration: 2
   nrgGain: 3
+  life: 3
+  laugh: {fileID: 21300000, guid: e72461464e299dd41998daaa3f16d34e, type: 3}
+  nrgDrainWrongAnswer: 25
+--- !u!114 &1324601614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324601609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5647a539dbb752c4ba655fc5184a2d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
 --- !u!1 &1422089450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1497,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1502653550}
   - component: {fileID: 1502653551}
+  - component: {fileID: 1502653553}
+  - component: {fileID: 1502653552}
   m_Layer: 0
   m_Name: vButton
   m_TagString: Untagged
@@ -1476,6 +1571,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1502653552
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502653549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.8, y: 12.8}
+    newSize: {x: 12.8, y: 12.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.29, y: -4.8399997}
+      - {x: -0.06, y: -4.71}
+      - {x: 0.02, y: -4.5}
+      - {x: 0.02, y: -3.1}
+      - {x: 0, y: -3.08}
+      - {x: -6, y: -3.08}
+      - {x: -6.02, y: -3.1}
+      - {x: -6.02, y: -3.85}
+      - {x: -5.94, y: -4.0099998}
+      - {x: -5.8599997, y: -4.14}
+      - {x: -5.5699997, y: -4.5499997}
+      - {x: -5.12, y: -4.94}
+      - {x: -4.63, y: -5.12}
+      - {x: -4.5, y: -5.22}
+      - {x: -0.79999995, y: -5.22}
+      - {x: -0.78, y: -5.2}
+      - {x: -0.59, y: -5.04}
+      - {x: -0.39, y: -4.94}
+--- !u!114 &1502653553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502653549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f83b421752d6e4189295277de378d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isVButton: 1
+  v: {fileID: 0}
+  x: {fileID: 0}
 --- !u!1 &1517588354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,6 +2078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1864167760}
   - component: {fileID: 1864167759}
+  - component: {fileID: 1864167761}
   m_Layer: 0
   m_Name: SubWoofer
   m_TagString: Untagged
@@ -1997,6 +2151,21 @@ Transform:
   m_Father: {fileID: 1994393759}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1864167761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864167758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f33113bf0992634ca75a1271a718b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0.1273585, b: 0.1273585, a: 1}
+  interval: 0.2
+  repeats: 4
 --- !u!1 &1867494899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1879472604}
   - component: {fileID: 1879472603}
+  - component: {fileID: 1879472605}
   m_Layer: 0
   m_Name: Amp (1)
   m_TagString: Untagged
@@ -2145,6 +2315,21 @@ Transform:
   m_Father: {fileID: 997878852}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1879472605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879472602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f33113bf0992634ca75a1271a718b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0.1273585, b: 0.1273585, a: 1}
+  interval: 0.2
+  repeats: 4
 --- !u!1 &1982660422
 GameObject:
   m_ObjectHideFlags: 0

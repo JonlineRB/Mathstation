@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizShow : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class QuizShow : MonoBehaviour
     private bool isIdle = true;
     [SerializeField]
     private int nrgGain;
+    [SerializeField]
+    private int life = 3;
+    [SerializeField]
+    private Sprite laugh;
+    [SerializeField]
+    private int nrgDrainWrongAnswer;
 
     void Start(){
         StartCoroutine("Initiate");
@@ -36,9 +43,11 @@ public class QuizShow : MonoBehaviour
     }
     public void toIdleMode(){
         gameObject.GetComponent<SpriteRenderer>().sprite=idle;
+        textField.GetComponent<Text>().text="";
         vButton.SetActive(false);
         xButton.SetActive(false);
         isIdle=true;
+        StartCoroutine("Initiate");
     }
     public void GenerateStatement(){
         string result = "";
@@ -59,9 +68,9 @@ public class QuizShow : MonoBehaviour
 
         result += operand_a;
         if(aGreaterB)
-            result+="<";
-        else
             result+=">";
+        else
+            result+="<";
         
         result += operand_b;
 
@@ -87,12 +96,48 @@ public class QuizShow : MonoBehaviour
 
     void OnMouseDown(){
         if(isIdle){
-            GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgGain);
+            bool consumed = GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge();
+            if(consumed){
+                //call math editor
+                gameObject.GetComponent<QuizShow_Mathcaller>().CallMathEditor();
+                GameObject.Find("FightGame").GetComponent<FightMaster>().setPauseCharging();
+                StopAllCoroutines();
+                isIdle=false;
+            }
+            else
+                GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgGain);
         }
     }
 
-    public void vButtonClick(){}
+    public void vButtonClick(){
+        if(evaluateStatement()){
+            toIdleMode();
+        }
+        else
+            WrongAnswer();
+    }
 
-    public void xButtonClick(){}
+    public void xButtonClick(){
+        if(!evaluateStatement()){
+            toIdleMode();
+        }
+        else
+            WrongAnswer();
+    }
 
+    private void WrongAnswer(){
+        gameObject.GetComponent<SpriteRenderer>().sprite=laugh;
+        ClearText();
+        xButton.SetActive(false);
+        vButton.SetActive(false);
+        StartCoroutine("Initiate");
+        GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(-nrgDrainWrongAnswer);
+    }
+    public void MathSuccess(){
+        if(--life<=0)
+            SceneManager.LoadScene("WinScene");
+        isIdle=true;
+        GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
+        StartCoroutine("Initiate");
+    }
 }
