@@ -30,6 +30,8 @@ public class QuizShow : MonoBehaviour
     private Sprite laugh;
     [SerializeField]
     private int nrgDrainWrongAnswer;
+    [SerializeField]
+    private GameObject amp;
 
     void Start(){
         StartCoroutine("Initiate");
@@ -132,6 +134,7 @@ public class QuizShow : MonoBehaviour
         vButton.SetActive(false);
         StartCoroutine("Initiate");
         GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(-nrgDrainWrongAnswer);
+        amp.GetComponent<Amp>().InitAttack();
     }
     public void MathSuccess(){
         if(--life<=0)

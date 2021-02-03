@@ -14,6 +14,7 @@ public class FlashColor : MonoBehaviour
     public IEnumerator Flash(){
         Color og = gameObject.GetComponent<SpriteRenderer>().color;
         for(int i = 0; i < repeats; i++){
+            Debug.Log("DING");
             gameObject.GetComponent<SpriteRenderer>().color = color;
             yield return new WaitForSeconds(interval);
             gameObject.GetComponent<SpriteRenderer>().color = og;

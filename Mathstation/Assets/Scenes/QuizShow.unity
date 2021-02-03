@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &218397816
 Transform:
   m_ObjectHideFlags: 0
@@ -499,7 +499,8 @@ GameObject:
   m_Component:
   - component: {fileID: 582423937}
   - component: {fileID: 582423936}
-  - component: {fileID: 582423938}
+  - component: {fileID: 582423939}
+  - component: {fileID: 582423940}
   m_Layer: 0
   m_Name: Amp
   m_TagString: Untagged
@@ -572,7 +573,7 @@ Transform:
   m_Father: {fileID: 997878852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &582423938
+--- !u!114 &582423939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -581,12 +582,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 582423935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f33113bf0992634ca75a1271a718b32, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dba2bdb2890e6047b882d5e22ea5360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.1273585, b: 0.1273585, a: 1}
-  interval: 0.2
-  repeats: 4
+  flashColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
+  explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
+  flashInterval: 0.075
+  attackInterval: 1.65
+--- !u!61 &582423940
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582423935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06453991}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.89, y: 4.4638186}
+  m_EdgeRadius: 0
 --- !u!1 &840958862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100495935}
   - component: {fileID: 1100495934}
+  - component: {fileID: 1100495936}
   m_Layer: 0
   m_Name: Amp (3)
   m_TagString: Untagged
@@ -1203,6 +1232,22 @@ Transform:
   m_Father: {fileID: 218397816}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1100495936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100495933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dba2bdb2890e6047b882d5e22ea5360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
+  explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
+  flashInterval: 0.075
+  attackInterval: 1.65
 --- !u!1 &1324601609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1383,7 @@ MonoBehaviour:
   life: 3
   laugh: {fileID: 21300000, guid: e72461464e299dd41998daaa3f16d34e, type: 3}
   nrgDrainWrongAnswer: 25
+  amp: {fileID: 582423935}
 --- !u!114 &1324601614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,12 +2206,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1864167758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f33113bf0992634ca75a1271a718b32, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dba2bdb2890e6047b882d5e22ea5360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.1273585, b: 0.1273585, a: 1}
-  interval: 0.2
-  repeats: 4
+  flashColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
+  explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
+  flashInterval: 0.075
+  attackInterval: 1.65
 --- !u!1 &1867494899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,12 +2371,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1879472602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f33113bf0992634ca75a1271a718b32, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dba2bdb2890e6047b882d5e22ea5360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.1273585, b: 0.1273585, a: 1}
-  interval: 0.2
-  repeats: 4
+  flashColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
+  explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
+  flashInterval: 0.075
+  attackInterval: 1.65
 --- !u!1 &1982660422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,7 +2468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1994393759
 Transform:
   m_ObjectHideFlags: 0
@@ -2623,6 +2671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116246924}
   - component: {fileID: 2116246923}
+  - component: {fileID: 2116246925}
   m_Layer: 0
   m_Name: Amp (2)
   m_TagString: Untagged
@@ -2695,6 +2744,22 @@ Transform:
   m_Father: {fileID: 218397816}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2116246925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116246922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dba2bdb2890e6047b882d5e22ea5360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
+  explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
+  flashInterval: 0.075
+  attackInterval: 1.65
 --- !u!1 &2144921112
 GameObject:
   m_ObjectHideFlags: 0

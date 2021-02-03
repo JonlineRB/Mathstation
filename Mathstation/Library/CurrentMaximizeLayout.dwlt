@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 677, y: 342}
+  m_MaxSize: {x: 12002, y: 8042}
   vertical: 0
-  controlID: 15994
+  controlID: 22249
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 0
     width: 1542
     height: 947
-  m_MinSize: {x: 402, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 402, y: 342}
+  m_MaxSize: {x: 8002, y: 8042}
   vertical: 1
-  controlID: 15995
+  controlID: 22250
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 15996
+  controlID: 22251
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,9 +309,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.008604776, y: -0.61292094, z: -1.0613432}
+    m_Target: {x: 0.36538437, y: -0.673105, z: -1.0766035}
     speed: 2
-    m_Value: {x: 0.008604776, y: -0.61292094, z: -1.0613432}
+    m_Value: {x: 0.36538437, y: -0.673105, z: -1.0766035}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -362,9 +362,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.2365055
+    m_Target: 4.0458627
     speed: 2
-    m_Value: 4.2365055
+    m_Value: 4.0458627
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -494,15 +494,15 @@ MonoBehaviour:
     y: 573
     width: 1542
     height: 374
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -541,21 +541,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Fight/QuizShow
+    - Assets/Scripts/Fight/QuizShow
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 80
   m_LastFolders:
-  - Assets/Sprites/Fight/QuizShow
+  - Assets/Scripts/Fight/QuizShow
   m_LastFoldersGridSize: 80
   m_LastProjectPath: D:\Thesis\Repo\Mathstation\Mathstation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 14410000
-    m_LastClickedID: 16660
-    m_ExpandedIDs: 00000000b43f0000b63f0000b83f0000ba3f0000d83f0000f649000000ca9a3b
+    m_SelectedIDs: 12510000
+    m_LastClickedID: 20754
+    m_ExpandedIDs: 00000000b43f0000b63f0000b83f0000ba3f0000d83f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,8 +608,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 4e400000
-    m_LastClickedInstanceID: 16462
+    m_SelectedInstanceIDs: 14400000
+    m_LastClickedInstanceID: 16404
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300009045000000000000e441000000700000
     m_RenameOverlay:
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 16462
+  m_LastSelectedObjectID: 16404
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -749,7 +749,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 16462
+  m_LastInspectedObjectInstanceID: 16404
   m_LastVerticalScrollValue: 0
   m_AssetGUID: 
   m_InstanceID: 0
