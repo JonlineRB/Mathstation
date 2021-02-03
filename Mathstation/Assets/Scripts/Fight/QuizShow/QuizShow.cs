@@ -31,10 +31,17 @@ public class QuizShow : MonoBehaviour
     [SerializeField]
     private int nrgDrainWrongAnswer;
     [SerializeField]
-    private GameObject amp;
+    private List<GameObject> amps;
+    [SerializeField]
+    private float attackInterval;
+    [SerializeField]
+    private GameObject Set2;
+    [SerializeField]
+    private GameObject Set3;
 
     void Start(){
         StartCoroutine("Initiate");
+        StartCoroutine("Attack");
     }
 
     public void toQuizMode(){
@@ -96,6 +103,14 @@ public class QuizShow : MonoBehaviour
         GenerateStatement();
     }
 
+    private IEnumerator Attack(){
+        while(true){
+            yield return new WaitForSeconds(attackInterval);
+            Debug.Log(amps.Count);
+            amps[Random.Range(0,amps.Count)].GetComponent<Amp>().InitAttack();
+            // amps[1].GetComponent<Amp>().InitAttack();
+        }
+    }
     void OnMouseDown(){
         if(isIdle){
             bool consumed = GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge();
@@ -134,13 +149,34 @@ public class QuizShow : MonoBehaviour
         vButton.SetActive(false);
         StartCoroutine("Initiate");
         GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(-nrgDrainWrongAnswer);
-        amp.GetComponent<Amp>().InitAttack();
+        
+        //attack with a random amp
+        int index = Random.Range(0,amps.Count);
+        bool taken = amps[index].GetComponent<Amp>().IsAttackig();
+        while(taken){
+            index = (index + 1) % amps.Count;
+            taken = amps[index].GetComponent<Amp>().IsAttackig();
+        }
+        amps[index].GetComponent<Amp>().InitAttack();
     }
     public void MathSuccess(){
         if(--life<=0)
             SceneManager.LoadScene("WinScene");
+        switch (life){
+            case 2:
+                Set2.SetActive(true);
+                foreach(Transform child in Set2.transform)
+                    amps.Add(child.gameObject);
+                break;
+            case 1:
+                Set3.SetActive(true);
+                foreach(Transform child in Set3.transform)
+                    amps.Add(child.gameObject);
+                break;
+        }
         isIdle=true;
         GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
         StartCoroutine("Initiate");
+        StartCoroutine("Attack");
     }
 }

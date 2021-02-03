@@ -1160,6 +1160,7 @@ GameObject:
   - component: {fileID: 1100495935}
   - component: {fileID: 1100495934}
   - component: {fileID: 1100495936}
+  - component: {fileID: 1100495937}
   m_Layer: 0
   m_Name: Amp (3)
   m_TagString: Untagged
@@ -1248,6 +1249,32 @@ MonoBehaviour:
   explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
   flashInterval: 0.075
   attackInterval: 1.65
+--- !u!61 &1100495937
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100495933}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06453991}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.89, y: 4.4638186}
+  m_EdgeRadius: 0
 --- !u!1 &1324601609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,7 +1410,12 @@ MonoBehaviour:
   life: 3
   laugh: {fileID: 21300000, guid: e72461464e299dd41998daaa3f16d34e, type: 3}
   nrgDrainWrongAnswer: 25
-  amp: {fileID: 582423935}
+  amps:
+  - {fileID: 582423935}
+  - {fileID: 1879472602}
+  attackInterval: 4
+  Set2: {fileID: 1994393758}
+  Set3: {fileID: 218397815}
 --- !u!114 &1324601614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,6 +2157,7 @@ GameObject:
   - component: {fileID: 1864167760}
   - component: {fileID: 1864167759}
   - component: {fileID: 1864167761}
+  - component: {fileID: 1864167762}
   m_Layer: 0
   m_Name: SubWoofer
   m_TagString: Untagged
@@ -2213,6 +2246,32 @@ MonoBehaviour:
   explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
   flashInterval: 0.075
   attackInterval: 1.65
+--- !u!61 &1864167762
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864167758}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.9551563}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.55, y: 2.4996872}
+  m_EdgeRadius: 0
 --- !u!1 &1867494899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,6 +2349,7 @@ GameObject:
   - component: {fileID: 1879472604}
   - component: {fileID: 1879472603}
   - component: {fileID: 1879472605}
+  - component: {fileID: 1879472606}
   m_Layer: 0
   m_Name: Amp (1)
   m_TagString: Untagged
@@ -2378,6 +2438,32 @@ MonoBehaviour:
   explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
   flashInterval: 0.075
   attackInterval: 1.65
+--- !u!61 &1879472606
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879472602}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06453991}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.89, y: 4.4638186}
+  m_EdgeRadius: 0
 --- !u!1 &1982660422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,6 +2758,7 @@ GameObject:
   - component: {fileID: 2116246924}
   - component: {fileID: 2116246923}
   - component: {fileID: 2116246925}
+  - component: {fileID: 2116246926}
   m_Layer: 0
   m_Name: Amp (2)
   m_TagString: Untagged
@@ -2760,6 +2847,32 @@ MonoBehaviour:
   explosion: {fileID: 5226978550088883020, guid: 30c62e64400d2584caabe51db6a412e2, type: 3}
   flashInterval: 0.075
   attackInterval: 1.65
+--- !u!61 &2116246926
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116246922}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06453991}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.89, y: 4.4638186}
+  m_EdgeRadius: 0
 --- !u!1 &2144921112
 GameObject:
   m_ObjectHideFlags: 0

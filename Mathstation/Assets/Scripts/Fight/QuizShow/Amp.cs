@@ -13,12 +13,14 @@ public class Amp : MonoBehaviour
     private float flashInterval;
     [SerializeField]
     private float attackInterval;
+    private bool isAttacking = false;
     
     void Start(){
         ogColor = gameObject.GetComponent<SpriteRenderer>().color;
     }
     
     public void InitAttack(){
+        isAttacking = true;
         StartCoroutine("Flash");
         StartCoroutine("Attack");
     }
@@ -34,6 +36,7 @@ public class Amp : MonoBehaviour
 
     void OnMouseDown(){
         StopAllCoroutines();
+        isAttacking = false;
         gameObject.GetComponent<SpriteRenderer>().color=ogColor;
     }
 
@@ -43,5 +46,10 @@ public class Amp : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color=ogColor;
         GameObject.Instantiate(explosion,transform.position,Quaternion.identity);
         GameObject.Find("FightGame").GetComponent<FightMaster>().DecrementLife();
+        isAttacking = false;
+    }
+
+    public bool IsAttackig(){
+        return isAttacking;
     }
 }
