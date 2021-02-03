@@ -49,6 +49,9 @@ public class QuizShow : MonoBehaviour
         vButton.SetActive(true);
         xButton.SetActive(true);
         isIdle = false;
+        if(life==1)
+            SwapButtons();
+
     }
     public void toIdleMode(){
         gameObject.GetComponent<SpriteRenderer>().sprite=idle;
@@ -178,5 +181,10 @@ public class QuizShow : MonoBehaviour
         GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
         StartCoroutine("Initiate");
         StartCoroutine("Attack");
+    }
+
+    public void SwapButtons(){
+        vButton.GetComponent<QuizShowButton>().Swap();
+        xButton.GetComponent<QuizShowButton>().Swap();
     }
 }

@@ -755,8 +755,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isVButton: 0
-  v: {fileID: 0}
-  x: {fileID: 0}
+  v: {fileID: 21300000, guid: c95a04ed52e29854bba8a17a038aae7e, type: 3}
+  x: {fileID: 21300000, guid: ae07b2993e53e4840a0051b216a9166a, type: 3}
 --- !u!1 &900787599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,8 +1705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isVButton: 1
-  v: {fileID: 0}
-  x: {fileID: 0}
+  v: {fileID: 21300000, guid: 7c35c59575acb964896c3651244cb3c0, type: 3}
+  x: {fileID: 21300000, guid: 2b28f177371fde44c9fe85f0ffd8328e, type: 3}
 --- !u!1 &1517588354
 GameObject:
   m_ObjectHideFlags: 0
