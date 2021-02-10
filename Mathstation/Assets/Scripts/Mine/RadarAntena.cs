@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thruster : MonoBehaviour
+public class RadarAntena : MonoBehaviour
 {
     [SerializeField]
-    private GameObject engine;
-    [SerializeField]
-    private float boostValue;
+    private GameObject popup;
 
     void OnMouseDown(){
         if(GameObject.Find("MineGame").GetComponent<ClickLock>().isLocked())
             return;
-        engine.GetComponent<Engine>().Boost(boostValue);
+        popup.SetActive(true);
+        GameObject.Find("MineGame").GetComponent<ClickLock>().Lock();
     }
 }

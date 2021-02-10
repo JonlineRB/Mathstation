@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Radar : MonoBehaviour
 {
-    private bool isDeployed = false;
+    // private bool isDeployed = false;
 
-    public void Deploy(){
-        isDeployed = true;
-    }
+    // public void Deploy(){
+    //     isDeployed = true;
+    // }
 }

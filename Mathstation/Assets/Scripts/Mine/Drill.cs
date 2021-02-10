@@ -11,6 +11,8 @@ public class Drill : MonoBehaviour
     private GameObject resourceObject;
 
     void OnMouseDown(){
+        if(GameObject.Find("MineGame").GetComponent<ClickLock>().isLocked())
+            return;
         resourceObject.GetComponent<Resource>().Boost(boostValue);
     }
 }
