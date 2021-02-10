@@ -11,23 +11,28 @@ public class Resource : MonoBehaviour
     private float passiveGainRate;
     [SerializeField]
     private GameObject textObject;
+    [SerializeField]
+    private GameObject[] deployButtons;
 
 
     void Update(){
+        metals += passiveGainRate * Time.deltaTime;
         metals = Mathf.Clamp(metals, 0, 100);
         textObject.GetComponent<Text>().text = ((int)metals).ToString();
     }
-
-    void FixedUpdate(){
-        metals += passiveGainRate * Time.deltaTime;
-    }
     
 
-    public void Consume(){}
+    public void Consume(){
+        metals = 0;
+    }
 
     public void Boost(float value){
         metals += value;
     }
 
     public void Reduce(){}
+
+    public bool isFullResources(){
+        return metals==100;
+    }
 }
