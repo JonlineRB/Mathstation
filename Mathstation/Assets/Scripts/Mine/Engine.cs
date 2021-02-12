@@ -17,7 +17,7 @@ public class Engine : MonoBehaviour
             return;
         journey += rate * Time.deltaTime;
         //check for events here
-        // gameObject.GetComponent<Obstacles>().;
+        gameObject.GetComponent<Obstacles>().CheckEvent((int)journey);
         journey = Mathf.Clamp(journey, 0f, 100f);
         textObject.GetComponent<Text>().text = ((int)journey).ToString() + "%";
     }

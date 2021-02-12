@@ -2309,8 +2309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014247c187b4a5f449cf813a481bae54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events: 00000000
-  occourences: 0a000000
+  events: 0000000001000000
+  occourences: 050000000a000000
 --- !u!1 &1725507372
 GameObject:
   m_ObjectHideFlags: 0

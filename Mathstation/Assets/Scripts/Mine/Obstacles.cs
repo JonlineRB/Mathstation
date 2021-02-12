@@ -16,11 +16,15 @@ public class Obstacles : MonoBehaviour
         for(int i = 0; i < occourences.Length && i < events.Length; i++){
             combined.Add((events[i], occourences[i], true));
         }
+    }
 
-        //testing
-        Debug.Log("combined:");
-        foreach((MineGameEvent.EventType, int, bool) entry in combined){
-            Debug.Log(entry.Item1 + ", " + entry.Item2 + ", " + entry.Item3);
+    public void CheckEvent(int value){
+        if(combined.Count==0)
+            return;
+        if(value>= combined[0].Item2){
+            //triger event
+            Debug.Log("Event triggered: " + combined[0].Item1);
+            combined.RemoveAt(0);
         }
     }
     
