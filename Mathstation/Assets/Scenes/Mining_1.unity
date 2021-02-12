@@ -2007,6 +2007,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostValue: 100
   resourceObject: {fileID: 1663617451}
+  breakTimerFlat: 1
+  breakTimerRandom: 1
 --- !u!61 &1471313203
 BoxCollider2D:
   m_ObjectHideFlags: 0

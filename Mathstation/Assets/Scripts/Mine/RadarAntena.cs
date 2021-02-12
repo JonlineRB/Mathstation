@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadarAntena : MonoBehaviour
+public class RadarAntena : ClickLockedObject
 {
     [SerializeField]
     private GameObject popup;
 
     void OnMouseDown(){
-        if(GameObject.Find("MineGame").GetComponent<ClickLock>().isLocked())
+        if(IsLocked())
             return;
         popup.SetActive(true);
         GameObject.Find("MineGame").GetComponent<ClickLock>().Lock();

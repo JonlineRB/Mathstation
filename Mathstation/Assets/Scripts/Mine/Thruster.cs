@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thruster : MonoBehaviour
+public class Thruster : ClickLockedObject
 {
     [SerializeField]
     private GameObject engine;
@@ -10,7 +10,7 @@ public class Thruster : MonoBehaviour
     private float boostValue;
 
     void OnMouseDown(){
-        if(GameObject.Find("MineGame").GetComponent<ClickLock>().isLocked())
+        if(IsLocked())
             return;
         engine.GetComponent<Engine>().Boost(boostValue);
     }

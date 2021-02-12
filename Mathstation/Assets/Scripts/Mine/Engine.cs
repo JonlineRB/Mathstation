@@ -21,7 +21,6 @@ public class Engine : MonoBehaviour
     }
 
     public void DeployEngine(){
-        Debug.Log("ENGINE DEPLOY");
         engineDeployed = true;
     }
 

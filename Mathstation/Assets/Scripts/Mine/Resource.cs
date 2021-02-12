@@ -13,9 +13,12 @@ public class Resource : MonoBehaviour
     private GameObject textObject;
     [SerializeField]
     private GameObject[] deployButtons;
+    private bool broken = false;
 
 
     void Update(){
+        if(broken)
+            return;
         metals += passiveGainRate * Time.deltaTime;
         metals = Mathf.Clamp(metals, 0, 100);
         textObject.GetComponent<Text>().text = ((int)metals).ToString();
@@ -34,5 +37,17 @@ public class Resource : MonoBehaviour
 
     public bool isFullResources(){
         return metals==100;
+    }
+
+    public bool IsBroken(){
+        return broken;
+    }
+
+    public void Break(){
+        broken = true;
+    }
+
+    public void Repair(){
+        broken = false;
     }
 }
