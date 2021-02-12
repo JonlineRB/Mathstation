@@ -29,7 +29,7 @@ public class Drill : ClickLockedObject
     }
 
     void Start(){
-        StartCoroutine("InitBreak");
+        // StartCoroutine("InitBreak");
     }
 
     IEnumerator InitBreak(){
