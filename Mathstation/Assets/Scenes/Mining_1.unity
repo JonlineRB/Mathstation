@@ -231,17 +231,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1663617452}
-        m_TargetAssemblyTypeName: MineMaster, Assembly-CSharp
-        m_MethodName: ActivateRadar
-        m_Mode: 1
+      - m_Target: {fileID: 1274581654}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 33020560}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -1613,17 +1613,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1663617452}
-        m_TargetAssemblyTypeName: MineMaster, Assembly-CSharp
-        m_MethodName: ActivateEngine
-        m_Mode: 1
+      - m_Target: {fileID: 786874174}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1056716992}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2465,17 +2465,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1663617452}
-        m_TargetAssemblyTypeName: MineMaster, Assembly-CSharp
-        m_MethodName: ActivateCannon
-        m_Mode: 1
+      - m_Target: {fileID: 2145063716}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1475160389}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2705,7 +2705,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1663617453}
-  - component: {fileID: 1663617452}
   - component: {fileID: 1663617454}
   - component: {fileID: 1663617455}
   - component: {fileID: 1663617456}
@@ -2718,23 +2717,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1663617452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663617451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4303e2cce75a4ee48b02d0a5090ed105, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drill: {fileID: 1471313198}
-  engine: {fileID: 786874174}
-  radar: {fileID: 1274581654}
-  cannon: {fileID: 2145063716}
-  shield: {fileID: 0}
 --- !u!4 &1663617453
 Transform:
   m_ObjectHideFlags: 0
