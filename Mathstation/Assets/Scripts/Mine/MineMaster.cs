@@ -10,6 +10,10 @@ public class MineMaster : MonoBehaviour
     private GameObject engine;
     [SerializeField]
     private GameObject radar;
+    [SerializeField]
+    private GameObject cannon;
+    [SerializeField]
+    private GameObject shield;
 
     public void ActivateDrill(){
         drill.SetActive(true);
@@ -21,5 +25,13 @@ public class MineMaster : MonoBehaviour
 
     public void ActivateRadar(){
         radar.SetActive(true);
+    }
+
+    public void ActivateCannon(){
+        cannon.SetActive(true);
+    }
+
+    public void ActivateShield(){
+        shield.SetActive(true);
     }
 }
