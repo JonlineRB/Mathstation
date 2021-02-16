@@ -15,12 +15,12 @@ public class Obstacles : MonoBehaviour
     [SerializeField]
     private GameObject shield;
 
-    private  List<(MineGameEvent.EventType, int, bool)> combined = new List<(MineGameEvent.EventType, int, bool)>();
+    private  List<(MineGameEvent.EventType, int)> combined = new List<(MineGameEvent.EventType, int)>();
 
     void Start(){
         System.Array.Sort(occourences);
         for(int i = 0; i < occourences.Length && i < events.Length; i++){
-            combined.Add((events[i], occourences[i], true));
+            combined.Add((events[i], occourences[i]));
         }
     }
 
@@ -63,5 +63,9 @@ public class Obstacles : MonoBehaviour
         }
         else
             gameObject.GetComponent<Penalties>().Add(MineGameEvent.EventType.Pirates);
+    }
+
+    public List<(MineGameEvent.EventType, int)> getEvents(){
+        return combined;
     }
 }

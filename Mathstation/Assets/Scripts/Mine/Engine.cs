@@ -29,4 +29,8 @@ public class Engine : MonoBehaviour
     public void Boost(float value){
         journey += value;
     }
+
+    public int getJourney(){
+        return (int)journey;
+    }
 }
