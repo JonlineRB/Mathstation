@@ -9,6 +9,12 @@ public class Obstacles : MonoBehaviour
     [SerializeField]
     private int[] occourences;
 
+    //gadget references
+    [SerializeField]
+    private GameObject cannon;
+    [SerializeField]
+    private GameObject shield;
+
     private  List<(MineGameEvent.EventType, int, bool)> combined = new List<(MineGameEvent.EventType, int, bool)>();
 
     void Start(){
@@ -24,8 +30,38 @@ public class Obstacles : MonoBehaviour
         if(value>= combined[0].Item2){
             //triger event
             Debug.Log("Event triggered: " + combined[0].Item1);
+            switch (combined[0].Item1){
+            case MineGameEvent.EventType.Blockade:
+                BlockadeEvent();
+                break;
+            case MineGameEvent.EventType.Pirates:
+                PirateEvent();
+                break;
+                
+            }
             combined.RemoveAt(0);
         }
     }
-    
+
+    private void BlockadeEvent(){
+        //check if there is cannos
+        if(cannon.activeSelf){
+            //visual FX here
+            Debug.Log("Barricade cleared!");
+        }
+        else
+            gameObject.GetComponent<Penalties>().Add(MineGameEvent.EventType.Blockade);
+    }
+
+    private void PirateEvent(){
+        //check if there is cannos
+        bool cannonActive = cannon.activeSelf;
+        bool shieldActive = shield.activeSelf;
+        if(cannonActive && shieldActive){
+            //visual FX here
+            Debug.Log("Pirates defeated!");
+        }
+        else
+            gameObject.GetComponent<Penalties>().Add(MineGameEvent.EventType.Pirates);
+    }
 }
