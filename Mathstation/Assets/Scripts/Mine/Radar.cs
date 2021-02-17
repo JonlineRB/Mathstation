@@ -14,11 +14,12 @@ public class Radar : MonoBehaviour
     [SerializeField]
     private GameObject blockade;
 
+    private List<GameObject> blips = new List<GameObject>();
+
     private int journey;
 
     //put the sprites on the radar
     void OnEnable(){
-        Debug.Log("DING");
         //get sprite status, journey
         GameObject mineGame = GameObject.Find("MineGame");
         journey = mineGame.GetComponent<Engine>().getJourney();
@@ -31,7 +32,24 @@ public class Radar : MonoBehaviour
             if(!(entry.Item2 - journey <= radarRange))
                 continue;
             //if it's in range, instantiate prefab (sprite)
-            Debug.Log("event on radar: " + entry.Item1.ToString());
+            GameObject instancee = null;
+            switch (entry.Item1){
+            case MineGameEvent.EventType.Blockade:
+                instancee = blockade;
+                break;
+            case MineGameEvent.EventType.Pirates:
+                instancee = pirates;
+                break;
+            }
+            GameObject blip = GameObject.Instantiate(instancee, transform);
+            blip.transform.Translate(new Vector3(((float)entry.Item2 - (float)journey) / radarRange * 120 + 50,0,0)); //max range is 170, min is 50
+            blips.Add(blip);
         }
+    }
+    
+    void OnDisable(){
+        foreach(GameObject blip in blips)
+            GameObject.Destroy(blip);
+        blips = new List<GameObject>();
     }
 }
