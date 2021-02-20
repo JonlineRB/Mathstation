@@ -218,8 +218,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 683e0000
-      m_LastClickedID: 15976
+      m_SelectedIDs: b23d0000
+      m_LastClickedID: 15794
       m_ExpandedIDs: 54fbffff2a3d0000063e0000723e0000a63e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -309,9 +309,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 519.22455, y: 237.5076, z: -141.8987}
+    m_Target: {x: 503.38577, y: 271.08597, z: -157.8591}
     speed: 2
-    m_Value: {x: 519.22455, y: 237.5076, z: -141.8987}
+    m_Value: {x: 503.38577, y: 271.08597, z: -157.8591}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -362,9 +362,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 530.12146
+    m_Target: 319.45706
     speed: 2
-    m_Value: 530.12146
+    m_Value: 319.45706
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -541,21 +541,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Mine
+    - Assets/Prefabs
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 80
   m_LastFolders:
-  - Assets/Sprites/Mine
+  - Assets/Prefabs
   m_LastFoldersGridSize: 80
   m_LastProjectPath: D:\Thesis\Repo\Mathstation\Mathstation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 71}
-    m_SelectedIDs: 623f0000
-    m_LastClickedID: 16226
-    m_ExpandedIDs: 00000000383f00003a3f00003c3f00003e3f0000403f000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 403f0000
+    m_LastClickedID: 16192
+    m_ExpandedIDs: 00000000383f00003a3f00003c3f00003e3f0000403f00005a3f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,9 +608,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 683e0000
-    m_LastClickedInstanceID: 15976
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: b23d0000
+    m_LastClickedInstanceID: 15794
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009045000000000000e441000000700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -26380
+  m_LastSelectedObjectID: 15794
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -750,7 +750,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 304
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
