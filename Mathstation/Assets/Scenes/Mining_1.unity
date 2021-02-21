@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 33020564}
   - component: {fileID: 33020563}
   - component: {fileID: 33020562}
+  - component: {fileID: 33020566}
   m_Layer: 5
   m_Name: RadarButton
   m_TagString: Untagged
@@ -231,22 +232,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1274581654}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 33020560}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 33020566}
+        m_TargetAssemblyTypeName: Mine_Super_Mathcaller, Assembly-CSharp
+        m_MethodName: CallMathEditor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -293,6 +282,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33020560}
   m_CullTransparentMesh: 0
+--- !u!114 &33020566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33020560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c160e686b21bc14cbd49f5b8d4af1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+  successObject: {fileID: 1274581654}
 --- !u!1 &37056447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,6 +1757,7 @@ GameObject:
   - component: {fileID: 849745946}
   - component: {fileID: 849745945}
   - component: {fileID: 849745948}
+  - component: {fileID: 849745949}
   m_Layer: 5
   m_Name: ShieldButton
   m_TagString: Untagged
@@ -1824,18 +1828,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1182009741}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1663617454}
         m_TargetAssemblyTypeName: Resource, Assembly-CSharp
         m_MethodName: Consume
@@ -1846,12 +1838,12 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 849745943}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 849745949}
+        m_TargetAssemblyTypeName: Mine_Super_Mathcaller, Assembly-CSharp
+        m_MethodName: CallMathEditor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1911,6 +1903,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceContainer: {fileID: 1663617451}
+--- !u!114 &849745949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849745943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c160e686b21bc14cbd49f5b8d4af1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+  successObject: {fileID: 1182009741}
 --- !u!1 &858844383
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,6 +3228,7 @@ GameObject:
   - component: {fileID: 1475160392}
   - component: {fileID: 1475160391}
   - component: {fileID: 1475160394}
+  - component: {fileID: 1475160395}
   m_Layer: 5
   m_Name: CannonButton
   m_TagString: Untagged
@@ -3304,22 +3311,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2145063716}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1475160389}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1475160395}
+        m_TargetAssemblyTypeName: Mine_Super_Mathcaller, Assembly-CSharp
+        m_MethodName: CallMathEditor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3379,6 +3374,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceContainer: {fileID: 1663617451}
+--- !u!114 &1475160395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475160389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c160e686b21bc14cbd49f5b8d4af1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+  successObject: {fileID: 2145063716}
 --- !u!1 &1513148682
 GameObject:
   m_ObjectHideFlags: 0

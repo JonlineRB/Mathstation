@@ -78,7 +78,7 @@ public class MathEditorInput : MonoBehaviour
 
     IEnumerator restoreClickable(){
         clickable = false;
-        yield return new WaitForSeconds(0.02f);
+        yield return new WaitForSecondsRealtime(0.02f);
         clickable = true;
     }
 
