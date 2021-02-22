@@ -11,9 +11,10 @@ public class Engine : MonoBehaviour
     private GameObject textObject;
     private float journey;
     private bool engineDeployed;
+    private bool blockade = false;
 
     void Update(){
-        if(!engineDeployed)
+        if(!engineDeployed || blockade)
             return;
         journey += rate * Time.deltaTime;
         //check for events here
@@ -32,5 +33,13 @@ public class Engine : MonoBehaviour
 
     public int getJourney(){
         return (int)journey;
+    }
+
+    public void Blockade(){
+        blockade = true;
+    }
+
+    public void PassBlockade(){
+        blockade = false;
     }
 }
