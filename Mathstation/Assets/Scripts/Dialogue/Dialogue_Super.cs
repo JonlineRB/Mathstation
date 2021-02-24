@@ -9,22 +9,38 @@ public class Dialogue_Super : MonoBehaviour
     private string[] texts;
     [SerializeField]
     private GameObject textObject;
-    private int index = 0;    
+    private int index = 0;
+    [SerializeField]
+    private List<GameObject> assistObjects = new List<GameObject>();
 
-    void Start(){
+    public virtual void OnEnable(){
         textObject.GetComponent<Text>().text = texts[index];
         Time.timeScale=0;
+
+        if(assistObjects[0])
+            assistObjects[0].SetActive(true);
     }
 
     public void Next(){
         if(index==texts.Length-1){
             Close();
+            return;
         }
-        else
-            textObject.GetComponent<Text>().text = texts[++index];
+
+        if(assistObjects[index]){
+            assistObjects[index].SetActive(false);
+        }
+
+        textObject.GetComponent<Text>().text = texts[++index];
+        
+        if(assistObjects[index]){
+            assistObjects[index].SetActive(true);
+        }
     }
 
     public virtual void Close(){
+        if(assistObjects[index])
+            assistObjects[index].SetActive(false);
         Time.timeScale=1f;
         GameObject.Destroy(gameObject);
     }

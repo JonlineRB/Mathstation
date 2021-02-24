@@ -15,6 +15,10 @@ public class Engine : MonoBehaviour
     private bool engineStopped = false;
     [SerializeField]
     private GameObject engineObject;
+    [SerializeField]
+    private bool callTutorialLine;
+    [SerializeField]
+    private GameObject tutorialLine;
 
     void Update(){
         if(!engineDeployed || blockade || engineStopped)
@@ -28,6 +32,11 @@ public class Engine : MonoBehaviour
 
     public void DeployEngine(){
         engineDeployed = true;
+        //also deploy some dialogue
+        if(callTutorialLine){
+            // gameObject.GetComponent<Mine_Dialogue_Manager>().Call(tutorialLine);
+            tutorialLine.SetActive(true);
+        }
     }
 
     public void Boost(float value){
