@@ -2285,7 +2285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   engine: {fileID: 1663617451}
-  boostValue: 4
+  engineOn: {fileID: 21300000, guid: 7087c9186babafe4893978d774282ecf, type: 3}
+  engineOff: {fileID: 21300000, guid: b48a3c44dce14954ab44b71e6315d8d4, type: 3}
 --- !u!61 &786874178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5709,6 +5710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 3
   textObject: {fileID: 377445115}
+  engineObject: {fileID: 786874174}
 --- !u!114 &1663617456
 MonoBehaviour:
   m_ObjectHideFlags: 0

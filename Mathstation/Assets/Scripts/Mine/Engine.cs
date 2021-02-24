@@ -12,9 +12,12 @@ public class Engine : MonoBehaviour
     private float journey;
     private bool engineDeployed;
     private bool blockade = false;
+    private bool engineStopped = false;
+    [SerializeField]
+    private GameObject engineObject;
 
     void Update(){
-        if(!engineDeployed || blockade)
+        if(!engineDeployed || blockade || engineStopped)
             return;
         journey += rate * Time.deltaTime;
         //check for events here
@@ -43,5 +46,10 @@ public class Engine : MonoBehaviour
 
     public void PassBlockade(){
         blockade = false;
+    }
+
+    public void StartStopEngine(){
+        engineStopped = !engineStopped;
+        engineObject.GetComponent<Thruster>().setSprite(!engineStopped);
     }
 }

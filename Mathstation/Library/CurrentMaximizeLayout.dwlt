@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 51456
+  controlID: 63095
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 51408
+  controlID: 63096
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 51371
+  controlID: 63017
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,21 +220,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c474ffff5278ffff5478fffff27bffffa886ffff50bfffff62bfffff80c3ffff54fbffff2a3d0000063e0000723e0000a63e00001c8c0000e88c0000fa8c0000
+      m_ExpandedIDs: 0a7ffeff56a6feff4aacfeffecb0feff86b1feffc474ffff5278ffff5478fffff27bffffa886ffff50bfffff62bfffff80c3ffff54fbffff2a3d0000063e0000723e0000a63e00001c8c0000e88c0000fa8c0000248f0100ae900100f690010000a0010076a80100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Dialogue_Win 1
+        m_OriginalName: Dialogue_Win 1
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -98552
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -309,9 +309,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.20909023, y: -0.23998976, z: -3.669431}
+    m_Target: {x: 472, y: 170, z: 0}
     speed: 2
-    m_Value: {x: 0.20909023, y: -0.23998976, z: -3.669431}
+    m_Value: {x: 472, y: 170, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -362,9 +362,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.585618
+    m_Target: 416.65454
     speed: 2
-    m_Value: 7.585618
+    m_Value: 416.65454
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -541,21 +541,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/BGs
+    - Assets/Scenes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 80
   m_LastFolders:
-  - Assets/BGs
+  - Assets/Scenes
   m_LastFoldersGridSize: 80
   m_LastProjectPath: D:\Thesis\Repo\Mathstation\Mathstation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 4a3f0000
-    m_LastClickedID: 16202
-    m_ExpandedIDs: 00000000383f00003c3f00003e3f0000403f00005a3f000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 583f0000
+    m_LastClickedID: 16216
+    m_ExpandedIDs: 00000000383f00003c3f00003e3f0000403f00005a3f0000e847000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,8 +608,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fa8c0000
-    m_LastClickedInstanceID: 36090
+    m_SelectedInstanceIDs: 087ffeff
+    m_LastClickedInstanceID: -98552
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009045000000000000e441000000700000
     m_RenameOverlay:
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 36252
+  m_LastSelectedObjectID: 107622
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -749,7 +749,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 36090
+  m_LastInspectedObjectInstanceID: -98552
   m_LastVerticalScrollValue: 0
   m_AssetGUID: 
   m_InstanceID: 0
