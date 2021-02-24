@@ -28,6 +28,8 @@ public class Engine : MonoBehaviour
     }
 
     public void Boost(float value){
+        if(blockade)
+            return;
         journey += value;
     }
 

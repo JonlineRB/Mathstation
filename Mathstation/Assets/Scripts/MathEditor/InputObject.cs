@@ -127,13 +127,13 @@ public class InputObject : MonoBehaviour
 
     IEnumerator FeedbackWrong(){
         feedbackObject.GetComponent<Image>().sprite = feedbackWrong;
-        yield return new WaitForSeconds(feedbackChangeTime);
+        yield return new WaitForSecondsRealtime(feedbackChangeTime);
         feedbackObject.GetComponent<Image>().sprite = feedbackIdle;
     }
 
     IEnumerator FeedbackCorrect(){
         feedbackObject.GetComponent<Image>().sprite = feedbackCorrect;
-        yield return new WaitForSeconds(feedbackChangeTime);
+        yield return new WaitForSecondsRealtime(feedbackChangeTime);
         feedbackObject.GetComponent<Image>().sprite = feedbackIdle;
     }
 }

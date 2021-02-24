@@ -49,8 +49,10 @@ public class Obstacles : MonoBehaviour
             //visual FX here
             Debug.Log("Barricade cleared!");
         }
-        else
+        else{
             gameObject.GetComponent<Penalties>().Add(MineGameEvent.EventType.Blockade);
+            GameObject.Find("MineGame").GetComponent<Engine>().Blockade();
+        }
     }
 
     private void PirateEvent(){
