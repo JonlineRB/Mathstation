@@ -14,6 +14,8 @@ public class Obstacles : MonoBehaviour
     private GameObject cannon;
     [SerializeField]
     private GameObject shield;
+    [SerializeField]
+    private GameObject Blockade;
 
     private  List<(MineGameEvent.EventType, int)> combined = new List<(MineGameEvent.EventType, int)>();
 
@@ -44,10 +46,11 @@ public class Obstacles : MonoBehaviour
     }
 
     private void BlockadeEvent(){
+        Blockade.SetActive(true);
         //check if there is cannos
         if(cannon.activeSelf){
             //visual FX here
-            Debug.Log("Barricade cleared!");
+            Debug.Log("Blockade cleared!");
         }
         else{
             gameObject.GetComponent<Penalties>().Add(MineGameEvent.EventType.Blockade);
