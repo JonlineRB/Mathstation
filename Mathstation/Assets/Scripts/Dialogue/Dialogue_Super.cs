@@ -17,6 +17,9 @@ public class Dialogue_Super : MonoBehaviour
         textObject.GetComponent<Text>().text = texts[index];
         Time.timeScale=0;
 
+        if(assistObjects.Count==0)
+            return;
+
         if(assistObjects[0])
             assistObjects[0].SetActive(true);
     }
@@ -27,19 +30,19 @@ public class Dialogue_Super : MonoBehaviour
             return;
         }
 
-        if(assistObjects[index]){
+        if(index<assistObjects.Count && assistObjects[index]){
             assistObjects[index].SetActive(false);
         }
 
         textObject.GetComponent<Text>().text = texts[++index];
         
-        if(assistObjects[index]){
+        if(index<assistObjects.Count && assistObjects[index]){
             assistObjects[index].SetActive(true);
         }
     }
 
     public virtual void Close(){
-        if(assistObjects[index])
+        if(index < assistObjects.Count && assistObjects[index])
             assistObjects[index].SetActive(false);
         Time.timeScale=1f;
         GameObject.Destroy(gameObject);

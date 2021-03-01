@@ -255,6 +255,7 @@ MonoBehaviour:
     shells. Fire a devastating charged shot when the gague on the top right is full
     to finish the job.
   textObject: {fileID: 7592765028320682993}
+  assistObjects: []
 --- !u!1 &7592765029605652934
 GameObject:
   m_ObjectHideFlags: 0
