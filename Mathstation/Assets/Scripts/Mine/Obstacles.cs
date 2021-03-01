@@ -17,6 +17,10 @@ public class Obstacles : MonoBehaviour
     [SerializeField]
     private GameObject Blockade;
 
+    //other references
+    [SerializeField]
+    private GameObject pirateShipSpawner;
+
     private  List<(MineGameEvent.EventType, int)> combined = new List<(MineGameEvent.EventType, int)>();
 
     void Start(){
@@ -59,6 +63,9 @@ public class Obstacles : MonoBehaviour
     }
 
     private void PirateEvent(){
+        //do the visual part
+        pirateShipSpawner.SetActive(true);
+        
         //check if there is cannos
         bool cannonActive = cannon.activeSelf;
         bool shieldActive = shield.activeSelf;
