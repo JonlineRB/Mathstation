@@ -20,8 +20,8 @@ public class SpawnPirateShips : MonoBehaviour
         for(int i = 0; i < amtOfShips; i++){
             //add some modifiers: some should be in front of the roid, some behind, different sizes
             GameObject currentShip = GameObject.Instantiate(pirateShip,transform.position, Quaternion.identity);
-            currentShip.GetComponent<Move>().SetTranslateVector(new Vector3(-1, -0.25f * Mathf.Pow(-1f, i)));
-            currentShip.transform.Translate(new Vector3(0,0,Mathf.Pow(-1f, i) * -2));
+            currentShip.GetComponent<Move>().SetTranslateVector(new Vector3(-1, -0.17f * Mathf.Pow(-1f, i)));
+            currentShip.transform.Translate(new Vector3(0,0,Mathf.Pow(-1f, i) * -4));
             yield return new WaitForSeconds(interSpawnInterval);
         }
         gameObject.SetActive(false);

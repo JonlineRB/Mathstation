@@ -20,6 +20,8 @@ public class Obstacles : MonoBehaviour
     //other references
     [SerializeField]
     private GameObject pirateShipSpawner;
+    [SerializeField]
+    private GameObject rockShowerSpawner;
 
     private  List<(MineGameEvent.EventType, int)> combined = new List<(MineGameEvent.EventType, int)>();
 
@@ -43,7 +45,9 @@ public class Obstacles : MonoBehaviour
             case MineGameEvent.EventType.Pirates:
                 PirateEvent();
                 break;
-                
+            case MineGameEvent.EventType.Shower:
+                ShowerEvent();
+                break;
             }
             combined.RemoveAt(0);
         }
@@ -53,8 +57,6 @@ public class Obstacles : MonoBehaviour
         Blockade.SetActive(true);
         //check if there is cannos
         if(cannon.activeSelf){
-            //visual FX here
-            Debug.Log("Blockade cleared!");
         }
         else{
             gameObject.GetComponent<Penalties>().Add(MineGameEvent.EventType.Blockade);
@@ -71,11 +73,26 @@ public class Obstacles : MonoBehaviour
         bool shieldActive = shield.activeSelf;
         if(cannonActive && shieldActive){
             //visual FX here
+            cannon.GetComponent<SpriteSwap>().InitSwap();
+            shield.GetComponent<EnableTmpSprite>().InitExternalSprite();
             Debug.Log("Pirates defeated!");
         }
         else
             gameObject.GetComponent<Penalties>().Add(MineGameEvent.EventType.Pirates);
     }
+
+    private void ShowerEvent(){
+        rockShowerSpawner.SetActive(true);
+
+        //check if shields are active
+        bool shieldActive = shield.activeSelf;
+        if(shieldActive)
+            shield.GetComponent<EnableTmpSprite>().InitExternalSprite();
+        else
+            gameObject.GetComponent<Penalties>().Add(MineGameEvent.EventType.Shower);
+
+    }
+
 
     public List<(MineGameEvent.EventType, int)> getEvents(){
         return combined;

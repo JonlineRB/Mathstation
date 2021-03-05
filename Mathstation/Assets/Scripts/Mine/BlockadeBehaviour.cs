@@ -33,8 +33,10 @@ public class BlockadeBehaviour : MonoBehaviour
     }
 
     public void BlowUp(){
-        Debug.Log("DING");
-        StartCoroutine("DestructionSequence");
+        // Debug.Log("DING");
+        // StartCoroutine("DestructionSequence");
+        GameObject.Find("Cannon").GetComponent<SpriteSwap>().InitSwap();
+        GameObject.Destroy(gameObject);
     }
 
     private IEnumerator DestructionSequence(){

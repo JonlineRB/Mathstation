@@ -14,6 +14,9 @@ public class Radar : MonoBehaviour
     [SerializeField]
     private GameObject blockade;
 
+    [SerializeField]
+    private GameObject shower;
+
     private List<GameObject> blips = new List<GameObject>();
 
     private int journey;
@@ -39,6 +42,9 @@ public class Radar : MonoBehaviour
                 break;
             case MineGameEvent.EventType.Pirates:
                 instancee = pirates;
+                break;
+            case MineGameEvent.EventType.Shower:
+                instancee = shower;
                 break;
             }
             GameObject blip = GameObject.Instantiate(instancee, transform);

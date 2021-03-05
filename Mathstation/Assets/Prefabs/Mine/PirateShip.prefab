@@ -110,4 +110,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationVector: {x: -1, y: 0, z: 0}
-  velocity: 14
+  velocity: 11
