@@ -36,7 +36,8 @@ public class BlockadeBehaviour : MonoBehaviour
         // Debug.Log("DING");
         // StartCoroutine("DestructionSequence");
         GameObject.Find("Cannon").GetComponent<SpriteSwap>().InitSwap();
-        GameObject.Destroy(gameObject);
+        transform.position = new Vector3(initialPosition, transform.position.y, transform.position.z);
+        gameObject.SetActive(false);
     }
 
     private IEnumerator DestructionSequence(){
@@ -47,6 +48,9 @@ public class BlockadeBehaviour : MonoBehaviour
             yield return new WaitForSeconds(blinkDuration);
         }
 
-        GameObject.Destroy(gameObject);
+
+        //reset positoin, deactivate
+        transform.position = new Vector3(initialPosition, transform.position.y, transform.position.z);
+        gameObject.SetActive(false);
     }
 }

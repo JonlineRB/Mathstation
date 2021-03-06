@@ -19,6 +19,8 @@ public class Engine : MonoBehaviour
     private bool callTutorialLine;
     [SerializeField]
     private GameObject tutorialLine;
+    [SerializeField]
+    private GameObject JourneyReportWindow;
 
     void Update(){
         if(!engineDeployed || blockade || engineStopped)
@@ -28,6 +30,11 @@ public class Engine : MonoBehaviour
         gameObject.GetComponent<Obstacles>().CheckEvent((int)journey);
         journey = Mathf.Clamp(journey, 0f, 100f);
         textObject.GetComponent<Text>().text = ((int)journey).ToString() + "%";
+
+        if(journey >= 100){
+            //call journey report, level over
+            JourneyReportWindow.SetActive(true);
+        }
     }
 
     public void DeployEngine(){
