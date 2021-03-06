@@ -21,6 +21,7 @@ public class Engine : MonoBehaviour
     private GameObject tutorialLine;
     [SerializeField]
     private GameObject JourneyReportWindow;
+    private bool journeyComplete = false;
 
     void Update(){
         if(!engineDeployed || blockade || engineStopped)
@@ -31,8 +32,10 @@ public class Engine : MonoBehaviour
         journey = Mathf.Clamp(journey, 0f, 100f);
         textObject.GetComponent<Text>().text = ((int)journey).ToString() + "%";
 
-        if(journey >= 100){
+        if(journey >= 100 && !journeyComplete){
             //call journey report, level over
+            journeyComplete = true;
+            GameObject.Find("EngineUI").GetComponent<PopFadeGUI>().initPopFade();
             JourneyReportWindow.SetActive(true);
         }
     }

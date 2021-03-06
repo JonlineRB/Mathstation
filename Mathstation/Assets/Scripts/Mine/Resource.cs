@@ -14,6 +14,7 @@ public class Resource : MonoBehaviour
     [SerializeField]
     private GameObject[] deployButtons;
     private bool broken = false;
+    private bool fullPopFX = true;
 
 
     void Update(){
@@ -22,11 +23,16 @@ public class Resource : MonoBehaviour
         metals += passiveGainRate * Time.deltaTime;
         metals = Mathf.Clamp(metals, 0, 100);
         textObject.GetComponent<Text>().text = ((int)metals).ToString();
+        if(metals >= 100 && fullPopFX){
+            fullPopFX = false;
+            GameObject.Find("ResourceUI").GetComponent<PopFadeGUI>().initPopFade();
+        }
     }
     
 
     public void Consume(){
         metals = 0;
+        fullPopFX = true;
     }
 
     public void Boost(float value){
