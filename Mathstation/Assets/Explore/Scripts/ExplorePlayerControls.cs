@@ -15,10 +15,10 @@ public class ExplorePlayerControls : MonoBehaviour
 
     void Update(){
         if(leadingObject.activeSelf && Vector3.Distance(transform.position, leadingObject.transform.position) > stopDistance){
-            float lookAngle = Vector2.Angle(transform.up, (leadingObject.transform.position - transform.position).normalized);
+            float lookAngle = Vector2.SignedAngle(transform.up, (leadingObject.transform.position - transform.position).normalized);
+            // transform.Rotate(new Vector3(0,0,lookAngle * Time.deltaTime));
             transform.Rotate(new Vector3(0,0,lookAngle));
             transform.Translate(Vector3.up * maxVelocity * Time.deltaTime ,Space.Self);
         }
     }
-
 }
