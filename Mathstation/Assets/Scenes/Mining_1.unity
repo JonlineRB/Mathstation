@@ -6386,7 +6386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e474314d97f05234d8a67471f4b000c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostValue: 100
+  boostValue: 10
   resourceObject: {fileID: 1663617451}
   breakTimerFlat: 1
   breakTimerRandom: 1
@@ -7497,7 +7497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57d26cc3daee3a42bc05129d787d07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 7
+  rate: 5
   textObject: {fileID: 377445115}
   engineObject: {fileID: 786874174}
   callTutorialLine: 1
@@ -7540,8 +7540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014247c187b4a5f449cf813a481bae54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events: 00000000010000000300000000000000
-  occourences: 1800000043000000500000005a000000
+  events: 0000000001000000
+  occourences: 320000005a000000
   cannon: {fileID: 2145063716}
   shield: {fileID: 1182009741}
   Blockade: {fileID: 1359951224}

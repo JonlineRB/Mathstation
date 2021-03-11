@@ -6,11 +6,15 @@ public class MoveTargetMarker : MonoBehaviour
 {
     [SerializeField]
     private GameObject targetMarker;
+    [SerializeField] private GameObject player;
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButton(0)){
+            //if player movement is locked, don't do anything
+            if(player.GetComponent<MoveLock>().isMoveLock())
+                return;
             Vector2 mouseScreenPosition = Input.mousePosition;
             Ray ray = gameObject.GetComponent<Camera>().ScreenPointToRay(mouseScreenPosition);
 
