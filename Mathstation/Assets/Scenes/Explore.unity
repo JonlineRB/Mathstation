@@ -5345,6 +5345,8 @@ MonoBehaviour:
   duration_2: 0.4
   distance_2: 2
   intermission: 0.7
+  mainCamera: {fileID: 835902146}
+  cameraDistance: 1.2
 --- !u!114 &793249850
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,14 @@ public class PlayerRingInterpolation : MonoBehaviour
     [SerializeField] private float duration_2;
     [SerializeField] private float distance_2;
     [SerializeField] private float intermission;
+    [SerializeField] private GameObject mainCamera;
+    [SerializeField] private float cameraDistance;
+    private float cameraOGSize;
     private GameObject currentRing;
+
+    void Start(){
+        cameraOGSize = mainCamera.GetComponent<Camera>().orthographicSize;
+    }
     
     public void Init1stInterpolation(Vector3 position, GameObject ring){
         currentRing = ring;
@@ -28,6 +35,8 @@ public class PlayerRingInterpolation : MonoBehaviour
 
             transform.position = Vector3.Lerp(currentPosition, position, elapsed / duration_1);
 
+            mainCamera.GetComponent<Camera>().orthographicSize = Mathf.Lerp(cameraOGSize, cameraOGSize - cameraDistance, elapsed / duration_1);
+
             elapsed += Time.deltaTime;
 
             yield return null;
@@ -35,6 +44,7 @@ public class PlayerRingInterpolation : MonoBehaviour
 
         transform.position = position;
         transform.rotation = Quaternion.identity;
+        mainCamera.GetComponent<Camera>().orthographicSize = cameraOGSize - cameraDistance;
 
         //call math here, rest depends on correct solving
 
@@ -58,10 +68,13 @@ public class PlayerRingInterpolation : MonoBehaviour
 
             elapsed += Time.deltaTime;
 
+            mainCamera.GetComponent<Camera>().orthographicSize = Mathf.Lerp(cameraOGSize - cameraDistance, cameraOGSize, elapsed / duration_2);
+
             yield return null;
         }
 
         transform.position = finPosition;
+        mainCamera.GetComponent<Camera>().orthographicSize = cameraOGSize;
         gameObject.GetComponent<MoveLock>().setMoveLock(false);
     }
 }
