@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class Ring : MonoBehaviour
 {
-    [SerializeField] private float interpolationDistance;
-    [SerializeField] private GameObject moveMarker;
-    [SerializeField] private float duration;
-    [SerializeField] private float size;
-    [SerializeField] private float windUp;
-    [SerializeField] private GameObject lowerPart;
+    [SerializeField] protected float interpolationDistance;
+    [SerializeField] protected GameObject moveMarker;
+    [SerializeField] protected float duration;
+    [SerializeField] protected float size;
+    [SerializeField] protected float windUp;
+    [SerializeField] protected GameObject lowerPart;
+    protected GameObject player;
     public void OnTriggerEnter2D(Collider2D other){
         moveMarker.SetActive(false);
         other.GetComponent<Fuel>().SetConsuming(false);
+        player = other.gameObject;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
         //interpolate player into a specified position
         other.GetComponent<PlayerRingInterpolation>().Init1stInterpolation(transform.position - new Vector3(0, interpolationDistance, 0), gameObject);
     }
 
     public IEnumerator Consume(){
+        //apply the ring's effect to player here
+        ApplyRingEffect();
         //windUp to delay the consumption effect
         yield return new WaitForSeconds(windUp);
         float elapsed= 0;
@@ -41,4 +46,6 @@ public class Ring : MonoBehaviour
 
         gameObject.SetActive(false);
     }
+
+    protected virtual void ApplyRingEffect(){}
 }

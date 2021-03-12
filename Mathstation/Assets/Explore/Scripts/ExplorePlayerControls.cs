@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class ExplorePlayerControls : MonoBehaviour
 {
-    [SerializeField]
-    private float maxVelocity;
+    
+    private float currentVelocity;
+    [SerializeField] private List<float> velocities;
+    private int velocityIndex = 0;
 
     [SerializeField]
     private GameObject leadingObject;
     [SerializeField]
     private float stopDistance;
+
+    void Start(){
+        currentVelocity = velocities[0];
+    }
 
 
     void Update(){
@@ -18,7 +24,13 @@ public class ExplorePlayerControls : MonoBehaviour
             gameObject.GetComponent<Fuel>().SetConsuming(true);
             float lookAngle = Vector2.SignedAngle(transform.up, (leadingObject.transform.position - transform.position).normalized);
             transform.Rotate(new Vector3(0,0,lookAngle));
-            transform.Translate(Vector3.up * maxVelocity * Time.deltaTime ,Space.Self);
+            transform.Translate(Vector3.up * currentVelocity * Time.deltaTime ,Space.Self);
+        }
+    }
+
+    public void SpeedUp(){
+        if(velocities.Count > velocityIndex + 1){
+            currentVelocity = velocities[++velocityIndex];
         }
     }
 }
