@@ -11,4 +11,8 @@ public class FollowPosition : MonoBehaviour
     {
         transform.position = new Vector3(following.transform.position.x, following.transform.position.y, transform.position.z);
     }
+
+    public void SetFollowing(GameObject followObject){
+        following = followObject;
+    }
 }
