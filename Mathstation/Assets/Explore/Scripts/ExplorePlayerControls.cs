@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ExplorePlayerControls : MonoBehaviour
 {
@@ -13,9 +14,11 @@ public class ExplorePlayerControls : MonoBehaviour
     private GameObject leadingObject;
     [SerializeField]
     private float stopDistance;
+    [SerializeField] private GameObject velocityText;
 
     void Start(){
         currentVelocity = velocities[0];
+        velocityText.GetComponent<Text>().text = ((int)currentVelocity).ToString();
     }
 
 
@@ -32,5 +35,6 @@ public class ExplorePlayerControls : MonoBehaviour
         if(velocities.Count > velocityIndex + 1){
             currentVelocity = velocities[++velocityIndex];
         }
+        velocityText.GetComponent<Text>().text = ((int)currentVelocity).ToString();
     }
 }

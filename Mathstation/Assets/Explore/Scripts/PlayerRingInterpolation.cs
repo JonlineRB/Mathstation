@@ -46,18 +46,23 @@ public class PlayerRingInterpolation : MonoBehaviour
         transform.rotation = Quaternion.identity;
         mainCamera.GetComponent<Camera>().orthographicSize = cameraOGSize - cameraDistance;
 
-        //call math here, rest depends on correct solving
-
-        //intermission
+        // intermission
         yield return new WaitForSeconds(intermission);
 
+        //call math here, rest depends on correct solving
+        gameObject.GetComponent<Explore_Player_Mathcaller>().CallMathEditor();
+
+        
+
         //call the next interpolation
-        StartCoroutine("Interpolation_2");
+        // StartCoroutine("Interpolation_2");
     }
 
-    private IEnumerator Interpolation_2(){ //2nd interpolation, fly through the ring and consume it
+    public IEnumerator Interpolation_2(){ //2nd interpolation, fly through the ring and consume it
         currentRing.GetComponent<Ring>().StartCoroutine("Consume");
         float elapsed = 0;
+        // intermission
+        yield return new WaitForSeconds(intermission);
 
         Vector3 currentPosition = transform.position;
         Vector3 finPosition = currentPosition + new Vector3(0, distance_2, 0);
