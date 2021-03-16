@@ -6,6 +6,8 @@ public class Carry : MonoBehaviour
 {
 
     public enum Carriables {None, Moon}
+    private GameObject carryReference;
+    [SerializeField] private GameObject carriedMoon;
     private Carriables carrying;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,18 @@ public class Carry : MonoBehaviour
 
     public void SetCarrying(Carriables value){
         carrying = value;
+        switch (carrying){
+            case Carriables.None:
+                GameObject.Destroy(carryReference);    
+                break;
+            case Carriables.Moon:
+                GameObject moon = GameObject.Instantiate(carriedMoon, transform.position, Quaternion.identity);
+                moon.GetComponent<FollowPosition>().SetFollowing(gameObject);
+                carryReference = moon;
+                break;
+        }
+        if(carrying == Carriables.None)
+            GameObject.Destroy(carryReference);
     }
 
     public Carriables GetCarrying(){

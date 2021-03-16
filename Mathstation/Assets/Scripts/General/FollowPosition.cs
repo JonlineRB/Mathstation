@@ -9,6 +9,8 @@ public class FollowPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!following)
+            return;
         transform.position = new Vector3(following.transform.position.x, following.transform.position.y, transform.position.z);
     }
 
