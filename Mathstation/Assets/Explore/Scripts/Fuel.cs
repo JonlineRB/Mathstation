@@ -16,6 +16,7 @@ public class Fuel : MonoBehaviour
     [SerializeField] private List<int> capacities;
     [SerializeField] private GameObject fuelText;
     [SerializeField] private GameObject capacityText;
+    [SerializeField] private GameObject rateText;
     private float fuel;
 
     void Start(){
@@ -23,6 +24,7 @@ public class Fuel : MonoBehaviour
         capacity = capacities[capacitiesIndex];
         fuel = (float)capacity;
         capacityText.GetComponent<Text>().text = capacity.ToString();
+        rateText.GetComponent<Text>().text = consumptionRate.ToString();
     }
 
     // Update is called once per frame
@@ -51,11 +53,14 @@ public class Fuel : MonoBehaviour
             capacity = capacities[++capacitiesIndex];
         ResetFuel();
         capacityText.GetComponent<Text>().text = capacity.ToString();
+        gameObject.GetComponent<UpgradeLog>().CapacityUp();
     }
 
     public void RateUp(){
         if(consumptionRates.Count > consumptionIndex + 1)
             consumptionRate = consumptionRates[++consumptionIndex];
         ResetFuel();
+        gameObject.GetComponent<UpgradeLog>().ConsumptionUp();
+        rateText.GetComponent<Text>().text = consumptionRate.ToString();
     }
 }

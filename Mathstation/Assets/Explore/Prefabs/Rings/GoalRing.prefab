@@ -92,10 +92,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9112467257991184583}
   - component: {fileID: 9112467257991184582}
-  - component: {fileID: 9112467257991184581}
   - component: {fileID: 9112467257991184580}
+  - component: {fileID: 6332982405944219823}
   m_Layer: 0
-  m_Name: Ring
+  m_Name: GoalRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,24 +167,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9112467257991184581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9112467257991184577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7e005fd799877b469053c1c59f43892, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interpolationDistance: 1
-  moveMarker: {fileID: 0}
-  duration: 1
-  size: 0.25
-  windUp: 0.3
-  lowerPart: {fileID: 9112467257220517059}
 --- !u!61 &9112467257991184580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -211,3 +193,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15, y: 15}
   m_EdgeRadius: 0
+--- !u!114 &6332982405944219823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9112467257991184577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e1d19e16fdefa428ea3765e028c713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interpolationDistance: 1
+  moveMarker: {fileID: 0}
+  duration: 1
+  size: 0.25
+  windUp: 0.3
+  lowerPart: {fileID: 9112467257220517059}
+  report: {fileID: 8233389616575123216, guid: dd6a92283cc4b69409ed0571b8f9937e, type: 3}

@@ -36,5 +36,6 @@ public class ExplorePlayerControls : MonoBehaviour
             currentVelocity = velocities[++velocityIndex];
         }
         velocityText.GetComponent<Text>().text = ((int)currentVelocity).ToString();
+        gameObject.GetComponent<UpgradeLog>().SpeedUp();    
     }
 }

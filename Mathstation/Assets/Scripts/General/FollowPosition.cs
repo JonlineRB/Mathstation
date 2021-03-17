@@ -5,16 +5,21 @@ using UnityEngine;
 public class FollowPosition : MonoBehaviour
 {
     [SerializeField] private GameObject following;
+    private bool isFollowing = true;
 
     // Update is called once per frame
     void Update()
     {
-        if(!following)
+        if(!following || !isFollowing)
             return;
         transform.position = new Vector3(following.transform.position.x, following.transform.position.y, transform.position.z);
     }
 
     public void SetFollowing(GameObject followObject){
         following = followObject;
+    }
+
+    public void SetIsFollownig(bool value){
+        isFollowing = value;
     }
 }

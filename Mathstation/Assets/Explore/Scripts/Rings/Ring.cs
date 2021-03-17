@@ -12,6 +12,8 @@ public class Ring : MonoBehaviour
     [SerializeField] protected GameObject lowerPart;
     protected GameObject player;
     public void OnTriggerEnter2D(Collider2D other){
+        if(!moveMarker)
+            moveMarker = GameObject.Find("TargetMarker");
         moveMarker.SetActive(false);
         other.GetComponent<Fuel>().SetConsuming(false);
         player = other.gameObject;
