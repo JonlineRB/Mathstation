@@ -8,6 +8,8 @@ public class Reset : MonoBehaviour
     [SerializeField] private Vector3 restartLocation;
     [SerializeField] private GameObject moveMarker;
     [SerializeField] private float duration;
+    private Color ogColor;
+    [SerializeField] private Color resetColor;
     
 
     public void InitReset(){
@@ -16,6 +18,9 @@ public class Reset : MonoBehaviour
         gameObject.GetComponent<Fuel>().ResetFuel();
         gameObject.GetComponent<Fuel>().SetConsuming(false);
         moveMarker.SetActive(false);
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        ogColor = gameObject.GetComponent<SpriteRenderer>().color;
+        gameObject.GetComponent<SpriteRenderer>().color = resetColor;
     }
 
     private IEnumerator SmoothReset(){
@@ -33,5 +38,7 @@ public class Reset : MonoBehaviour
         transform.position = restartLocation;
         transform.rotation = Quaternion.identity;
         gameObject.GetComponent<MoveLock>().setMoveLock(false);
+        gameObject.GetComponent<CircleCollider2D>().enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().color = ogColor;
     }
 }

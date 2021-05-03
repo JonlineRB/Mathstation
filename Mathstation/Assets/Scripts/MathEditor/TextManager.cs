@@ -42,8 +42,6 @@ public class TextManager : MonoBehaviour
         text = text.Replace("Sub","-");
         text = text.Replace("Mul","*");
         text = text.Replace("Div","/");
-        // Debug.Log(text);
-        // Debug.Log("Done replacing");
         defualtTextObject.GetComponentInParent<Text>().text = text;
     }
 }

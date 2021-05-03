@@ -17,7 +17,7 @@ public class EditorMaster : MonoBehaviour
     void Start()
     {
         //generate initial problem
-        generateProblem();
+        GenerateProblem();
         problemCountObject.GetComponent<Text>().text = problemCount.ToString();
     }
 
@@ -33,10 +33,10 @@ public class EditorMaster : MonoBehaviour
             return;
         }
         problemCountObject.GetComponent<Text>().text = problemCount.ToString();
-        generateProblem();
+        GenerateProblem();
     }
 
-    private Problem generateProblem(){
+    private Problem GenerateProblem(){
         Problem problem = gameObject.GetComponent<ProblemGenerator>().generateProblem();
         gameObject.GetComponent<TextManager>().SetProblem(problem);
         return problem;

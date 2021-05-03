@@ -7540,8 +7540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014247c187b4a5f449cf813a481bae54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events: 03000000
-  occourences: 02000000
+  events: 01000000
+  occourences: 28000000
   cannon: {fileID: 2145063716}
   shield: {fileID: 1182009741}
   Blockade: {fileID: 1359951224}
