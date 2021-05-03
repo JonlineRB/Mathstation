@@ -8,7 +8,7 @@ public class Reset : MonoBehaviour
     [SerializeField] private Vector3 restartLocation;
     [SerializeField] private GameObject moveMarker;
     [SerializeField] private float duration;
-    private Color ogColor;
+    private Color ogColor = Color.white;
     [SerializeField] private Color resetColor;
     
 
@@ -19,7 +19,6 @@ public class Reset : MonoBehaviour
         gameObject.GetComponent<Fuel>().SetConsuming(false);
         moveMarker.SetActive(false);
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
-        ogColor = gameObject.GetComponent<SpriteRenderer>().color;
         gameObject.GetComponent<SpriteRenderer>().color = resetColor;
     }
 
