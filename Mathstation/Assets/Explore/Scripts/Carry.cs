@@ -5,9 +5,10 @@ using UnityEngine;
 public class Carry : MonoBehaviour
 {
 
-    public enum Carriables {None, Moon}
+    public enum Carriables {None, Moon, Cork}
     private GameObject carryReference;
     [SerializeField] private GameObject carriedMoon;
+    [SerializeField] private GameObject carriedCork;
     private Carriables carrying;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,11 @@ public class Carry : MonoBehaviour
                 GameObject moon = GameObject.Instantiate(carriedMoon, transform.position, Quaternion.identity);
                 moon.GetComponent<FollowPosition>().SetFollowing(gameObject);
                 carryReference = moon;
+                break;
+            case Carriables.Cork:
+                GameObject cork = GameObject.Instantiate(carriedCork, transform.position, Quaternion.identity);
+                cork.GetComponent<FollowPosition>().SetFollowing(gameObject);
+                carryReference = cork;
                 break;
         }
         if(carrying == Carriables.None)
