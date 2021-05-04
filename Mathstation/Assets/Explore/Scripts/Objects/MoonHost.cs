@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoonHost : MonoBehaviour
+public class MoonHost : Reciever
 {
     [SerializeField] private GameObject carriedMoon;
-    public void OnTriggerEnter2D(Collider2D other){
-        if(other.GetComponent<Carry>().IsCarrying() && other.GetComponent<Carry>().GetCarrying()==Carry.Carriables.Moon){
-            other.GetComponent<Carry>().SetCarrying(Carry.Carriables.None);
-            GameObject.Instantiate(carriedMoon, transform.position, Quaternion.identity);
-            //change the sprite from a sad planet to a happy one
-            //increment objectives
-            other.GetComponent<Objective>().Increment();
-        }
+    
+
+    protected override Carry.Carriables Expected(){
+        return Carry.Carriables.Moon;
+    }
+
+    protected override void Resolve(Collider2D other)
+    {
+        base.Resolve(other);
+        GameObject.Instantiate(carriedMoon, transform.position, Quaternion.identity);
+        
     }
 }
