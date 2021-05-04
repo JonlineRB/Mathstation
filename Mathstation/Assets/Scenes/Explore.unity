@@ -10848,7 +10848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a5d39098f66cb4ba612dbc4069a81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectives: 1
+  targetObjectives: 2
   goalRing: {fileID: 9112467257991184577, guid: 12aed9a98175bbd44b95e5aa9f299b54, type: 3}
   goalPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &793249854
@@ -11121,6 +11121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23f83e0989ba644a9880757fac5db1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corked: {fileID: 21300000, guid: 12e54c8d0a6fde640bb61428b35e879c, type: 3}
 --- !u!1001 &895456134
 PrefabInstance:
   m_ObjectHideFlags: 0
