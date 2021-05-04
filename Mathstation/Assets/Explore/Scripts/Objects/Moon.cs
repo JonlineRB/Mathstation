@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Moon : MonoBehaviour
+public class Moon : Carriable
 {
-    
-    public void OnTriggerEnter2D(Collider2D other){
-        if(other.GetComponent<Carry>().IsCarrying())
-            return;
-        other.GetComponent<Carry>().SetCarrying(Carry.Carriables.Moon);
-        gameObject.SetActive(false);
+    protected override Carry.Carriables CarryObject()
+    {
+        return Carry.Carriables.Moon;
     }
 }
