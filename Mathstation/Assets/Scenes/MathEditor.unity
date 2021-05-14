@@ -302,6 +302,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: textProblems
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: negativeValues
       value: 0
       objectReference: {fileID: 0}
@@ -328,6 +332,10 @@ PrefabInstance:
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: includeMultiplication
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 756663213, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.5859985
       objectReference: {fileID: 0}
     - target: {fileID: 6340798705914388710, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: m_Pivot.x
