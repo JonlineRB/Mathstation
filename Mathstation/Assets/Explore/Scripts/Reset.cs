@@ -10,9 +10,21 @@ public class Reset : MonoBehaviour
     [SerializeField] private float duration;
     private Color ogColor = Color.white;
     [SerializeField] private Color resetColor;
+
+    [SerializeField] private bool resetLock = false;
+
+    public void LockReset(){
+        resetLock = true;
+    }
+
+    public void ReleaseLock(){
+        resetLock = false;
+    }
     
 
     public void InitReset(){
+        if(resetLock)
+            return;
         gameObject.GetComponent<MoveLock>().setMoveLock(true);
         StartCoroutine("SmoothReset");
         gameObject.GetComponent<Fuel>().ResetFuel();

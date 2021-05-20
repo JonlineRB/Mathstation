@@ -21,6 +21,7 @@ public class PlayerRingInterpolation : MonoBehaviour
         currentRing = ring;
         StartCoroutine(Interpolation_1(position));
         gameObject.GetComponent<MoveLock>().setMoveLock(true);
+        gameObject.GetComponent<Reset>().LockReset();
     }
 
     private IEnumerator Interpolation_1(Vector3 position){ //initial interpolation, get into position before flying through the ring
@@ -81,5 +82,6 @@ public class PlayerRingInterpolation : MonoBehaviour
         transform.position = finPosition;
         mainCamera.GetComponent<Camera>().orthographicSize = cameraOGSize;
         gameObject.GetComponent<MoveLock>().setMoveLock(false);
+        gameObject.GetComponent<Reset>().ReleaseLock();
     }
 }
