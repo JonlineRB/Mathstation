@@ -20,6 +20,13 @@ public class Reset : MonoBehaviour
     public void ReleaseLock(){
         resetLock = false;
     }
+
+    //keyboard shortcut
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.R)){
+            InitReset();
+        }
+    }
     
 
     public void InitReset(){
