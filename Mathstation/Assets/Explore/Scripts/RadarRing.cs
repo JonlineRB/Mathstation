@@ -6,6 +6,7 @@ public class RadarRing : MonoBehaviour
 {
     [SerializeField] private GameObject[] fadies;
     void OnTriggerEnter2D(Collider2D other){
+        other.GetComponent<ArtifactInterpolation>().InitInterpolation(transform.position);
         foreach(GameObject fadie in fadies){
             fadie.GetComponent<ConditionFade>().InitFadeIn();
         }
