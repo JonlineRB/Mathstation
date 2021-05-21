@@ -33,5 +33,7 @@ public class ArtifactInterpolation : MonoBehaviour
         transform.position = position;
         gameObject.GetComponent<MoveLock>().setMoveLock(false);
         gameObject.GetComponent<Reset>().ReleaseLock();
+
+        // gameObject.GetComponent<Explore_Player_Mathcaller>().CallMathEditor();
     }
 }

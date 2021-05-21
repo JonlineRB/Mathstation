@@ -14,6 +14,7 @@ public class Explore_Player_Mathcaller : MonoBehaviour, MathCaller
 
     public void MathSuccess()
     {
+        //replace this with a call to the object that initiated the math sequence
         StartCoroutine(gameObject.GetComponent<PlayerRingInterpolation>().Interpolation_2());
     }
 }
