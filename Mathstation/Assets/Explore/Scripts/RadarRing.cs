@@ -11,6 +11,7 @@ public class RadarRing : MonoBehaviour, MathCaller
     // [SerializeField] private bool active = false;
     [SerializeField] private GameObject[] pointingAt;
     [SerializeField] private GameObject mathEditor;
+    [SerializeField] private GameObject dial;
     private bool solved = false; //Turns true once math problem solved
 
     void OnTriggerEnter2D(Collider2D other){
@@ -59,7 +60,8 @@ public class RadarRing : MonoBehaviour, MathCaller
     public void MathSuccess()
     {
         solved = true;
+        dial.GetComponent<Rotate>().enabled = true;
         //garphic transformation here
-        Scan();
+        Scan(); 
     }
 }

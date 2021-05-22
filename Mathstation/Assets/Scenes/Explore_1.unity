@@ -750,12 +750,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585153232}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52160545b797b1c4e9f128ffcf826db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRate: 120
+  rotationRate: 360
   accelaration: 0
   limit: 0
 --- !u!212 &585153235
@@ -6996,6 +6996,7 @@ MonoBehaviour:
   - {fileID: 1768853137}
   - {fileID: 1074109190}
   mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+  dial: {fileID: 585153232}
 --- !u!1 &1766163945
 GameObject:
   m_ObjectHideFlags: 0
