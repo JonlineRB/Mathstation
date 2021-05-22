@@ -6995,6 +6995,7 @@ MonoBehaviour:
   - {fileID: 1638346920}
   - {fileID: 1768853137}
   - {fileID: 1074109190}
+  mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
 --- !u!1 &1766163945
 GameObject:
   m_ObjectHideFlags: 0
