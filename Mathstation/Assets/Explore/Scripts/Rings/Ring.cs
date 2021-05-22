@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ring : MonoBehaviour
+public class Ring : MonoBehaviour, MathCaller
 {
     [SerializeField] protected float interpolationDistance;
     [SerializeField] protected GameObject moveMarker;
@@ -10,6 +10,7 @@ public class Ring : MonoBehaviour
     [SerializeField] protected float size;
     [SerializeField] protected float windUp;
     [SerializeField] protected GameObject lowerPart;
+    [SerializeField] private GameObject mathEditor;
     protected GameObject player;
     public void OnTriggerEnter2D(Collider2D other){
         if(!moveMarker)
@@ -50,4 +51,17 @@ public class Ring : MonoBehaviour
     }
 
     protected virtual void ApplyRingEffect(){}
+
+    //Mathcaller
+    public void CallMathEditor()
+    {
+        GameObject editor = GameObject.Instantiate(mathEditor);
+        editor.GetComponent<EditorMaster>().SetReport(gameObject);
+    }
+
+    public void MathSuccess()
+    {
+        StartCoroutine(player.GetComponent<PlayerRingInterpolation>().Interpolation_2());
+    }
+
 }

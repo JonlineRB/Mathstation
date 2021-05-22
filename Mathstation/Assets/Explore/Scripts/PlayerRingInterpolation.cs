@@ -51,7 +51,7 @@ public class PlayerRingInterpolation : MonoBehaviour
         yield return new WaitForSeconds(intermission);
 
         //call math here, rest depends on correct solving
-        gameObject.GetComponent<Explore_Player_Mathcaller>().CallMathEditor();
+        currentRing.GetComponent<Ring>().CallMathEditor();
 
         
 
