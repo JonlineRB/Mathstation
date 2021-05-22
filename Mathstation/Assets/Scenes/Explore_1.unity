@@ -6529,6 +6529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f894f00972ca0dc4ab791b1416dc64a6, type: 3}
+--- !u!1 &1074109190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9112467257991184577, guid: f894f00972ca0dc4ab791b1416dc64a6, type: 3}
+  m_PrefabInstance: {fileID: 978024365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1099439644
 GameObject:
   m_ObjectHideFlags: 0
@@ -6764,6 +6769,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511731959}
   m_CullTransparentMesh: 0
+--- !u!1 &1638346920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6905571861296830176, guid: da6a080822cfcf841b8710bbe00f86fa, type: 3}
+  m_PrefabInstance: {fileID: 111169313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1725608771
 GameObject:
   m_ObjectHideFlags: 0
@@ -6976,8 +6986,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ea1dfef0ceb164181ecf105e599e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrow: {fileID: 1780257157568803198, guid: 0eccb3eb8b79fb244be63989fda2625c, type: 3}
+  arrowDistance: 2
   fadies:
   - {fileID: 1725608771}
+  pointingAt:
+  - {fileID: 1638346920}
+  - {fileID: 1768853137}
+  - {fileID: 1074109190}
 --- !u!1 &1766163945
 GameObject:
   m_ObjectHideFlags: 0
@@ -7057,6 +7073,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766163945}
   m_CullTransparentMesh: 0
+--- !u!1 &1768853137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8182128260562372529, guid: a7e0f9cfa90f20d418044fbfe25888ef, type: 3}
+  m_PrefabInstance: {fileID: 873546518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1964994694
 GameObject:
   m_ObjectHideFlags: 0
