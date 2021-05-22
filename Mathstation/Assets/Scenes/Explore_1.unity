@@ -6990,6 +6990,7 @@ MonoBehaviour:
   arrowDistance: 2
   fadies:
   - {fileID: 1725608771}
+  background: {fileID: 1725608771}
   pointingAt:
   - {fileID: 1638346920}
   - {fileID: 1768853137}
