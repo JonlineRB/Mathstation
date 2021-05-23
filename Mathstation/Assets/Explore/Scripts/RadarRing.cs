@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadarRing : MonoBehaviour, MathCaller
+public class RadarRing : Artifact_Super, MathCaller
 {
     [SerializeField] private GameObject arrow;
     [SerializeField] private float arrowDistance;
@@ -10,21 +10,24 @@ public class RadarRing : MonoBehaviour, MathCaller
     [SerializeField] private GameObject background;
     // [SerializeField] private bool active = false;
     [SerializeField] private GameObject[] pointingAt;
-    [SerializeField] private GameObject mathEditor;
     [SerializeField] private GameObject dial;
-    private bool solved = false; //Turns true once math problem solved
 
-    void OnTriggerEnter2D(Collider2D other){
-        //put player in the center of the object
-        other.GetComponent<ArtifactInterpolation>().InitInterpolation(transform.position);
 
-        if(!solved){
-            CallMathEditor();
+    protected override void Action()
+    {
+        Scan();
+    }
+
+    protected override void Resolve()
+    {
+        dial.GetComponent<Rotate>().enabled = true;
+    }
+
+    protected override void Exit()
+    {
+        foreach(GameObject fadie in fadies){
+            fadie.GetComponent<ConditionFade>().InitFadeOut();
         }
-        else{
-            Scan();
-        }
-        
     }
 
     private void Scan(){
@@ -43,25 +46,5 @@ public class RadarRing : MonoBehaviour, MathCaller
         foreach(GameObject fadie in fadies){
             fadie.GetComponent<ConditionFade>().InitFadeIn();
         }
-    }
-    
-    void OnTriggerExit2D(Collider2D other){
-        foreach(GameObject fadie in fadies){
-            fadie.GetComponent<ConditionFade>().InitFadeOut();
-        }
-    }
-
-    public void CallMathEditor()
-    {
-        GameObject editor = GameObject.Instantiate(mathEditor);
-        editor.GetComponent<EditorMaster>().SetReport(gameObject);
-    }
-
-    public void MathSuccess()
-    {
-        solved = true;
-        dial.GetComponent<Rotate>().enabled = true;
-        //garphic transformation here
-        Scan(); 
     }
 }

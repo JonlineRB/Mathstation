@@ -52,11 +52,6 @@ public class PlayerRingInterpolation : MonoBehaviour
 
         //call math here, rest depends on correct solving
         currentRing.GetComponent<Ring>().CallMathEditor();
-
-        
-
-        //call the next interpolation
-        // StartCoroutine("Interpolation_2");
     }
 
     public IEnumerator Interpolation_2(){ //2nd interpolation, fly through the ring and consume it
