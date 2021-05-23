@@ -13,6 +13,7 @@ public class RadarRing : Artifact_Super
 
     protected override void Action()
     {
+        base.Action();
         Scan();
     }
 
