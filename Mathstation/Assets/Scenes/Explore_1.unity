@@ -6182,7 +6182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjectives: 1
   goalRing: {fileID: 9112467257991184577, guid: 12aed9a98175bbd44b95e5aa9f299b54, type: 3}
-  goalPosition: {x: 0, y: 0, z: 0}
+  goalPosition: {x: 4, y: 0, z: 0}
 --- !u!114 &793249854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6987,16 +6987,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ea1dfef0ceb164181ecf105e599e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+  background: {fileID: 1725608771}
   arrow: {fileID: 1780257157568803198, guid: 0eccb3eb8b79fb244be63989fda2625c, type: 3}
   arrowDistance: 2
   fadies:
   - {fileID: 1725608771}
-  background: {fileID: 1725608771}
   pointingAt:
   - {fileID: 1638346920}
   - {fileID: 1768853137}
   - {fileID: 1074109190}
-  mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
   dial: {fileID: 585153232}
 --- !u!1 &1766163945
 GameObject:

@@ -21,5 +21,7 @@ public class Sun : Reciever
         //switch the sun's sprite to the cool version
         gameObject.GetComponent<SpriteRenderer>().sprite=coolSprite;
         GameObject.Destroy(particleFX);
+        //disable collider
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
     }
 }
