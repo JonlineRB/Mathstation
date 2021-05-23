@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadarRing : Artifact_Super, MathCaller
+public class RadarRing : Artifact_Super
 {
     [SerializeField] private GameObject arrow;
     [SerializeField] private float arrowDistance;
     [SerializeField] private List<GameObject> fadies;
-    [SerializeField] private GameObject background;
-    // [SerializeField] private bool active = false;
     [SerializeField] private GameObject[] pointingAt;
     [SerializeField] private GameObject dial;
 
@@ -37,10 +35,10 @@ public class RadarRing : Artifact_Super, MathCaller
             if(!pointee.activeSelf)
                 continue;
             //instantiate an arrow
-            //add it to the list of fade objects
             Vector3 direction = (pointee.transform.position - transform.position).normalized;
             GameObject arrowInstance = GameObject.Instantiate(arrow, transform.position + direction * arrowDistance,
             Quaternion.Euler(0,0,Vector3.SignedAngle(Vector3.up, direction, Vector3.forward)), transform);
+            //add it to the list of fade objects
             fadies.Add(arrowInstance);
         }
         foreach(GameObject fadie in fadies){
