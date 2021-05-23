@@ -11,8 +11,10 @@ public class ArtifactInterpolation : MonoBehaviour
         if(moveMarker)
             moveMarker.SetActive(false);
         gameObject.GetComponent<Fuel>().SetConsuming(false);
-        gameObject.GetComponent<MoveLock>().setMoveLock(true);
-        gameObject.GetComponent<Reset>().LockReset();
+        // gameObject.GetComponent<MoveLock>().setMoveLock(true);
+        // gameObject.GetComponent<Reset>().IncrementLockReset();
+        gameObject.GetComponent<MoveLock>().IncrementMoveLock();
+        gameObject.GetComponent<Reset>().IncrementLockReset();
         StartCoroutine(Interpolate(position));
         
         
@@ -30,6 +32,8 @@ public class ArtifactInterpolation : MonoBehaviour
             yield return null;
         }
 
+        gameObject.GetComponent<MoveLock>().DecrementMoveLock();
+        gameObject.GetComponent<Reset>().DecrementLockReset();
         transform.position = position;
     }
 }

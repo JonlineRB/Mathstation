@@ -11,14 +11,14 @@ public class Reset : MonoBehaviour
     private Color ogColor = Color.white;
     [SerializeField] private Color resetColor;
 
-    [SerializeField] private bool resetLock = false;
+    [SerializeField] private int resetLock = 0;
 
-    public void LockReset(){
-        resetLock = true;
+    public void IncrementLockReset(){
+        resetLock++;
     }
 
-    public void ReleaseLock(){
-        resetLock = false;
+    public void DecrementLockReset(){
+        resetLock = Mathf.Max(--resetLock, 0);
     }
 
     //keyboard shortcut
@@ -30,9 +30,9 @@ public class Reset : MonoBehaviour
     
 
     public void InitReset(){
-        if(resetLock)
+        if(resetLock > 0)
             return;
-        gameObject.GetComponent<MoveLock>().setMoveLock(true);
+        gameObject.GetComponent<MoveLock>().IncrementMoveLock();
         StartCoroutine("SmoothReset");
         gameObject.GetComponent<Fuel>().ResetFuel();
         gameObject.GetComponent<Fuel>().SetConsuming(false);
@@ -55,7 +55,7 @@ public class Reset : MonoBehaviour
         
         transform.position = restartLocation;
         transform.rotation = Quaternion.identity;
-        gameObject.GetComponent<MoveLock>().setMoveLock(false);
+        gameObject.GetComponent<MoveLock>().DecrementMoveLock();
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().color = ogColor;
     }

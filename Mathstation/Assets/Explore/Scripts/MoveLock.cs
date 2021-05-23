@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class MoveLock : MonoBehaviour
 {
-    private bool moveLock = false;
+    private int moveLock = 0;
 
-    public bool isMoveLock(){
-        return moveLock;
+    public bool IsMoveLock(){
+        return moveLock > 0;
     }
 
-    public void setMoveLock(bool value){
-        moveLock = value;
+    // public void setMoveLock(bool value){
+    //     moveLock = value;
+    // }
+
+    public void IncrementMoveLock(){
+        moveLock++;
+    }
+
+    public void DecrementMoveLock(){
+        moveLock = Mathf.Max(--moveLock,0);
     }
 }

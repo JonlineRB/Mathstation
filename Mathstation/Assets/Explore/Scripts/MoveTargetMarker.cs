@@ -13,7 +13,7 @@ public class MoveTargetMarker : MonoBehaviour
     {
         if(Input.GetMouseButton(0)){
             //if player movement is locked, don't do anything
-            if(player.GetComponent<MoveLock>().isMoveLock())
+            if(player.GetComponent<MoveLock>().IsMoveLock())
                 return;
             Vector2 mouseScreenPosition = Input.mousePosition;
             Ray ray = gameObject.GetComponent<Camera>().ScreenPointToRay(mouseScreenPosition);

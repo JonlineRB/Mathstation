@@ -16,7 +16,7 @@ public class ShowToCamera : MonoBehaviour
     
 
     private IEnumerator PanCamera(){
-        player.GetComponent<MoveLock>().setMoveLock(true);
+        player.GetComponent<MoveLock>().IncrementMoveLock();
         gameObject.GetComponent<FollowPosition>().SetIsFollownig(false);
         
         float elapsed = 0;
@@ -50,6 +50,6 @@ public class ShowToCamera : MonoBehaviour
         }
 
         gameObject.GetComponent<FollowPosition>().SetIsFollownig(true);
-        player.GetComponent<MoveLock>().setMoveLock(false);
+        player.GetComponent<MoveLock>().DecrementMoveLock();
     }
 }
