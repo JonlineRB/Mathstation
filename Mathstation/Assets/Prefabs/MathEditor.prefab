@@ -4580,7 +4580,7 @@ MonoBehaviour:
   includeDivision: 0
   includeFractions: 0
   singleOperation: 1
-  simplifyFractions: 1
+  simplifyFractions: 0
   policyTextObject: {fileID: 338838759}
 --- !u!1 &9116868809196034453
 GameObject:
