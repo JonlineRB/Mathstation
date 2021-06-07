@@ -7446,6 +7446,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 668710076}
     m_Modifications:
+    - target: {fileID: 3028714353993592384, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
+      propertyPath: texts.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028714353993592384, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
+      propertyPath: texts.Array.data[0]
+      value: Welcome to your first exploration, navigator!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028714353993592384, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
+      propertyPath: texts.Array.data[1]
+      value: Find all objects and resolve the hazards in order to advance to the
+        next stage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028714353993592384, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
+      propertyPath: texts.Array.data[2]
+      value: Click anywhere to move the ship there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028714353993592384, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
+      propertyPath: texts.Array.data[3]
+      value: Keep an eye on the fuel, we will warp back to square one once we run
+        out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028714353993592384, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
+      propertyPath: texts.Array.data[4]
+      value: Touching anything dangerous will also warp us back to the starting position.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028714353993592384, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
+      propertyPath: texts.Array.data[5]
+      value: Good luck!
+      objectReference: {fileID: 0}
     - target: {fileID: 3028714353993592386, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
       propertyPath: m_Name
       value: Tutorial

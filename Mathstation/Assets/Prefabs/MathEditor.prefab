@@ -4573,11 +4573,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe9320de1eec7347bba3c02efb7cf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainderDivision: 0
+  remainderDivision: 1
   negativeValues: 0
   textProblems: 0
   includeMultiplication: 0
-  includeDivision: 0
+  includeDivision: 1
   includeFractions: 0
   singleOperation: 1
   simplifyFractions: 0
