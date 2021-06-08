@@ -237,7 +237,9 @@ MonoBehaviour:
   - The ship must plan a journey that consists of two legs. The first leg is VAL_A
     lightyears long, and the second leg is VAL_B lightyears long. What is the length
     of the total journey in lightyears?
-  subtraction_questions: []
+  subtraction_questions:
+  - We have VAL_A shield generators on board. VAL_B of them are damaged. How many
+    shield generators are left?
 --- !u!1 &1711917889
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 1347784334}
     - target: {fileID: 108031870, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: problemCount
-      value: 3
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: textProblems
