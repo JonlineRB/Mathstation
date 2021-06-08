@@ -4575,9 +4575,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remainderDivision: 1
   negativeValues: 0
-  textProblems: 0
+  textProblems: 1
   includeMultiplication: 0
-  includeDivision: 1
+  includeDivision: 0
   includeFractions: 0
   singleOperation: 1
   simplifyFractions: 0

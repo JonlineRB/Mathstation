@@ -28,10 +28,17 @@ public class TextManager : MonoBehaviour
         if(GameObject.FindObjectOfType<Policy>().isTextProblems()){
             NoTextBasedMaster.SetActive(false);
             TextBasedMaster.SetActive(true);
-            string textProblem = "This is long, a text based problem. This is long, a text based problem. This is long, a text based problem. This is long, a text based problem. ";
-            textProblem += this.problem.ToString(false);
+            //transform the problem into a text based item
+            //TODO
+            string textProblem = gameObject.GetComponent<TextQuestions>().ToTextProblem(this.problem);
             textBasedTextObject.GetComponentInParent<Text>().text = textProblem;
             return;
+
+            //deprecate
+            // string textProblem = "This is long, a text based problem. This is long, a text based problem. This is long, a text based problem. This is long, a text based problem. ";
+            // textProblem += this.problem.ToString(false);
+            // textBasedTextObject.GetComponentInParent<Text>().text = textProblem;
+            // return;
         }
         TextBasedMaster.SetActive(false);
         NoTextBasedMaster.SetActive(true);
