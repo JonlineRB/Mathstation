@@ -1580,7 +1580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.136}
   m_AnchorMax: {x: 0.5, y: 0.136}
-  m_AnchoredPosition: {x: -20.35986, y: -5.586014}
+  m_AnchoredPosition: {x: -20.35986, y: -5.5859985}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &793570815
@@ -3009,14 +3009,14 @@ RectTransform:
   m_GameObject: {fileID: 1347784334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8212374936310866559}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -192.1, y: 0}
+  m_AnchoredPosition: {x: -139, y: 0}
   m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1347784337
@@ -3049,7 +3049,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4090,7 +4090,7 @@ RectTransform:
   m_GameObject: {fileID: 307708839019440312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.37858, y: 0.37858, z: 0.37858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6340798705708424644}
   m_RootOrder: 0
@@ -4098,7 +4098,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -100, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2540891421712967217
 CanvasRenderer:
@@ -4400,6 +4400,8 @@ GameObject:
   - component: {fileID: 108031869}
   - component: {fileID: 108031870}
   - component: {fileID: 108031871}
+  - component: {fileID: 9084768077862250300}
+  - component: {fileID: 1446469786}
   m_Layer: 5
   m_Name: MathEditor
   m_TagString: Untagged
@@ -4558,7 +4560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f07d00a0aae77b49a715cf255d08ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  problemCount: 1
+  problemCount: 99
   problemCountObject: {fileID: 1757521047}
   reportsTo: {fileID: 0}
 --- !u!114 &108031871
@@ -4573,15 +4575,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe9320de1eec7347bba3c02efb7cf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainderDivision: 1
+  remainderDivision: 0
   negativeValues: 0
   textProblems: 1
-  includeMultiplication: 0
-  includeDivision: 0
-  includeFractions: 0
+  includeMultiplication: 1
+  includeDivision: 1
+  includeFractions: 1
   singleOperation: 1
-  simplifyFractions: 0
+  simplifyFractions: 1
   policyTextObject: {fileID: 338838759}
+--- !u!114 &9084768077862250300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6340798705914388714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e006251986194144490a25c79188e199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1446469786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6340798705914388714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dac586225acc6c4d83d8aef915c88c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addition_questions:
+  - The ship must plan a journey that consists of two legs. The first leg is VAL_A
+    lightyears long, and the second leg is VAL_B lightyears long. What is the length
+    of the total journey in lightyears?
+  subtraction_questions:
+  - We have VAL_A shield generators on board. VAL_B of them are damaged. How many
+    shield generators are left?
+  multiplication_questions:
+  - The ship needs to visit VAL_A sectors to find all artifacts. Each sector contains
+    VAL_B artifacts. How many artiacts does the ship need to find in total?
+  division_questions:
+  - There are VAL_A ships in the fleet. How many ships would be in each division,
+    if there were VAL_B divisions of equal size?
 --- !u!1 &9116868809196034453
 GameObject:
   m_ObjectHideFlags: 0

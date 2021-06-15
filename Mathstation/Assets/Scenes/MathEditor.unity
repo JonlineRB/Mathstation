@@ -206,46 +206,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1346779213 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2077796803, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-  m_PrefabInstance: {fileID: 6340798705946906526}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1347784334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1347784334, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-  m_PrefabInstance: {fileID: 6340798705946906526}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1446469785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-  m_PrefabInstance: {fileID: 6340798705946906526}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1446469786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446469785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dac586225acc6c4d83d8aef915c88c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addition_questions:
-  - The ship must plan a journey that consists of two legs. The first leg is VAL_A
-    lightyears long, and the second leg is VAL_B lightyears long. What is the length
-    of the total journey in lightyears?
-  subtraction_questions:
-  - We have VAL_A shield generators on board. VAL_B of them are damaged. How many
-    shield generators are left?
-  multiplication_questions:
-  - The ship needs to visit VAL_A sectors to find all artifacts. Each sector contains
-    VAL_B artifacts. How many artiacts does the ship need to find in total?
-  division_questions:
-  - There are VAL_A ships in the fleet. How many ships would be in each division,
-    if there were VAL_B divisions of equal size?
 --- !u!1 &1711917889
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,100 +279,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 108031863, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: defualtTextObject
-      value: 
-      objectReference: {fileID: 1346779213}
-    - target: {fileID: 108031863, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: textBasedTextObject
-      value: 
-      objectReference: {fileID: 1347784334}
-    - target: {fileID: 108031870, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: problemCount
-      value: 99
-      objectReference: {fileID: 0}
-    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: textProblems
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: negativeValues
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: includeDivision
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: singleOperation
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: includeFractions
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: remainderDivision
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: simplifyFractions
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: includeMultiplication
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 756663213, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5.5859985
-      objectReference: {fileID: 0}
-    - target: {fileID: 1347784335, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1347784335, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1347784335, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1347784335, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -139
-      objectReference: {fileID: 0}
-    - target: {fileID: 1347784336, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458370800849488971, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458370800849488971, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458370800849488971, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458370800849488971, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458370800849488971, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458370800849488971, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458370800849488971, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6340798705914388710, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
@@ -503,6 +383,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: MathEditor
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 108031864, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9db1e68fa898cd048b750652310532d5, type: 3}

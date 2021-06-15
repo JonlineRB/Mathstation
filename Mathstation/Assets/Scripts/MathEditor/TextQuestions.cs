@@ -21,16 +21,20 @@ public class TextQuestions : MonoBehaviour
 
         switch(problemString.Split(' ')[1]){
         case "Add":
-            result = addition_questions[0];
+            // result = addition_questions[0];
+            result = gameObject.GetComponent<XmlHandler>().FetchQuestion("addition");
             break;
         case "Sub":
-            result = subtraction_questions[0];
+            // result = subtraction_questions[0];
+            result = gameObject.GetComponent<XmlHandler>().FetchQuestion("subtraction");
             break;
         case "Mul":
-            result = multiplication_questions[0];
+            // result = multiplication_questions[0];
+            result = gameObject.GetComponent<XmlHandler>().FetchQuestion("multiplication");
             break;
         case "Div":
-            result = division_questions[0];
+            // result = division_questions[0];
+            result = gameObject.GetComponent<XmlHandler>().FetchQuestion("division");
             break;
         }
 
