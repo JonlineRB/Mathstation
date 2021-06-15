@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class TextQuestions : MonoBehaviour
 {
-    [SerializeField] string[] addition_questions;
-    [SerializeField] string[] subtraction_questions;
-    [SerializeField] string[] multiplication_questions;
-    [SerializeField] string[] division_questions;
-
     public string ToTextProblem(Problem problem){
         //break the problem string into tokens
         string problemString = problem.ToString(false); //has the shape of 1 Add 1
