@@ -240,6 +240,12 @@ MonoBehaviour:
   subtraction_questions:
   - We have VAL_A shield generators on board. VAL_B of them are damaged. How many
     shield generators are left?
+  multiplication_questions:
+  - The ship needs to visit VAL_A sectors to find all artifacts. Each sector contains
+    VAL_B artifacts. How many artiacts does the ship need to find in total?
+  division_questions:
+  - There are VAL_A ships in the fleet. How many ships would be in each division,
+    if there were VAL_B divisions of equal size?
 --- !u!1 &1711917889
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: includeDivision
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: singleOperation
@@ -343,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: includeFractions
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: remainderDivision
@@ -351,11 +357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: simplifyFractions
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108031871, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: includeMultiplication
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 756663213, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: m_AnchoredPosition.y
