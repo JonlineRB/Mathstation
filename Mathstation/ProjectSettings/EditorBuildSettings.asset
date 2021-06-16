@@ -6,11 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 3e2ceed6d0341e5438ae67f3b1006c15
+  - enabled: 1
     path: Assets/Scenes/MathEditor.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Rockstorm.unity
+    guid: 6bd68ecd557307c488e12de99476d227
+  - enabled: 1
     path: Assets/Scenes/Polarius.unity
     guid: a1b98d6423cfdda49a32d1ad137b1079
+  - enabled: 1
+    path: Assets/Scenes/QuizShow.unity
+    guid: faa05760390cbda4391faf19379b720b
+  - enabled: 1
+    path: Assets/Scenes/Mining_1.unity
+    guid: b485554d0a7e55f499438fb6d8772f4d
+  - enabled: 1
+    path: Assets/Scenes/Explore_1.unity
+    guid: cf1f8170978a80a4c9c59d4907cc88a2
+  - enabled: 1
+    path: Assets/Scenes/Explore_2.unity
+    guid: e9bd2e389e8d8974189ab11f64a2846b
+  - enabled: 1
+    path: Assets/Scenes/Explore_3.unity
+    guid: 7e47f7f5019260e489789a63f39fd8b6
   - enabled: 1
     path: Assets/Scenes/LoseScene.unity
     guid: 6a8d087f511398f4a8a311db66fd3d74
