@@ -9,7 +9,7 @@ public class XmlHandler : MonoBehaviour
 
     XmlDocument Xdoc = null;
     
-    void Start()
+    void Awake()
     {
         Xdoc = new XmlDocument(); //Instantiate
         

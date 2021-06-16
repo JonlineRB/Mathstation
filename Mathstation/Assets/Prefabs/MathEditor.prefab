@@ -4560,7 +4560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f07d00a0aae77b49a715cf255d08ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  problemCount: 99
+  problemCount: 2
   problemCountObject: {fileID: 1757521047}
   reportsTo: {fileID: 0}
 --- !u!114 &108031871
@@ -4575,14 +4575,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe9320de1eec7347bba3c02efb7cf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainderDivision: 0
+  remainderDivision: 1
   negativeValues: 0
   textProblems: 1
   includeMultiplication: 1
-  includeDivision: 1
-  includeFractions: 1
+  includeDivision: 0
+  includeFractions: 0
   singleOperation: 1
-  simplifyFractions: 1
+  simplifyFractions: 0
   policyTextObject: {fileID: 338838759}
 --- !u!114 &9084768077862250300
 MonoBehaviour:
@@ -4608,19 +4608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dac586225acc6c4d83d8aef915c88c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addition_questions:
-  - The ship must plan a journey that consists of two legs. The first leg is VAL_A
-    lightyears long, and the second leg is VAL_B lightyears long. What is the length
-    of the total journey in lightyears?
-  subtraction_questions:
-  - We have VAL_A shield generators on board. VAL_B of them are damaged. How many
-    shield generators are left?
-  multiplication_questions:
-  - The ship needs to visit VAL_A sectors to find all artifacts. Each sector contains
-    VAL_B artifacts. How many artiacts does the ship need to find in total?
-  division_questions:
-  - There are VAL_A ships in the fleet. How many ships would be in each division,
-    if there were VAL_B divisions of equal size?
 --- !u!1 &9116868809196034453
 GameObject:
   m_ObjectHideFlags: 0
