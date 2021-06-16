@@ -1,14 +1,18 @@
 <root>
     <addition>
         <question>The ship must plan a journey that consists of two legs. The first leg is VAL_A lightyears long, and the second leg is VAL_B lightyears long. What is the length of the total journey in lightyears?</question>
+        <question>Other addition question. VAL_A plus VAL_B</question>
     </addition>
     <subtraction>
         <question>We have VAL_A shield generators on board. VAL_B of them are damaged. How many shield generators are left?</question>
+        <question>Other subtraction question. VAL_A minus VAL_B</question>
     </subtraction>
     <multiplication>
         <question>The ship needs to visit VAL_A sectors to find all artifacts. Each sector contains VAL_B artifacts. How many artiacts does the ship need to find in total?</question>
+        <question>Other multiplication question. VAL_A times VAL_B</question>
     </multiplication>
     <division>
         <question>There are VAL_A ships in the fleet. How many ships would be in each division, if there were VAL_B divisions of equal size?</question>
+        <question>Other division question. VAL_A divided by VAL_B</question>
     </division>
 </root>
