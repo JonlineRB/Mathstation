@@ -3902,6 +3902,7 @@ GameObject:
   - component: {fileID: 1435213427}
   - component: {fileID: 1435213426}
   - component: {fileID: 1435213425}
+  - component: {fileID: 1435213428}
   m_Layer: 5
   m_Name: ApplyButton
   m_TagString: Untagged
@@ -3971,7 +3972,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1435213426}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435213428}
+        m_TargetAssemblyTypeName: MathConfigApply, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1435213426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4010,6 +4023,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435213423}
   m_CullTransparentMesh: 0
+--- !u!114 &1435213428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435213423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fbcc7683ca33c542b26cdfdaef096bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remainderDivision: {fileID: 1951420731}
+  negativeValues: {fileID: 1655365123}
+  textProblems: {fileID: 1763243537}
+  multiplication: {fileID: 1229914302}
+  division: {fileID: 1142704737}
+  fraction: {fileID: 548678389}
+  singleOperation: {fileID: 1042603227}
+  simplifyFractions: {fileID: 459392089}
+  mathEditorPrefab: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
 --- !u!1 &1469653596
 GameObject:
   m_ObjectHideFlags: 0
