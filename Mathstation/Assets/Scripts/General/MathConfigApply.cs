@@ -27,7 +27,8 @@ public class MathConfigApply : MonoBehaviour
     }
 
     void Update(){
-        //Illegal policy combinations will lead to the button being inactive
+        //Illegal policy combinations will lead to the button being uninteractible.
+        //Reverting these will make the apply button interactible again.
         if(
             (remainderDivision.isOn && (negativeValues.isOn || fraction.isOn)) ||
             (textProblems.isOn && !singleOperation.isOn))
