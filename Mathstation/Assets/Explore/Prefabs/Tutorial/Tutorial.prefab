@@ -260,7 +260,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028714353993592386}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -327,7 +327,8 @@ MonoBehaviour:
   texts:
   - Welcome to your first exploration, navigator!
   - Click anywhere to move the ship there.
-  - Keep an eye on the fuel, we will warp back to square one once we run out.
+  - Keep an eye on the fuel, we will warp back to square one once we run out. You
+    may also hit the reset button or the R key to reset at any time.
   - Touching anything dangerous will also warp us back to the starting position.
   - Find all objects and resolve the hazards in order to advance to the next stage.
     Good luck!
