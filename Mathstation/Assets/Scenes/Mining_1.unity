@@ -1501,7 +1501,7 @@ PrefabInstance:
       objectReference: {fileID: 1663617457}
     - target: {fileID: 1381537164933437720, guid: 61d9dc7e5697bfa46a870198fec36e75, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Lock
+      value: Unlock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d9dc7e5697bfa46a870198fec36e75, type: 3}
