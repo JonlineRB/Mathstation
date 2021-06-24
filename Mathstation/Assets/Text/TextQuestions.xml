@@ -8,7 +8,7 @@
         <question>Other subtraction question. VAL_A minus VAL_B</question>
     </subtraction>
     <multiplication>
-        <question>The ship needs to visit VAL_A sectors to find all artifacts. Each sector contains VAL_B artifacts. How many artiacts does the ship need to find in total?</question>
+        <question>The ship needs to visit VAL_A sectors to find all artifacts. Each sector contains VAL_B artifacts. How many artifacts does the ship need to find in total?</question>
         <question>Other multiplication question. VAL_A times VAL_B</question>
     </multiplication>
     <division>
