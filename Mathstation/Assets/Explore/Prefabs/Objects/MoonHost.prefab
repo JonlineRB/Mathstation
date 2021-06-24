@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -778863055
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a908dad25f0296241a6816d2e71088ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8f28a1401692134cb65cd3b61a5e784, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carriedMoon: {fileID: 8182128260562372529, guid: d04a3d9ab19d81b4fac8d8659a0b781d, type: 3}
+  happy: {fileID: 21300000, guid: 67d20da54b3d1e542b3f4e44c3c6b01e, type: 3}
 --- !u!58 &5417547882925653108
 CircleCollider2D:
   m_ObjectHideFlags: 0

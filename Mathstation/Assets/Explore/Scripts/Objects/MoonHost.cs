@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoonHost : Reciever
 {
     [SerializeField] private GameObject carriedMoon;
+    [SerializeField] private Sprite happy;
     
 
     protected override Carry.Carriables Expected(){
@@ -15,6 +16,6 @@ public class MoonHost : Reciever
     {
         base.Resolve(other);
         GameObject.Instantiate(carriedMoon, transform.position, Quaternion.identity);
-        
+        gameObject.GetComponent<SpriteRenderer>().sprite = happy;
     }
 }
