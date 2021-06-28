@@ -5324,7 +5324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3028714353993592387, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3028714353993592387, guid: 1bf6a2d9eae09794f84fcab8cf7ec50e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5512,6 +5512,7 @@ MonoBehaviour:
   leadingObject: {fileID: 2065797704}
   stopDistance: 0.1
   velocityText: {fileID: 1031146013}
+  velocityPanel: {fileID: 1031146012}
 --- !u!58 &793249845
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5566,7 +5567,7 @@ MonoBehaviour:
   capacities: 64000000780000008c000000a0000000
   fuelText: {fileID: 1031146015}
   capacityText: {fileID: 1031146014}
-  rateText: {fileID: 1031146012}
+  rateText: {fileID: 0}
 --- !u!114 &793249848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6032,7 +6033,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
 --- !u!1 &1031146012 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5766256714878941538, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5766256714086628155, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
   m_PrefabInstance: {fileID: 1031146011}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1031146013 stripped

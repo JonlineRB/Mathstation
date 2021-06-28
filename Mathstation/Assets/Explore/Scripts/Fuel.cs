@@ -23,8 +23,10 @@ public class Fuel : MonoBehaviour
         consumptionRate = consumptionRates[consumptionIndex];
         capacity = capacities[capacitiesIndex];
         fuel = (float)capacity;
-        capacityText.GetComponent<Text>().text = capacity.ToString();
-        rateText.GetComponent<Text>().text = consumptionRate.ToString();
+
+        //deprecated, left in for potential future use
+        // capacityText.GetComponent<Text>().text = capacity.ToString();
+        // rateText.GetComponent<Text>().text = consumptionRate.ToString();
     }
 
     // Update is called once per frame
@@ -62,5 +64,9 @@ public class Fuel : MonoBehaviour
         ResetFuel();
         gameObject.GetComponent<UpgradeLog>().ConsumptionUp();
         rateText.GetComponent<Text>().text = consumptionRate.ToString();
+    }
+
+    public float GetFuel(){
+        return fuel;
     }
 }

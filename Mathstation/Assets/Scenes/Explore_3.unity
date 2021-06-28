@@ -380,6 +380,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2510925513510109367, guid: aa4503afcefd3e64186b2496b315a057, type: 3}
   m_PrefabInstance: {fileID: 258177510}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &371700207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5766256714086628155, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
+  m_PrefabInstance: {fileID: 5766256713607992868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &464698040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5796,6 +5801,7 @@ MonoBehaviour:
   leadingObject: {fileID: 1194468363}
   stopDistance: 0.1
   velocityText: {fileID: 67063073}
+  velocityPanel: {fileID: 371700207}
 --- !u!58 &793249845
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5850,7 +5856,7 @@ MonoBehaviour:
   capacities: 64000000780000008c000000a0000000
   fuelText: {fileID: 3511582}
   capacityText: {fileID: 2124242599}
-  rateText: {fileID: 2084646726}
+  rateText: {fileID: 0}
 --- !u!114 &793249848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6997,11 +7003,6 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2510925513510109367, guid: aa4503afcefd3e64186b2496b315a057, type: 3}
   m_PrefabInstance: {fileID: 1970443037}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2084646726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5766256714878941538, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-  m_PrefabInstance: {fileID: 5766256713607992868}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2124242599 stripped
 GameObject:

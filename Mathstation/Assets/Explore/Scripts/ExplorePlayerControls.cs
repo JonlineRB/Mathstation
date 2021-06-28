@@ -15,6 +15,7 @@ public class ExplorePlayerControls : MonoBehaviour
     [SerializeField]
     private float stopDistance;
     [SerializeField] private GameObject velocityText;
+    [SerializeField] private GameObject velocityPanel;
 
     void Start(){
         currentVelocity = velocities[0];
@@ -35,7 +36,11 @@ public class ExplorePlayerControls : MonoBehaviour
         if(velocities.Count > velocityIndex + 1){
             currentVelocity = velocities[++velocityIndex];
         }
-        velocityText.GetComponent<Text>().text = ((int)currentVelocity).ToString();
+
+        //update UI elements
+        velocityPanel.GetComponent<VelocityPanel>().SpeedUp(((int)currentVelocity).ToString());
+
+        //log the speedup upgrade
         gameObject.GetComponent<UpgradeLog>().SpeedUp();    
     }
 }

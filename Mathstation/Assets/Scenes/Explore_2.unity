@@ -5449,6 +5449,7 @@ MonoBehaviour:
   leadingObject: {fileID: 1413190678}
   stopDistance: 0.1
   velocityText: {fileID: 1483956238}
+  velocityPanel: {fileID: 1668629744}
 --- !u!58 &793249845
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5500,10 +5501,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   consumptionRates:
   - 40
-  capacities: 64000000780000008c000000a0000000
+  capacities: 64000000
   fuelText: {fileID: 1483956240}
-  capacityText: {fileID: 1483956239}
-  rateText: {fileID: 1483956237}
+  capacityText: {fileID: 0}
+  rateText: {fileID: 0}
 --- !u!114 &793249848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5996,24 +5997,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
---- !u!1 &1483956237 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5766256714878941538, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-  m_PrefabInstance: {fileID: 1483956236}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1483956238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5766256713597426437, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
   m_PrefabInstance: {fileID: 1483956236}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1483956239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5766256714857678979, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-  m_PrefabInstance: {fileID: 1483956236}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1483956240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5766256713609331514, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
+  m_PrefabInstance: {fileID: 1483956236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1668629744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5766256714086628155, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
   m_PrefabInstance: {fileID: 1483956236}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1786283739 stripped
