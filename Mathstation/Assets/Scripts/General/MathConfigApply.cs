@@ -14,8 +14,11 @@ public class MathConfigApply : MonoBehaviour
     [SerializeField] private Toggle singleOperation;
     [SerializeField] private Toggle simplifyFractions;
     [SerializeField] private GameObject mathEditorPrefab;
+    [SerializeField] private GameObject settingsWindow;
 
     public void Execute(){
+
+        //set policies to math editor prefab
         mathEditorPrefab.GetComponent<Policy>().setRemainderDivision(remainderDivision.isOn);
         mathEditorPrefab.GetComponent<Policy>().setNegativeValues(negativeValues.isOn);
         mathEditorPrefab.GetComponent<Policy>().setTextProblems(textProblems.isOn);
@@ -24,6 +27,9 @@ public class MathConfigApply : MonoBehaviour
         mathEditorPrefab.GetComponent<Policy>().setIncludeFractions(fraction.isOn);
         mathEditorPrefab.GetComponent<Policy>().setSingleOperation(singleOperation.isOn);
         mathEditorPrefab.GetComponent<Policy>().setSimplifyFractions(simplifyFractions.isOn);
+
+        //close window
+        settingsWindow.SetActive(false);
     }
 
     void Update(){
