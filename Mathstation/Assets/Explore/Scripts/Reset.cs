@@ -32,6 +32,8 @@ public class Reset : MonoBehaviour
     public void InitReset(){
         if(resetLock > 0)
             return;
+        //disable trail particle FX
+        transform.GetChild(0).gameObject.SetActive(false);
         gameObject.GetComponent<MoveLock>().IncrementMoveLock();
         StartCoroutine("SmoothReset");
         gameObject.GetComponent<Fuel>().ResetFuel();
@@ -58,5 +60,7 @@ public class Reset : MonoBehaviour
         gameObject.GetComponent<MoveLock>().DecrementMoveLock();
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().color = ogColor;
+        //enable trail particle FX
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 }
