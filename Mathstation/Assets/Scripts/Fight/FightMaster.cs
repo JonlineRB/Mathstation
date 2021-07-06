@@ -20,6 +20,8 @@ public class FightMaster : MonoBehaviour
     private GameObject heartManager;
     [SerializeField]
     private bool pauseCharging = true;
+    [SerializeField] private GameObject loseWindow;
+    [SerializeField] private GameObject winWindow;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +60,7 @@ public class FightMaster : MonoBehaviour
     public void DecrementLife(){
         if(--life<=0){
             heartManager.GetComponent<HeartManager>().SetHearts(0);
-            SceneManager.LoadScene("LoseScene");
+            loseWindow.SetActive(true);            
             return;
         }
         heartManager.GetComponent<HeartManager>().SetHearts(life);
@@ -75,7 +77,7 @@ public class FightMaster : MonoBehaviour
     }
 
     public void winGame(){
-        SceneManager.LoadScene("WinScene");
+        winWindow.SetActive(true);
     }
 
     public void mainMenu(){

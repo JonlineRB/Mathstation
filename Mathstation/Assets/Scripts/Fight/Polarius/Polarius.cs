@@ -135,7 +135,8 @@ public class Polarius : MonoBehaviour
                 isPositive = true;
                 break;
            case 0: 
-                SceneManager.LoadScene(3);
+                GameObject.Find("FightGame").GetComponent<FightMaster>().winGame();
+                GameObject.Destroy(gameObject);
                 break;
        }
        maxShield += 2;
