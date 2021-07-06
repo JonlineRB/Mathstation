@@ -18,5 +18,6 @@ public class Rockstorm_Phase3 : Rockstorm_Phase2
         //initiate crumbling animation, call win at the end
         fightGame.GetComponent<FightMaster>().winGame();
         base.Destroy();
+        GameObject.Destroy(gameObject);
     }
 }

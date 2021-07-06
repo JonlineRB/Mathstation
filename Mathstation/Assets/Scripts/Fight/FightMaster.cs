@@ -60,7 +60,10 @@ public class FightMaster : MonoBehaviour
     public void DecrementLife(){
         if(--life<=0){
             heartManager.GetComponent<HeartManager>().SetHearts(0);
-            loseWindow.SetActive(true);            
+            loseWindow.SetActive(true);
+            if(opponent){
+                GameObject.Destroy(opponent);
+            }
             return;
         }
         heartManager.GetComponent<HeartManager>().SetHearts(life);

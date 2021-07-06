@@ -163,8 +163,11 @@ public class QuizShow : MonoBehaviour
         amps[index].GetComponent<Amp>().InitAttack();
     }
     public void MathSuccess(){
-        if(--life<=0)
-            SceneManager.LoadScene("WinScene");
+        if(--life<=0){
+            GameObject.Find("FightGame").GetComponent<FightMaster>().winGame();
+            GameObject.Destroy(gameObject);
+        }
+            
         switch (life){
             case 2:
                 Set2.SetActive(true);
