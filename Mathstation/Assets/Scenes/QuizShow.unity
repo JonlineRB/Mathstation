@@ -661,6 +661,7 @@ GameObject:
   - component: {fileID: 582423936}
   - component: {fileID: 582423939}
   - component: {fileID: 582423940}
+  - component: {fileID: 582423938}
   m_Layer: 0
   m_Name: Amp
   m_TagString: Untagged
@@ -733,6 +734,19 @@ Transform:
   m_Father: {fileID: 997878852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &582423938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582423935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!114 &582423939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,6 +801,7 @@ GameObject:
   - component: {fileID: 840958864}
   - component: {fileID: 840958866}
   - component: {fileID: 840958865}
+  - component: {fileID: 840958867}
   m_Layer: 0
   m_Name: xButton
   m_TagString: Untagged
@@ -917,6 +932,19 @@ MonoBehaviour:
   isVButton: 0
   v: {fileID: 21300000, guid: c95a04ed52e29854bba8a17a038aae7e, type: 3}
   x: {fileID: 21300000, guid: ae07b2993e53e4840a0051b216a9166a, type: 3}
+--- !u!114 &840958867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840958862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!1 &900787599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1351,7 @@ GameObject:
   - component: {fileID: 1100495934}
   - component: {fileID: 1100495936}
   - component: {fileID: 1100495937}
+  - component: {fileID: 1100495938}
   m_Layer: 0
   m_Name: Amp (3)
   m_TagString: Untagged
@@ -1437,6 +1466,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.89, y: 4.4638186}
   m_EdgeRadius: 0
+--- !u!114 &1100495938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100495933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!1 &1324601609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1492,7 @@ GameObject:
   - component: {fileID: 1324601612}
   - component: {fileID: 1324601613}
   - component: {fileID: 1324601614}
+  - component: {fileID: 1324601615}
   m_Layer: 0
   m_Name: QuizShow
   m_TagString: Untagged
@@ -1591,6 +1634,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+--- !u!114 &1324601615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324601609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!1 &1422089450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1795,7 @@ GameObject:
   - component: {fileID: 1502653551}
   - component: {fileID: 1502653553}
   - component: {fileID: 1502653552}
+  - component: {fileID: 1502653554}
   m_Layer: 0
   m_Name: vButton
   m_TagString: Untagged
@@ -1869,6 +1926,19 @@ MonoBehaviour:
   isVButton: 1
   v: {fileID: 21300000, guid: 7c35c59575acb964896c3651244cb3c0, type: 3}
   x: {fileID: 21300000, guid: 2b28f177371fde44c9fe85f0ffd8328e, type: 3}
+--- !u!114 &1502653554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502653549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!1 &1517588354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2508,7 @@ GameObject:
   - component: {fileID: 1864167759}
   - component: {fileID: 1864167761}
   - component: {fileID: 1864167762}
+  - component: {fileID: 1864167763}
   m_Layer: 0
   m_Name: SubWoofer
   m_TagString: Untagged
@@ -2552,6 +2623,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.55, y: 2.4996872}
   m_EdgeRadius: 0
+--- !u!114 &1864167763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864167758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!1 &1867494899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,6 +2719,7 @@ GameObject:
   - component: {fileID: 1879472603}
   - component: {fileID: 1879472605}
   - component: {fileID: 1879472606}
+  - component: {fileID: 1879472607}
   m_Layer: 0
   m_Name: Amp (1)
   m_TagString: Untagged
@@ -2749,6 +2834,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.89, y: 4.4638186}
   m_EdgeRadius: 0
+--- !u!114 &1879472607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879472602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!1 &1982660422
 GameObject:
   m_ObjectHideFlags: 0
@@ -3141,6 +3239,7 @@ GameObject:
   - component: {fileID: 2116246923}
   - component: {fileID: 2116246925}
   - component: {fileID: 2116246926}
+  - component: {fileID: 2116246927}
   m_Layer: 0
   m_Name: Amp (2)
   m_TagString: Untagged
@@ -3255,6 +3354,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.89, y: 4.4638186}
   m_EdgeRadius: 0
+--- !u!114 &2116246927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116246922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!1 &2144921112
 GameObject:
   m_ObjectHideFlags: 0
