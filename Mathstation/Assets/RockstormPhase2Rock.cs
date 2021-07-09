@@ -52,6 +52,8 @@ public class RockstormPhase2Rock : MonoBehaviour
     void OnMouseDown(){
         gameObject.GetComponent<ExplodeRocks>().Explode(transform.position);
         gameObject.GetComponent<EnergyGain>().GainEnergy();
+        //reset cursor
+        gameObject.GetComponent<MouseOverCursorChange>().ApplyDefaultCursor();
         GameObject.Destroy(gameObject);
     }
 }

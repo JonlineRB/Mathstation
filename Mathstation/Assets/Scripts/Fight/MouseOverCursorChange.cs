@@ -11,6 +11,10 @@ public class MouseOverCursorChange : MonoBehaviour
     }
 
     void OnMouseExit(){
+        ApplyDefaultCursor();
+    }
+
+    public void ApplyDefaultCursor(){
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
     

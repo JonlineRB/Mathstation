@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9114299619819973247}
   - component: {fileID: 2004729944158333498}
   - component: {fileID: -488713989675805935}
+  - component: {fileID: 504307135116900227}
   m_Layer: 0
   m_Name: RockstormPhase2Rock
   m_TagString: Untagged
@@ -161,3 +162,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyGainValue: 4
+--- !u!114 &504307135116900227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167177743232048977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}

@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 5368283636781680819}
   - component: {fileID: 1401344214963062280}
   - component: {fileID: 2402846203510717905}
+  - component: {fileID: 3714657653011662943}
   m_Layer: 0
   m_Name: Rockstorm_RockStage 3
   m_TagString: Untagged
@@ -466,3 +467,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3714657653011662943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381558357103735554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
