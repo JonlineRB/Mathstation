@@ -49,6 +49,7 @@ public class QuizShow : MonoBehaviour
         vButton.SetActive(true);
         xButton.SetActive(true);
         isIdle = false;
+        gameObject.GetComponent<MouseOverCursorChange>().Lock();
         if(life==1)
             SwapButtons();
 
@@ -59,6 +60,7 @@ public class QuizShow : MonoBehaviour
         vButton.SetActive(false);
         xButton.SetActive(false);
         isIdle=true;
+        gameObject.GetComponent<MouseOverCursorChange>().Unlock();
         StartCoroutine("Initiate");
     }
     public void GenerateStatement(){
@@ -123,6 +125,7 @@ public class QuizShow : MonoBehaviour
                 GameObject.Find("FightGame").GetComponent<FightMaster>().setPauseCharging();
                 StopAllCoroutines();
                 isIdle=false;
+                gameObject.GetComponent<MouseOverCursorChange>().Lock();
             }
             else
                 GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgGain);
@@ -181,6 +184,7 @@ public class QuizShow : MonoBehaviour
                 break;
         }
         isIdle=true;
+        gameObject.GetComponent<MouseOverCursorChange>().Unlock();
         GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
         StartCoroutine("Initiate");
         StartCoroutine("Attack");
