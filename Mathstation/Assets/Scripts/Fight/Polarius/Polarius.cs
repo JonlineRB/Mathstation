@@ -43,6 +43,7 @@ public class Polarius : MonoBehaviour
         //spawn orbs
         GameObject.Find("OrbParent").GetComponent<Polarius_Orb_Spawn>().spawnOrbs();
         StartCoroutine("AutoAttack");
+        BecomeInvulnerable();
     }
 
     public bool orbShot(bool orbValue){
@@ -68,6 +69,8 @@ public class Polarius : MonoBehaviour
             isAttacking = false;
             StopCoroutine("Attack");
             gameObject.GetComponent<SpriteRenderer>().color = shielded;
+            gameObject.GetComponent<MouseOverCursorChange>().Lock();
+            gameObject.GetComponent<MouseOverCursorChange>().ApplyDefaultCursor();
         }
         if(!isVulnerable)
             return;
@@ -86,7 +89,8 @@ public class Polarius : MonoBehaviour
 
     private void DecrementShield(){
         if(--shield<=0){
-            isVulnerable = true;
+            // isVulnerable = true;
+            BecomeVulnerable();
             gameObject.GetComponent<SpriteRenderer>().color = vulnerable;
             //begin coroutine to reset
             StartCoroutine(ResetShield());
@@ -110,7 +114,8 @@ public class Polarius : MonoBehaviour
                     break;
             }
         }
-        isVulnerable = false;
+        // isVulnerable = false;
+        BecomeInvulnerable();
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
         shield = maxShield;
         GameObject.Find("OrbParent").GetComponent<Polarius_Orb_Spawn>().Reset();
@@ -146,6 +151,7 @@ public class Polarius : MonoBehaviour
 
     private IEnumerator Attack(){
         isAttacking = true;
+        gameObject.GetComponent<MouseOverCursorChange>().Unlock();
         for(int i = 0; i < 7; i ++){
             gameObject.GetComponent<SpriteRenderer>().color=Color.red;
             yield return new WaitForSeconds(0.075f);
@@ -158,6 +164,7 @@ public class Polarius : MonoBehaviour
         GameObject.Find("FightGame").GetComponent<FightMaster>().DecrementLife();
         
         isAttacking = false;
+        gameObject.GetComponent<MouseOverCursorChange>().Lock();
     }
 
     private IEnumerator AutoAttack(){
@@ -166,6 +173,18 @@ public class Polarius : MonoBehaviour
         if(!isAttacking && !doingMath)
             StartCoroutine("Attack");
         }
+    }
+
+    private void BecomeVulnerable(){
+        isVulnerable = true;
+        gameObject.GetComponent<MouseOverCursorChange>().Unlock();
+    }
+
+    private void BecomeInvulnerable(){
+        isVulnerable = false;
+        gameObject.GetComponent<MouseOverCursorChange>().Lock();
+        gameObject.GetComponent<MouseOverCursorChange>().ApplyDefaultCursor();
+
     }
 
 

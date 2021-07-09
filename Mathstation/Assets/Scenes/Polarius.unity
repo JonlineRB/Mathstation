@@ -887,6 +887,7 @@ GameObject:
   - component: {fileID: 1280092291}
   - component: {fileID: 1280092292}
   - component: {fileID: 1280092293}
+  - component: {fileID: 1280092294}
   m_Layer: 0
   m_Name: Polarius
   m_TagString: Untagged
@@ -1136,6 +1137,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mathEditor: {fileID: 6340798705914388714, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+--- !u!114 &1280092294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280092288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
 --- !u!1 &1422089450
 GameObject:
   m_ObjectHideFlags: 0
