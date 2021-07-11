@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3350861893102997620}
   - component: {fileID: 3350861893102997621}
   - component: {fileID: 5163978699955565543}
+  - component: {fileID: 809031997873791047}
   m_Layer: 0
   m_Name: OrbNeg
   m_TagString: Untagged
@@ -172,3 +173,17 @@ MonoBehaviour:
   color: {r: 1, g: 0, b: 0, a: 1}
   interval: 1
   repeats: 1
+--- !u!114 &809031997873791047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350861893102997579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89debf38283622044aff7f7f9eb65f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 0

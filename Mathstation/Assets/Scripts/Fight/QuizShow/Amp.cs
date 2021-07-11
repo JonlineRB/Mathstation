@@ -21,6 +21,7 @@ public class Amp : MonoBehaviour
     
     public void InitAttack(){
         isAttacking = true;
+        gameObject.GetComponent<MouseOverCursorChange>().Unlock();
         StartCoroutine("Flash");
         StartCoroutine("Attack");
     }
@@ -38,6 +39,7 @@ public class Amp : MonoBehaviour
         StopAllCoroutines();
         isAttacking = false;
         gameObject.GetComponent<SpriteRenderer>().color=ogColor;
+        gameObject.GetComponent<MouseOverCursorChange>().Lock();
     }
 
     private IEnumerator Attack(){

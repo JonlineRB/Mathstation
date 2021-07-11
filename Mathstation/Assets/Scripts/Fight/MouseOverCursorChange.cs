@@ -5,12 +5,13 @@ using UnityEngine;
 public class MouseOverCursorChange : MonoBehaviour
 {
     [SerializeField] private Texture2D cursorTexture;
-    private bool locked = false;
+    [SerializeField] private bool locked = false;
 
-    void OnMouseEnter(){
+    void OnMouseOver(){
         if(locked)
-            return;
-        Cursor.SetCursor(cursorTexture, new Vector2(0.5f, 0.5f) * cursorTexture.height, CursorMode.ForceSoftware);
+            ApplyDefaultCursor();
+        else
+            Cursor.SetCursor(cursorTexture, new Vector2(0.5f, 0.5f) * cursorTexture.height, CursorMode.ForceSoftware);
     }
 
     void OnMouseExit(){
@@ -18,6 +19,10 @@ public class MouseOverCursorChange : MonoBehaviour
     }
 
     void OnDestroy(){
+        ApplyDefaultCursor();
+    }
+
+    void OnDisable(){
         ApplyDefaultCursor();
     }
 
@@ -32,5 +37,7 @@ public class MouseOverCursorChange : MonoBehaviour
     public void Unlock(){
         locked = false;
     }
+
+
     
 }

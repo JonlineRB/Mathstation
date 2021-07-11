@@ -747,6 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 1
 --- !u!114 &582423939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,6 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 0
 --- !u!1 &900787599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 1
 --- !u!1 &1324601609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 0
 --- !u!1 &1422089450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,6 +1943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 0
 --- !u!1 &1517588354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,6 +2641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 1
 --- !u!1 &1867494899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,6 +2853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 1
 --- !u!1 &1982660422
 GameObject:
   m_ObjectHideFlags: 0
@@ -3367,6 +3374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 54c53af4bd8cce342b7ef674a569b5f2, type: 3}
+  locked: 1
 --- !u!1 &2144921112
 GameObject:
   m_ObjectHideFlags: 0
