@@ -8,6 +8,9 @@ public class QuizShow_Mathcaller : MonoBehaviour, MathCaller
     private GameObject mathEditor;
 
     public void CallMathEditor(){
+        //disable gun sprites
+        GameObject.Find("GunSpriteManager").GetComponent<GunSprites>().Lock();
+
         GameObject editor = GameObject.Instantiate(mathEditor);
         editor.GetComponent<EditorMaster>().SetReport(gameObject);
     }

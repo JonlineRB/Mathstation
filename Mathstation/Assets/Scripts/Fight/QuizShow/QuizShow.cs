@@ -170,6 +170,9 @@ public class QuizShow : MonoBehaviour
             GameObject.Find("FightGame").GetComponent<FightMaster>().winGame();
             GameObject.Destroy(gameObject);
         }
+
+        //enable gun sprites
+        GameObject.Find("GunSpriteManager").GetComponent<GunSprites>().Unlock();
             
         switch (life){
             case 2:

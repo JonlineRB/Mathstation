@@ -132,7 +132,7 @@ MonoBehaviour:
   rightIdle: {fileID: 21300000, guid: 9de7cd88447bc5b41b102382a6310cb0, type: 3}
   rightFire: {fileID: 21300000, guid: f828dca7beaab73479579df20228f995, type: 3}
   duration: 0.1
-  locked: 1
+  locked: 0
 --- !u!1 &5977657584464402627
 GameObject:
   m_ObjectHideFlags: 0

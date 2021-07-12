@@ -2026,6 +2026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GunSpriteManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5977657584450648887, guid: f5bc58c22b7124246aaa3004ee45efee, type: 3}
+      propertyPath: locked
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5bc58c22b7124246aaa3004ee45efee, type: 3}
 --- !u!1001 &6381558357772139388
