@@ -14,5 +14,7 @@ public class Polarius_Mathcaller : MonoBehaviour, MathCaller
 
     public void MathSuccess(){
         gameObject.GetComponent<Polarius>().MathSuccess();
+        //enable gun sprites
+        GameObject.Find("GunSpriteManager").GetComponent<GunSprites>().Unlock();
     }
 }

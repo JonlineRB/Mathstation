@@ -82,6 +82,8 @@ public class Polarius : MonoBehaviour
             //call math editor
             gameObject.GetComponent<Polarius_Mathcaller>().CallMathEditor();
             gameObject.GetComponent<Collider2D>().enabled=false;
+            //disable gun sprites
+            GameObject.Find("GunSpriteManager").GetComponent<GunSprites>().Lock();
         }
         else
             GameObject.Find("FightGame").GetComponent<FightMaster>().energyGain(nrgGainValue);
@@ -89,7 +91,6 @@ public class Polarius : MonoBehaviour
 
     private void DecrementShield(){
         if(--shield<=0){
-            // isVulnerable = true;
             BecomeVulnerable();
             gameObject.GetComponent<SpriteRenderer>().color = vulnerable;
             //begin coroutine to reset
@@ -114,7 +115,6 @@ public class Polarius : MonoBehaviour
                     break;
             }
         }
-        // isVulnerable = false;
         BecomeInvulnerable();
         gameObject.GetComponent<SpriteRenderer>().color = shielded;
         shield = maxShield;
