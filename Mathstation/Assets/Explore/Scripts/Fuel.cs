@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//Script handles player fuel in the explore game
 public class Fuel : MonoBehaviour
 {
     private bool isConsuming = false;
@@ -32,11 +34,13 @@ public class Fuel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Reduce fuel value while consuming it
         if(isConsuming){
             fuel -= consumptionRate * Time.deltaTime;
         }
         fuelText.GetComponent<Text>().text = ((int)fuel).ToString();
 
+        // Initiate a player reset if fuel depletes
         if(fuel<=0){
             gameObject.GetComponent<Reset>().InitReset();
         }
@@ -50,6 +54,7 @@ public class Fuel : MonoBehaviour
         fuel = capacity;
     }
 
+    //Invoked when the capacity ring is consumed
     public void CapacityUp(){
         if(capacities.Count > capacitiesIndex + 1)
             capacity = capacities[++capacitiesIndex];
@@ -58,6 +63,7 @@ public class Fuel : MonoBehaviour
         gameObject.GetComponent<UpgradeLog>().CapacityUp();
     }
 
+    //Invoked when the fuel conspumtion ring is consumed
     public void RateUp(){
         if(consumptionRates.Count > consumptionIndex + 1)
             consumptionRate = consumptionRates[++consumptionIndex];

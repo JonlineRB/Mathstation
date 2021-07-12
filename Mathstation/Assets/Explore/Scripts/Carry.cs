@@ -2,21 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Class handles objects that are carried by the player
 public class Carry : MonoBehaviour
 {
 
-    public enum Carriables {None, Moon, Cork, IceCube}
-    private GameObject carryReference;
+    public enum Carriables {None, Moon, Cork, IceCube} //The types of objects
+    private GameObject carryReference; //Reference to an instance of a carriable object
+    //Prefab references
     [SerializeField] private GameObject carriedMoon;
     [SerializeField] private GameObject carriedCork;
     [SerializeField] private GameObject carriedIceCube;
+    //Reference to the type of the object currently being carried
     private Carriables carrying;
     // Start is called before the first frame update
     void Start()
     {
-        carrying = Carriables.None;
+        carrying = Carriables.None; // Player is not carrying anything initially
     }
 
+    //Set the object that the player carries.
+    // @ Carriables value
+    // The value of type Carriable that the player carries.
+    // All the other references are handled in this method accordingly.
     public void SetCarrying(Carriables value){
         carrying = value;
         switch (carrying){

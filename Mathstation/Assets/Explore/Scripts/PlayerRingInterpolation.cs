@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script handles the interpolations performed by the player when approaching upgrade rings
+// and when consuming them.
 public class PlayerRingInterpolation : MonoBehaviour
 {
+    //Fields for the respective interpolations
     [SerializeField] private float duration_1;
     [SerializeField] private float duration_2;
     [SerializeField] private float distance_2;

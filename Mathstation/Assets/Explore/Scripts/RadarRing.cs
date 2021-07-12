@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Radar ring object class
 public class RadarRing : Artifact_Super
 {
+    // Arrows and dials used for the radar's visual effects
     [SerializeField] private GameObject arrow;
     [SerializeField] private float arrowDistance;
     [SerializeField] private List<GameObject> fadies;
@@ -29,6 +31,8 @@ public class RadarRing : Artifact_Super
         }
     }
 
+    // Once activated, the radar ring will reveal the location of other objects in it's pointingAt array.
+    // Invokes when the player enters the collider
     private void Scan(){
         fadies = new List<GameObject>();
         fadies.Add(background);

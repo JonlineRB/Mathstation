@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script handles player position resets, such as when the fuel runs out
 public class Reset : MonoBehaviour
 {
-
+    // Interpolation related fields
     [SerializeField] private Vector3 restartLocation;
     [SerializeField] private GameObject moveMarker;
     [SerializeField] private float duration;
     private Color ogColor = Color.white;
     [SerializeField] private Color resetColor;
+
+    // Lock related field and methods. Has an incremental lock like player movement
 
     [SerializeField] private int resetLock = 0;
 
@@ -29,6 +32,7 @@ public class Reset : MonoBehaviour
     }
     
 
+    // Initialize the reset sequence, start coroutine
     public void InitReset(){
         if(resetLock > 0)
             return;
@@ -43,6 +47,7 @@ public class Reset : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = resetColor;
     }
 
+    // Reset coroutine
     private IEnumerator SmoothReset(){
         float elapsedTime = 0;
         Vector3 currentPosition = transform.position;

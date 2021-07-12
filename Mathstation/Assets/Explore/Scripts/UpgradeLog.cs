@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script counts the upgrades the player consumed during the levels
+// These are presented at the end of the level
 public class UpgradeLog : MonoBehaviour
 {
     private int speedCount, capacityCount, consumptionCount = 0;

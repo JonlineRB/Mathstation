@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CapacityUpRing : Ring
 {
+    //Increases the player's fuel capcaity
     protected override void ApplyRingEffect(){
         player.GetComponent<Fuel>().CapacityUp();
     }

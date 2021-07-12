@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script keeps track of resolved objectives, and stores the target value for the level.
+// Reaching the target resolved objective count will instantiate the goal ring in the specified position.
 public class Objective : MonoBehaviour
 {
     private int objectives = 0;

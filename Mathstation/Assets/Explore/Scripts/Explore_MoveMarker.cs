@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Class handles movement marker of the player, to which the ship moves
 public class Explore_MoveMarker : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D other){
