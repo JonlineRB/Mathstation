@@ -15,9 +15,17 @@ public class Rockstorm_Phase3 : Rockstorm_Phase2
     }
 
     public override void Destroy(){
+        //lock gun sprites
+        GameObject.Find("GunSpriteManager").GetComponent<GunSprites>().Lock();
         //initiate crumbling animation, call win at the end
         fightGame.GetComponent<FightMaster>().winGame();
         base.Destroy();
         GameObject.Destroy(gameObject);
     }
+
+    //unlocks gun sprites
+    void OnEnable(){
+        GameObject.Find("GunSpriteManager").GetComponent<GunSprites>().Unlock();
+    }
+
 }

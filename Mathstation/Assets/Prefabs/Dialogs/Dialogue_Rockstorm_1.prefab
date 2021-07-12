@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 7592765028555121785}
   - component: {fileID: 7592765028555121786}
   - component: {fileID: 7592765028555121735}
+  - component: {fileID: 1218452732860422993}
   m_Layer: 5
   m_Name: Dialogue_Rockstorm_1
   m_TagString: Untagged
@@ -256,6 +257,18 @@ MonoBehaviour:
     to finish the job.
   textObject: {fileID: 7592765028320682993}
   assistObjects: []
+--- !u!114 &1218452732860422993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592765028555121788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d52ca1454ac034caa4f9c990c5bdaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7592765029605652934
 GameObject:
   m_ObjectHideFlags: 0
