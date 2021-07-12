@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cork : Carriable
 {
-    // Start is called before the first frame update
+    //Overrides to carry the Cork object
     protected override Carry.Carriables CarryObject()
     {
         return Carry.Carriables.Cork;
