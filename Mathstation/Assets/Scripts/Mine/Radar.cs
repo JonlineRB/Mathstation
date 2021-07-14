@@ -17,14 +17,34 @@ public class Radar : MonoBehaviour
     [SerializeField]
     private GameObject shower;
 
+    // list of radar readings as game objects
     private List<GameObject> blips = new List<GameObject>();
 
+    //reference to current journey value
     private int journey;
+
+    //reference to the mone game object
+    GameObject mineGame;
+
+    //radar update interval duration
+    [SerializeField] private float interval;
+
+
 
     //put the sprites on the radar
     void OnEnable(){
+        // set mine game reference
+        mineGame = GameObject.Find("MineGame");
+        RadarRead();
+    }
+    
+    void OnDisable(){
+        StopAllCoroutines();
+        FlushRadar();
+    }
+
+    private void RadarRead(){
         //get sprite status, journey
-        GameObject mineGame = GameObject.Find("MineGame");
         journey = mineGame.GetComponent<Engine>().getJourney();
 
         //get the events
@@ -51,11 +71,18 @@ public class Radar : MonoBehaviour
             blip.transform.Translate(new Vector3(((float)entry.Item2 - (float)journey) / radarRange * 120 + 50,0,0)); //max range is 170, min is 50
             blips.Add(blip);
         }
+        StartCoroutine(Refresh());
     }
-    
-    void OnDisable(){
+
+    private void FlushRadar(){
         foreach(GameObject blip in blips)
             GameObject.Destroy(blip);
         blips = new List<GameObject>();
+    }
+
+    private IEnumerator Refresh(){
+        yield return new WaitForSeconds(interval);
+        FlushRadar();
+        RadarRead();
     }
 }
