@@ -20,13 +20,16 @@ public class UpgradeLog : MonoBehaviour
         consumptionCount++;
     }
 
+    // Outputs text for the end of level report
     public string ExportReport(){
         string output = "";
         output += speedCount;
-        output += "\n";
-        output += capacityCount;
-        output += "\n";
-        output += consumptionCount;
+
+        // deprecated
+        // output += "\n";
+        // output += capacityCount;
+        // output += "\n";
+        // output += consumptionCount;
 
         return output;
     }
