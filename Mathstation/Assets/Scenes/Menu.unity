@@ -1048,7 +1048,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mining
+  m_Text: Mining (Strategy)
 --- !u!222 &412592858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2370,7 +2370,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quiz Show
+  m_Text: 'III: Quiz Show'
 --- !u!222 &685184527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2684,7 +2684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &773590778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2921,7 +2921,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Asteroid_3
+  m_Text: Asteroid III
 --- !u!222 &865321060
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4482,7 +4482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Polarius
+  m_Text: 'II: Polarius'
 --- !u!222 &1314449622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4858,7 +4858,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fighting
+  m_Text: Fighting (Action)
 --- !u!222 &1515982072
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5385,7 +5385,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sector_2
+  m_Text: Sector II
 --- !u!222 &1611795284
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6188,7 +6188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Asteroid_1
+  m_Text: Asteroid I
 --- !u!222 &1804767432
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6234,7 +6234,7 @@ RectTransform:
   m_AnchorMin: {x: 0.14400001, y: 0.33483157}
   m_AnchorMax: {x: 0.14400001, y: 0.33483157}
   m_AnchoredPosition: {x: -4.8999634, y: 0.80000305}
-  m_SizeDelta: {x: 88, y: 40}
+  m_SizeDelta: {x: 100.9, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814386560
 MonoBehaviour:
@@ -6762,7 +6762,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Asteroid_2
+  m_Text: Asteroid II
 --- !u!222 &1874115544
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7110,7 +7110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rockstorm
+  m_Text: 'I: Rockstorm'
 --- !u!222 &1927374873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7189,7 +7189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sector_1
+  m_Text: Sector I
 --- !u!222 &1948117873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7353,7 +7353,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sector_3
+  m_Text: Sector III
 --- !u!222 &1965968948
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7526,10 +7526,10 @@ RectTransform:
   m_Father: {fileID: 875299656}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.9005843}
-  m_AnchorMax: {x: 0.5, y: 0.9005843}
-  m_AnchoredPosition: {x: 0.5, y: 7}
-  m_SizeDelta: {x: 159, y: 30}
+  m_AnchorMin: {x: 0.4691877, y: 0.9005843}
+  m_AnchorMax: {x: 0.4691877, y: 0.9005843}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 235.58, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993952614
 MonoBehaviour:
@@ -7564,7 +7564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exploration
+  m_Text: Exploration (Collectathon)
 --- !u!222 &1993952615
 CanvasRenderer:
   m_ObjectHideFlags: 0
