@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Depracated
 public class Interaction : MonoBehaviour
 {
     [SerializeField]

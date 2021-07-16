@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Mathcaller script for Polarius stage in fight game
 public class Polarius_Mathcaller : MonoBehaviour, MathCaller
 {
     [SerializeField]

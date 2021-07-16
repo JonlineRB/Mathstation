@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Class for QuizzShow's boss objects
 public class Amp : MonoBehaviour
 {
     [SerializeField]
     private Color flashColor;
-    private Color ogColor;
+    private Color ogColor; // Stores original color value
     [SerializeField]
-    private GameObject explosion;
+    private GameObject explosion; // Reference to an explosion sprite prefab
     [SerializeField]
     private float flashInterval;
     [SerializeField]
@@ -19,6 +20,7 @@ public class Amp : MonoBehaviour
         ogColor = gameObject.GetComponent<SpriteRenderer>().color;
     }
     
+    // Method initiates attack, calls flash and attack coroutines
     public void InitAttack(){
         isAttacking = true;
         gameObject.GetComponent<MouseOverCursorChange>().Unlock();
@@ -26,6 +28,7 @@ public class Amp : MonoBehaviour
         StartCoroutine("Attack");
     }
 
+    // Flashes the object the color stored in flashColor
     private IEnumerator Flash(){
         while(true){
             gameObject.GetComponent<SpriteRenderer>().color=flashColor;
@@ -35,6 +38,7 @@ public class Amp : MonoBehaviour
         }
     }
 
+    // Clicking this object disables attacks
     void OnMouseDown(){
         StopAllCoroutines();
         isAttacking = false;
@@ -42,6 +46,7 @@ public class Amp : MonoBehaviour
         gameObject.GetComponent<MouseOverCursorChange>().Lock();
     }
 
+    // Attack couroutine
     private IEnumerator Attack(){
         yield return new WaitForSeconds(attackInterval);
         StopCoroutine("Flash");

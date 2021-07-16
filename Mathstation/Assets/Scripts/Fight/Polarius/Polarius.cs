@@ -46,17 +46,20 @@ public class Polarius : MonoBehaviour
         BecomeInvulnerable();
     }
 
+    // Reaction when the player shoots an orb
     public bool orbShot(bool orbValue){
         bool result = (orbValue != isPositive);
+        // Correct shots will decrease polarius' shield
         if(result){
             DecrementShield();
         }
-            
+        // Incorrect shots will invoke a counter attack
         else
             StartCoroutine("Attack");
         return result;
     }
 
+    // Coroutine flashes boss red
     private IEnumerator FlashRed(){
         Color og = gameObject.GetComponent<SpriteRenderer>().color;
         gameObject.GetComponent<SpriteRenderer>().color=Color.red;
@@ -64,7 +67,9 @@ public class Polarius : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color=og;
     }
 
+    // Handles mouse clicks on polarius
     void OnMouseDown(){
+        // If boss was attacking, cancel that attack
         if(isAttacking){
             isAttacking = false;
             StopCoroutine("Attack");
@@ -72,11 +77,13 @@ public class Polarius : MonoBehaviour
             gameObject.GetComponent<MouseOverCursorChange>().Lock();
             gameObject.GetComponent<MouseOverCursorChange>().ApplyDefaultCursor();
         }
+        // return if boss is invulnerable
         if(!isVulnerable)
             return;
         bool consumed = GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge();
+        // If boss is vulnerable and player has full energy
         if(consumed){
-            //disable stuff
+            //disable normal behaviour
             doingMath = true;
             GameObject.Find("FightGame").GetComponent<FightMaster>().setPauseCharging();
             //call math editor
@@ -100,6 +107,7 @@ public class Polarius : MonoBehaviour
             StartCoroutine(FlashRed());
     }
 
+    // Coroutine resets the boss to an invulnerable state once it became vulnerable
     private IEnumerator ResetShield(){
         StopCoroutine("Attack");
         StopCoroutine("AutoAttack");
@@ -122,7 +130,7 @@ public class Polarius : MonoBehaviour
         StartCoroutine("AutoAttack");
     }
 
-
+    // Method called once math has been solved
     public void MathSuccess(){
         GameObject.Find("FightGame").GetComponent<FightMaster>().releasePauseCharging();
         gameObject.GetComponent<Collider2D>().enabled = true;
@@ -140,6 +148,7 @@ public class Polarius : MonoBehaviour
                 isPositive = true;
                 break;
            case 0: 
+                // Win
                 GameObject.Find("FightGame").GetComponent<FightMaster>().winGame();
                 GameObject.Destroy(gameObject);
                 break;
@@ -149,6 +158,7 @@ public class Polarius : MonoBehaviour
        doingMath = false;
     }
 
+    // Coroutine handles an attack from polarius
     private IEnumerator Attack(){
         isAttacking = true;
         gameObject.GetComponent<MouseOverCursorChange>().Unlock();
@@ -167,6 +177,7 @@ public class Polarius : MonoBehaviour
         gameObject.GetComponent<MouseOverCursorChange>().Lock();
     }
 
+    // Coroutine handles automatic attack sequences for polarius
     private IEnumerator AutoAttack(){
         while(true){
         yield return new WaitForSeconds(attack_interval);

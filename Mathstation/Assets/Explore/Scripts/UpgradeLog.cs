@@ -25,7 +25,7 @@ public class UpgradeLog : MonoBehaviour
         string output = "";
         output += speedCount;
 
-        // deprecated
+        // deprecated. used for the other upgrade rings
         // output += "\n";
         // output += capacityCount;
         // output += "\n";

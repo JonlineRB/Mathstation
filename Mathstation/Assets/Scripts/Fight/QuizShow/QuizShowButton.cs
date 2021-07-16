@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script for QuizzShow's button objects
 public class QuizShowButton : MonoBehaviour
 {
     [SerializeField]
-    private bool isVButton;
+    private bool isVButton; // Determines if the button is a true or a flase button
+    // Sprite references
     [SerializeField]
     private Sprite v;
 
     [SerializeField]
     private Sprite x;
 
+    // Handles mouse clicks
     void OnMouseDown(){
         if(isVButton)
             GameObject.Find("QuizShow").GetComponent<QuizShow>().vButtonClick();

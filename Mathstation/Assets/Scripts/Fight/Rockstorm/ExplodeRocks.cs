@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script for the visual effects of exploding rocks
 public class ExplodeRocks : MonoBehaviour
 {
     [SerializeField]
-    private GameObject stone;
+    private GameObject stone; // prefab reference
     [SerializeField]
-    private int amtOfStones;
+    private int amtOfStones; // Amount of stones in the explosion
 
     public void Explode(Vector3 position){
         for(int i = 0; i <= amtOfStones; i++){

@@ -4,65 +4,79 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Script for the QuizShow stage of fight game
 public class QuizShow : MonoBehaviour
 {
-    private int operand_a;
-    private int operand_b;
-    private bool aGreaterB;
+    private int operand_a; // left operand
+    private int operand_b; // right operand
+    private bool aGreaterB; // inequality sign. True is >, false is <
     [SerializeField]
-    private GameObject textField;
+    private GameObject textField; // Text object to which the problem is pushed
     [SerializeField]
+    // True and false button gameObject references
     private GameObject vButton;
     [SerializeField]
     private GameObject xButton;
     [SerializeField]
+    // Sprite references
     private Sprite idle;
     [SerializeField]
     private Sprite quiz;
     [SerializeField]
-    private float initDuration;
+    private Sprite laugh;
+    [SerializeField]
+    private float initDuration; // Duration for question generation
     private bool isIdle = true;
     [SerializeField]
     private int nrgGain;
     [SerializeField]
     private int life = 3;
     [SerializeField]
-    private Sprite laugh;
-    [SerializeField]
     private int nrgDrainWrongAnswer;
     [SerializeField]
-    private List<GameObject> amps;
+    private List<GameObject> amps; //List of amp objects
     [SerializeField]
     private float attackInterval;
+    // Sets of other amps, introduced in the later phases of the fight
     [SerializeField]
     private GameObject Set2;
     [SerializeField]
     private GameObject Set3;
 
+    // Call initiation, attack coroutines at the start
     void Start(){
         StartCoroutine("Initiate");
         StartCoroutine("Attack");
     }
 
+    // Transition from idle to quiz mode
     public void toQuizMode(){
         gameObject.GetComponent<SpriteRenderer>().sprite=quiz;
+        // Enable input buttons
         vButton.SetActive(true);
         xButton.SetActive(true);
         isIdle = false;
         gameObject.GetComponent<MouseOverCursorChange>().Lock();
+        // If it's the final stage, swap the position of the input buttons
         if(life==1)
             SwapButtons();
-
     }
+
+    // Transition to idle mode
     public void toIdleMode(){
         gameObject.GetComponent<SpriteRenderer>().sprite=idle;
         textField.GetComponent<Text>().text="";
+        // Disable input buttons
         vButton.SetActive(false);
         xButton.SetActive(false);
         isIdle=true;
         gameObject.GetComponent<MouseOverCursorChange>().Unlock();
         StartCoroutine("Initiate");
     }
+
+    // Generates question,
+    // pushes text value to text object,
+    // transitions to quiz mode
     public void GenerateStatement(){
         string result = "";
         operand_a = Random.Range(1,11);
@@ -93,9 +107,11 @@ public class QuizShow : MonoBehaviour
         toQuizMode();
 
     }
+    // Flush text object's text value
     public void ClearText(){
         textField.GetComponent<Text>().text="";
     }
+    // Evaluates the values from GenerateStatement()
     public bool evaluateStatement(){
         if(aGreaterB)
             return operand_a>operand_b;
@@ -103,19 +119,21 @@ public class QuizShow : MonoBehaviour
             return operand_a<operand_b;
     }
 
+    // Coroutine waits before calling GenerateStatement()
     private IEnumerator Initiate(){
         yield return new WaitForSeconds(initDuration);
         GenerateStatement();
     }
 
+    // Automatically initiate attacks over time. Calls an amp's InitAttack()
     private IEnumerator Attack(){
         while(true){
             yield return new WaitForSeconds(attackInterval);
             Debug.Log(amps.Count);
             amps[Random.Range(0,amps.Count)].GetComponent<Amp>().InitAttack();
-            // amps[1].GetComponent<Amp>().InitAttack();
         }
     }
+    // Handles player clicks
     void OnMouseDown(){
         if(isIdle){
             bool consumed = GameObject.Find("FightGame").GetComponent<FightMaster>().consumeEnergyCharge();
@@ -132,6 +150,7 @@ public class QuizShow : MonoBehaviour
         }
     }
 
+    // Handles player shooting the true button
     public void vButtonClick(){
         if(evaluateStatement()){
             toIdleMode();
@@ -140,6 +159,7 @@ public class QuizShow : MonoBehaviour
             WrongAnswer();
     }
 
+    // Handles player shooting the false button
     public void xButtonClick(){
         if(!evaluateStatement()){
             toIdleMode();
@@ -148,6 +168,7 @@ public class QuizShow : MonoBehaviour
             WrongAnswer();
     }
 
+    // Called when the player answered incorrectly
     private void WrongAnswer(){
         gameObject.GetComponent<SpriteRenderer>().sprite=laugh;
         ClearText();
@@ -165,7 +186,11 @@ public class QuizShow : MonoBehaviour
         }
         amps[index].GetComponent<Amp>().InitAttack();
     }
+    
+    // Called once math has been solved successfuly
     public void MathSuccess(){
+
+        // Win if the life is reduced to zero or less
         if(--life<=0){
             GameObject.Find("FightGame").GetComponent<FightMaster>().winGame();
             GameObject.Destroy(gameObject);
@@ -193,6 +218,8 @@ public class QuizShow : MonoBehaviour
         StartCoroutine("Attack");
     }
 
+    // Swaps the true and falls buttons.
+    // Internally, it swaps the button's sprites and values
     public void SwapButtons(){
         vButton.GetComponent<QuizShowButton>().Swap();
         xButton.GetComponent<QuizShowButton>().Swap();

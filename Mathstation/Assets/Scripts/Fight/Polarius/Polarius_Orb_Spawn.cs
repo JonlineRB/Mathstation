@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script handles orb instantiation for Polarius stage of the fight game
 public class Polarius_Orb_Spawn : MonoBehaviour
 {
     [SerializeField]
@@ -9,9 +10,12 @@ public class Polarius_Orb_Spawn : MonoBehaviour
     [SerializeField]
     private float radius;
     [SerializeField]
-    private GameObject negOrb;
+    private GameObject negOrb; // Reference
     [SerializeField]
-    private GameObject posOrb;
+    private GameObject posOrb; // Reference
+
+    // Instantiates orbs in a circle with the set radius.
+    // Space between orbs is derived from the amount of orbs, see variable slice.
     public void spawnOrbs(){
         float slice = 360 / amt_of_orbs;
         for(int i = 0; i < amt_of_orbs; i++){
@@ -22,11 +26,14 @@ public class Polarius_Orb_Spawn : MonoBehaviour
         }
     }
 
+    // Activates all orb objects
+
     public void Reset(){
         foreach(Transform child in transform)
             child.gameObject.SetActive(true);
     }
 
+    // Destroys orbs, adds more for the next stage, instantiates them again
     public void NextPhase(){
         //kill all kids! D:
         foreach(Transform child in transform)

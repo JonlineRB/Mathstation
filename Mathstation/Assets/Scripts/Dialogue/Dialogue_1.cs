@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class overrides Dialogue_Super.Close() for a fight game specific implementation
 public class Dialogue_1 : Dialogue_Super
 {
 

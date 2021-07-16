@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Mathcaller script for QuizShow stage of fight game
 public class QuizShow_Mathcaller : MonoBehaviour, MathCaller
 {
     [SerializeField]
@@ -15,6 +16,7 @@ public class QuizShow_Mathcaller : MonoBehaviour, MathCaller
         editor.GetComponent<EditorMaster>().SetReport(gameObject);
     }
 
+    // Called once math is successfuly solved
     public void MathSuccess(){
         gameObject.GetComponent<QuizShow>().MathSuccess();
     }
