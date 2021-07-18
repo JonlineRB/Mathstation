@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script for the UI element of the energy bar
 public class EnergyBar : MonoBehaviour
 {
     FightMaster master;

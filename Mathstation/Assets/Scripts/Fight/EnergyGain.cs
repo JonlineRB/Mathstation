@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script handles increases in the player's energy value
 public class EnergyGain : MonoBehaviour
 {
     [SerializeField]

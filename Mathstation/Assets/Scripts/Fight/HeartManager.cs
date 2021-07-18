@@ -3,26 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Hearts UI element script
 public class HeartManager : MonoBehaviour
 {
 
-    [SerializeField]
-    private GameObject[] hearts;
-    [SerializeField]
-    private Sprite fullHeart;
-    [SerializeField]
-    private Sprite emptyHeart;
+    [SerializeField] private GameObject[] hearts;
+    [SerializeField] private Sprite fullHeart;
+    [SerializeField] private Sprite emptyHeart;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetHearts(int value){
         for(int i = 0; i < hearts.Length; i++){
             if(i<value)

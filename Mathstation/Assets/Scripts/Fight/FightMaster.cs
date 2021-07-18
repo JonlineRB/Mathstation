@@ -3,52 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Main gameloop script for the fight game
 public class FightMaster : MonoBehaviour
 {
-    [SerializeField]
-    private int life = 3;
-    [SerializeField]
-    private GameObject opponent;
-    public float energy = 0;
-    [SerializeField]
-    private int MaxEnergy;
-    [SerializeField]
-    private float nrg_charge_rate;
-    [SerializeField]
-    private GameObject sidePanel;
-    [SerializeField]
-    private GameObject heartManager;
-    [SerializeField]
-    private bool pauseCharging = true;
+    // Player's life points / hit points
+    [SerializeField] private int life = 3;
+    [SerializeField] private GameObject opponent; // Opponent game object reference
+    public float energy = 0; // Current energy value
+    [SerializeField] private int MaxEnergy;
+    [SerializeField] private float nrg_charge_rate; // Charge rate
+    // UI Object references
+    [SerializeField] private GameObject sidePanel;
+    [SerializeField] private GameObject heartManager;
     [SerializeField] private GameObject loseWindow;
     [SerializeField] private GameObject winWindow;
+    // Lock for player energy charge
+    [SerializeField] private bool pauseCharging = true;
+    
     // Start is called before the first frame update
     void Start()
     {
         heartManager.GetComponent<HeartManager>().SetMaxHearts(life);
         heartManager.GetComponent<HeartManager>().SetHearts(life);
-        //begin dialogue
-        //make a script that calls dialogues
-        //call it here and call the first dialogue
+        // Calls dialogues. Handles case of no dialogue references
         gameObject.GetComponent<Dialogue_caller>().CallDialogue();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
-        //temporary key bound events
-        if(Input.GetKeyDown(KeyCode.D)){
-            DecrementLife();
-        }
-        if(energy==100){
+        // Cheat: Decrease player life with
+        // if(Input.GetKeyDown(KeyCode.D)){
+        //     DecrementLife();
+        // }
+        // If energy is at max, set a sprite
+        if(energy==MaxEnergy){
             sidePanel.GetComponent<SidePanel>().toCharged();
         }
+        // If not, default sprite
         else
             sidePanel.GetComponent<SidePanel>().toIdle();
     }
 
     void FixedUpdate(){
+        // Charges player energy
         if(pauseCharging)
             return;
         if(energy < MaxEnergy)
@@ -56,7 +54,7 @@ public class FightMaster : MonoBehaviour
         energy = Mathf.Clamp(energy, 0, (float)MaxEnergy);
     }
 
-    //events
+    // Events
     public void DecrementLife(){
         if(--life<=0){
             heartManager.GetComponent<HeartManager>().SetHearts(0);
@@ -67,7 +65,6 @@ public class FightMaster : MonoBehaviour
             return;
         }
         heartManager.GetComponent<HeartManager>().SetHearts(life);
-        Debug.Log("Life is: " + life);
     }
 
     public bool consumeEnergyCharge(){
@@ -81,10 +78,6 @@ public class FightMaster : MonoBehaviour
 
     public void winGame(){
         winWindow.SetActive(true);
-    }
-
-    public void mainMenu(){
-
     }
 
     public void setPauseCharging(){

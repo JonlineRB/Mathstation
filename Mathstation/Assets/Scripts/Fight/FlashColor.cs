@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script flashes an object with a specified color through coroutine
 public class FlashColor : MonoBehaviour
 {
+    // Color and coroutine values
     [SerializeField]
     private Color color;
     [SerializeField]
