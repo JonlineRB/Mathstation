@@ -3,22 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class of an Input object that is passed to the editor for evaluation.
+// Is manipulated by the functionality of the class MathEditorInput
 public class InputObject : MonoBehaviour
 {
     private string solution = "";
     private Problem currentProblem;
-    [SerializeField]
-    GameObject textObject;
-    [SerializeField]
-    private Sprite feedbackIdle;
-    [SerializeField]
-    private Sprite feedbackCorrect;
-    [SerializeField]
-    private Sprite feedbackWrong;
-    [SerializeField]
-    private GameObject feedbackObject;
-    [SerializeField]
-    private float feedbackChangeTime;
+    [SerializeField] GameObject textObject;
+    [SerializeField] private Sprite feedbackIdle;
+    [SerializeField] private Sprite feedbackCorrect;
+    [SerializeField] private Sprite feedbackWrong;
+    [SerializeField] private GameObject feedbackObject;
+    [SerializeField] private float feedbackChangeTime;
 
     public void concatinateSolution(int value){
         solution += value.ToString();

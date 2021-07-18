@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Rotation script
 public class Rotate : MonoBehaviour
 {
     [SerializeField]

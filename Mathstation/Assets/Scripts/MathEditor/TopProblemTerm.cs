@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
+// Top Problem term. Has two Trivial statement fields and a binary operation
 public class TopProblemTerm : ProblemTerm
 {
-
     private TrivialStatement operand_a{ get; set;}
     private MathOperations.Operations operation{ get; set;}
     private TrivialStatement operand_b{ get; set;}

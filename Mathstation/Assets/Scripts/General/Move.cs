@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Movement script
 public class Move : MonoBehaviour
 {
-    [SerializeField]
-    private Vector3 translationVector;
-    [SerializeField]
-    private float velocity;
+    [SerializeField] private Vector3 translationVector;
+    [SerializeField] private float velocity;
 
 
     // Update is called once per frame

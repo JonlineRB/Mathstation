@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Script handles user input in the math editor
 public class MathEditorInput : MonoBehaviour
 {
     public Button[] buttons;

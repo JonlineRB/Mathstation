@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script prevents click interactions if locked
 public class ClickLock : MonoBehaviour
 {
     [SerializeField]

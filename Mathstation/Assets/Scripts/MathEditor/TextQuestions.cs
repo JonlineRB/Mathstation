@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TextQuestions : MonoBehaviour
 {
+    // Pulls a text based problem from the text problem XML file
     public string ToTextProblem(Problem problem){
-        //break the problem string into tokens
+        // Break the problem string into tokens
         string problemString = problem.ToString(false); //has the shape of 1 Add 1
         if(problemString.Split(' ').Length!=3){
             Debug.Log("Length is not 3");

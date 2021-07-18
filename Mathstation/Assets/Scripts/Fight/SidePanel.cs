@@ -3,25 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// UI management class
 public class SidePanel : MonoBehaviour
 {
-    [SerializeField]
-    private Sprite idle;
-    [SerializeField]
-    private Sprite charged;
+    // Charge light bulb object sprite references
+    [SerializeField] private Sprite idle;
+    [SerializeField] private Sprite charged;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Methods swap the sprite
     public void toCharged(){
         gameObject.GetComponent<Image>().sprite = charged;
     }

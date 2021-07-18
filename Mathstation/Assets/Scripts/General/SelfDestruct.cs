@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Self destruct script, destruction coroutine called on Start()
+// Used for prefabs with a limited lifetime
 public class SelfDestruct : MonoBehaviour
 {
 
     [SerializeField]
     private float selfDestructionTimer;
-    // Start is called before the first frame update
+    
     void Start()
     {
         StartCoroutine(InitSelfDestruct());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     IEnumerator InitSelfDestruct(){

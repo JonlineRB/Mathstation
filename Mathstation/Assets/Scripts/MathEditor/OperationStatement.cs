@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Class for a math statement of two operands (a and b) and a binary operation
 public class OperationStatement :  ProblemTerm, TrivialStatement
 {
     private Number operand_a{ get; set;}

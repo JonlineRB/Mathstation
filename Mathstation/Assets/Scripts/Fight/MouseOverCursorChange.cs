@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script manages cursour changes when hovering over the object
 public class MouseOverCursorChange : MonoBehaviour
 {
     [SerializeField] private Texture2D cursorTexture;

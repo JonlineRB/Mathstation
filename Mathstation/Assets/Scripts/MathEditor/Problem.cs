@@ -1,4 +1,5 @@
 ﻿
+// Math problem class
 public class Problem
 {
     private ProblemTerm problemPart;

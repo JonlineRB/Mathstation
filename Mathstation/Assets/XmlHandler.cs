@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Xml;
 using System.IO;
 
+// XML interfacing script
 public class XmlHandler : MonoBehaviour
 {
 

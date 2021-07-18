@@ -2,28 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script for the blockade obstacle of the mine game
 public class BlockadeBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private float finalPosition;
+    [SerializeField] private float finalPosition;
     private float initialPosition;
     private float timeElapsed;
-    [SerializeField]
-    private float lerpDuration;
-    [SerializeField]
-    private float blinkDuration;
-    [SerializeField]
-    private int blinkAmt;
-    // Start is called before the first frame update
+    [SerializeField] private float lerpDuration;
+    [SerializeField] private float blinkDuration;
+    [SerializeField] private int blinkAmt;
+
     void Start()
     {
         initialPosition = transform.position.x;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        //lerp
+        // Lerp
         transform.position =new Vector3(Mathf.Lerp(initialPosition,finalPosition, timeElapsed / lerpDuration), transform.position.y,transform.position.z);
         timeElapsed += Time.deltaTime;
 

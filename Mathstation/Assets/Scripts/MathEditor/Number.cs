@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// Class that handles rational numeric values
 public class Number : TrivialStatement
 {
     private int numerator;
@@ -58,7 +59,7 @@ public class Number : TrivialStatement
         Policy policy = GameObject.FindObjectOfType<Policy>();
         this.numerator = this.CatchNegative(numerator, policy);
 
-        //simplify according to policy
+        // Simplify according to policy
         if(policy.isSimplifyFractions()){
             if(this.numerator % this.denominator == 0){
                 this.numerator = this.numerator / this.denominator;
@@ -83,7 +84,7 @@ public class Number : TrivialStatement
 
         this.numerator = this.CatchNegative(numerator, GameObject.FindObjectOfType<Policy>());
 
-        //simplify according to policy
+        // Simplify according to policy
         if(policy.isSimplifyFractions()){
             if(this.numerator % this.denominator == 0){
                 this.numerator = this.numerator / this.denominator;

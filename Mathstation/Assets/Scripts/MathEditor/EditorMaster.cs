@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Top level script for the math editor
 public class EditorMaster : MonoBehaviour
 {
 
-    [SerializeField]
-    public int problemCount;
-    // Start is called before the first frame update
-
-    [SerializeField]
-    private GameObject problemCountObject;
-    [SerializeField]
-    private GameObject reportsTo;
+    [SerializeField] public int problemCount;
+    [SerializeField] private GameObject problemCountObject; // UI text value
+    [SerializeField] private GameObject reportsTo; // Object to notify when math has been solved
     void Start()
     {
         //generate initial problem

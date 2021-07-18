@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// The math operations of the game and their interactions
 public static class MathOperations
 {
     public enum Operations { Add, Sub, Mul, Div }

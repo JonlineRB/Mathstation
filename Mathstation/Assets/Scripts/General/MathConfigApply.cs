@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// UI script, manages math configuration in the settings window of the main menu
 public class MathConfigApply : MonoBehaviour
 {
+    // References for ui toggle elements
     [SerializeField] private Toggle remainderDivision;
     [SerializeField] private Toggle negativeValues;
     [SerializeField] private Toggle textProblems;
@@ -18,7 +20,7 @@ public class MathConfigApply : MonoBehaviour
 
     public void Execute(){
 
-        //set policies to math editor prefab
+        // Set policies to math editor prefab
         mathEditorPrefab.GetComponent<Policy>().setRemainderDivision(remainderDivision.isOn);
         mathEditorPrefab.GetComponent<Policy>().setNegativeValues(negativeValues.isOn);
         mathEditorPrefab.GetComponent<Policy>().setTextProblems(textProblems.isOn);
@@ -28,13 +30,13 @@ public class MathConfigApply : MonoBehaviour
         mathEditorPrefab.GetComponent<Policy>().setSingleOperation(singleOperation.isOn);
         mathEditorPrefab.GetComponent<Policy>().setSimplifyFractions(simplifyFractions.isOn);
 
-        //close window
+        // Close window
         settingsWindow.SetActive(false);
     }
 
     void Update(){
-        //Illegal policy combinations will lead to the button being uninteractible.
-        //Reverting these will make the apply button interactible again.
+        // Illegal policy combinations will lead to the button being uninteractible.
+        // Reverting these will make the apply button interactible again.
         if(
             (remainderDivision.isOn && (negativeValues.isOn || fraction.isOn)) ||
             (textProblems.isOn && !singleOperation.isOn))

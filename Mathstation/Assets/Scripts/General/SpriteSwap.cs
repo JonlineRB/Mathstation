@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script swaps sprites of game object
 public class SpriteSwap : MonoBehaviour
 {
     [SerializeField]
@@ -15,6 +16,7 @@ public class SpriteSwap : MonoBehaviour
         StartCoroutine("Swap");
     }
 
+    // Alternates between og sprite and altSprite
     private IEnumerator Swap(){
         Sprite og = gameObject.GetComponent<SpriteRenderer>().sprite;
         for(int i = 0; i < repeats; i++){

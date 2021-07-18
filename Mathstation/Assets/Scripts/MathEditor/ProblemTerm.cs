@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+// Class for a problem term, which can be a TopProblemTerm (with OperationStatements)
+// or an OperationStatements directly
 public class ProblemTerm
 {
     public Number evaluate(TrivialStatement a, TrivialStatement b, MathOperations.Operations op){

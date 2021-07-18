@@ -21,7 +21,7 @@ public class ConditionFade : MonoBehaviour
         float elapsed = 0f;
 
         while(elapsed <= fadeDuration){
-            //interpolate forward
+            // Interpolate to be visible
             gameObject.GetComponent<SpriteRenderer>().color = Vector4.Lerp(defaultColor, altColor, elapsed / fadeDuration);
             elapsed += Time.deltaTime;
             yield return null;
@@ -36,7 +36,7 @@ public class ConditionFade : MonoBehaviour
         float elapsed = 0f;
 
         while(elapsed <= fadeDuration){
-            //interpolate back
+            // Interpolate to be invisible
             gameObject.GetComponent<SpriteRenderer>().color = Vector4.Lerp(altColor, defaultColor, elapsed / fadeDuration);
             elapsed += Time.deltaTime;
             yield return null;

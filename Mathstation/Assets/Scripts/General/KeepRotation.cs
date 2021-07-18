@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script keeps an object in Quaternion.identity rotation on Update()
 public class KeepRotation : MonoBehaviour
 {
-    // Update is called once per frame
     void Update()
     {
         transform.rotation = Quaternion.identity;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Simple lock script
 public class Lock : MonoBehaviour
 {
     [SerializeField]

@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Script manages the text objects of the math editor
 public class TextManager : MonoBehaviour
 {
 
     private Problem problem;
-
-    [SerializeField]
-    private GameObject defualtTextObject;
-    [SerializeField]
-    private GameObject NoTextBasedMaster;
-    [SerializeField]
-    private GameObject TextBasedMaster;
-    [SerializeField]
-    private GameObject textBasedTextObject;
-    // private GameObject fractionObject; //for future fraction?
+    [SerializeField] private GameObject defualtTextObject;
+    [SerializeField] private GameObject NoTextBasedMaster;
+    [SerializeField] private GameObject TextBasedMaster;
+    [SerializeField] private GameObject textBasedTextObject;
 
     public void SetProblem(Problem problem){
         this.problem = problem;
@@ -24,17 +19,16 @@ public class TextManager : MonoBehaviour
     }
 
     public void generateText(){
-        //if the text based question policy is in place, use the text based tools instead
+        // If the text based question policy is in place, use the text based tools instead
         if(GameObject.FindObjectOfType<Policy>().isTextProblems()){
             NoTextBasedMaster.SetActive(false);
             TextBasedMaster.SetActive(true);
-            //transform the problem into a text based item
-            //TODO
+            // Transform the problem into a text based item
             string textProblem = gameObject.GetComponent<TextQuestions>().ToTextProblem(this.problem);
             textBasedTextObject.GetComponentInParent<Text>().text = textProblem;
             return;
 
-            //deprecate
+            // Deprecated
             // string textProblem = "This is long, a text based problem. This is long, a text based problem. This is long, a text based problem. This is long, a text based problem. ";
             // textProblem += this.problem.ToString(false);
             // textBasedTextObject.GetComponentInParent<Text>().text = textProblem;
@@ -43,8 +37,10 @@ public class TextManager : MonoBehaviour
         TextBasedMaster.SetActive(false);
         NoTextBasedMaster.SetActive(true);
         string text = this.problem.ToString(false);
+
         // Debug.Log(text);
         // Debug.Log("Replacing stuff");
+
         text = text.Replace("Add","+");
         text = text.Replace("Sub","-");
         text = text.Replace("Mul","*");

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Script for UI elements,
+// gives a fade in effect
 public class FadeInGUI : MonoBehaviour
 {
     [SerializeField]
@@ -13,18 +15,15 @@ public class FadeInGUI : MonoBehaviour
     
 
     public void OnEnable(){
-        //preamble
-        // GameObject.Find("MineGame").GetComponent<ClickLock>().Lock();
-
-        //resize to make it bigger, make the color transparent, init a coroutine to make it like before
+        // Resize to make it bigger, make the color transparent, init a coroutine to make it like before
         ogScale = transform.localScale;
         transform.localScale *= initSizeFactor;
         gameObject.GetComponent<Image>().color = new Color(255f, 255f, 255f, 0);
         StartCoroutine("FadeIn");
     }
 
+    // Applies fade in effect and scales down over time
     private IEnumerator FadeIn(){
-        //use interpolation here
         float elapsedTime = 0;
         Vector3 currentSize = transform.localScale;
         Vector3 initSize = currentSize;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script enables sprite gameobjects temporarily
 public class EnableTmpSprite : MonoBehaviour
 {
     [SerializeField]

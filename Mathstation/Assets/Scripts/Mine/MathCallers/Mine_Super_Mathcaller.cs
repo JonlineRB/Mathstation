@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Superclass for math caller scripts for the mine game
+// Inherited by the different gadgets that can be constructed
 public class Mine_Super_Mathcaller : MonoBehaviour, MathCaller
 {
     [SerializeField]

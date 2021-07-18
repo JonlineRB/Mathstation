@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// UI effect that scales an element up and fades it out
 public class PopFadeGUI : MonoBehaviour
 {
     [SerializeField]
@@ -18,7 +19,7 @@ public class PopFadeGUI : MonoBehaviour
         ogSize = transform.localScale;
         ogColor = gameObject.GetComponent<Image>().color;
 
-        //coroutine
+        // Coroutine
         StartCoroutine("PopFade");
     }
 

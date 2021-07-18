@@ -3,26 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Math policies that dictate problem generation
 public class Policy : MonoBehaviour
 {
-    [SerializeField]
-    private bool remainderDivision;
-    [SerializeField]
-    private bool negativeValues;
-    [SerializeField]
-    private bool textProblems;
-    [SerializeField]
-    private bool includeMultiplication;
-    [SerializeField]
-    private bool includeDivision;
-    [SerializeField]
-    private bool includeFractions;
-    [SerializeField]
-    private bool singleOperation;
-    [SerializeField]
-    private bool simplifyFractions;
-    [SerializeField]
-    private GameObject policyTextObject;
+    [SerializeField] private bool remainderDivision;
+    [SerializeField] private bool negativeValues;
+    [SerializeField] private bool textProblems;
+    [SerializeField] private bool includeMultiplication;
+    [SerializeField] private bool includeDivision;
+    [SerializeField] private bool includeFractions;
+    [SerializeField] private bool singleOperation;
+    [SerializeField] private bool simplifyFractions;
+    [SerializeField] private GameObject policyTextObject;
 
     public bool isSingleOperation()
     {
@@ -105,7 +97,6 @@ public class Policy : MonoBehaviour
         this.simplifyFractions = simplifyFractions;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         string result = "";
@@ -120,6 +111,8 @@ public class Policy : MonoBehaviour
         if(includeFractions)
             result += "Includes Fractions\n";
 
+        // Push some policiy related text to a UI element
+        // Helps the user understand the current rule set
         policyTextObject.GetComponent<Text>().text = result;
     }
 }

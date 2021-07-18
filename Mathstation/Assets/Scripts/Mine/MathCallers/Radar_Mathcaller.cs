@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Radar_Mathcaller : Mine_Super_Mathcaller
 {
-    [SerializeField]
-    private bool callTutorialLine;
-    [SerializeField]
-    private GameObject tutorialLine;
+    [SerializeField] private bool callTutorialLine;
+    [SerializeField] private GameObject tutorialLine;
     public override void MathSuccess()
     {
         base.MathSuccess();
