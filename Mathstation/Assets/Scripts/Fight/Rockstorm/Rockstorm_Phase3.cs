@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script for the 3rd phase of Rockstorm
 public class Rockstorm_Phase3 : Rockstorm_Phase2
 {
     [SerializeField]

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Rockstorm Mathcaller superclass
+// To be subclassed by the different stages of the boss fight
 public class Rockstorm_Mathcaller_Super : MonoBehaviour, MathCaller
 {
     [SerializeField]

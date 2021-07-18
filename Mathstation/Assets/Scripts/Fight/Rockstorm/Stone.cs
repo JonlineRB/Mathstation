@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script for the stone effect sprite
 public class Stone : MonoBehaviour
 {
 
     [SerializeField]
     private float velocity;
-    // Start is called before the first frame update
     void Start()
     {
+        // Generate random direction
         int deg = Random.Range(0,359);
         SetVelocity(new Vector2(Mathf.Sin(deg),Mathf.Cos(deg))* velocity);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SetVelocity(Vector2 velocity){

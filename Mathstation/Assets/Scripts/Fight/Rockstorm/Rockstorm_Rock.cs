@@ -2,22 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Rockstorm 1st phase script
 public class Rockstorm_Rock : Rockstorm_Superclass
 {
     [SerializeField]
     private Sprite[] sprites;
     [SerializeField]
     private int clicks = 0;
-    void Update()
-    {
-        
-    }
 
     public override void Damage(){
         clicks++;
+        // change the sprite based on the amount of clicks
         if(clicks<sprites.Length){
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[clicks];
-            // gameObject.GetComponent<ExplodeRocks>().Explode(transform.position);
         }
         else
             CheckConsumeEnergy();
