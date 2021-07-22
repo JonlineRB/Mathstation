@@ -422,7 +422,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566960482}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 179390e1267653246a848f8e87a25e6f, type: 3}
@@ -610,9 +610,9 @@ MonoBehaviour:
   nrg_charge_rate: 4
   sidePanel: {fileID: 1694763814}
   heartManager: {fileID: 1437290442}
-  pauseCharging: 0
   loseWindow: {fileID: 147378436}
   winWindow: {fileID: 1835482664}
+  pauseCharging: 0
 --- !u!114 &900787604
 MonoBehaviour:
   m_ObjectHideFlags: 0
