@@ -38,10 +38,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Explore_3.unity
     guid: 7e47f7f5019260e489789a63f39fd8b6
-  - enabled: 0
-    path: Assets/Scenes/LoseScene.unity
-    guid: 6a8d087f511398f4a8a311db66fd3d74
-  - enabled: 0
-    path: Assets/Scenes/WinScene.unity
-    guid: 226e53439657e8d4787d9a4845fa7c05
   m_configObjects: {}
