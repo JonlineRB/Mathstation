@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -6113,6 +6113,7 @@ MonoBehaviour:
   pirates: {fileID: 8373459705876407302, guid: 6c486aaf7e2fe6d48b866d0c0b2a530b, type: 3}
   blockade: {fileID: 8373459705876407302, guid: a1cadac5a5c4d534ca513ab4ad4ac014, type: 3}
   shower: {fileID: 8373459705876407302, guid: f6a2cb64f79f05246b6c5f6a6fc2c79e, type: 3}
+  interval: 0
 --- !u!1 &1663617451
 GameObject:
   m_ObjectHideFlags: 0
