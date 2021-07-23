@@ -762,9 +762,9 @@ MonoBehaviour:
   nrg_charge_rate: 6
   sidePanel: {fileID: 1694763814}
   heartManager: {fileID: 1437290442}
-  pauseCharging: 1
   loseWindow: {fileID: 1570601409}
   winWindow: {fileID: 750830207}
+  pauseCharging: 1
 --- !u!114 &900787604
 MonoBehaviour:
   m_ObjectHideFlags: 0

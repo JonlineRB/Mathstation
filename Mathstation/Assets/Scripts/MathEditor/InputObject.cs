@@ -9,12 +9,19 @@ public class InputObject : MonoBehaviour
 {
     private string solution = "";
     private Problem currentProblem;
-    [SerializeField] GameObject textObject;
+    // Fields for text objects based on text problems or default problems
+    [SerializeField] GameObject defaultSolutionText;
+    [SerializeField] GameObject textBasedSolutionText;
+    private bool isTextBased;
     [SerializeField] private Sprite feedbackIdle;
     [SerializeField] private Sprite feedbackCorrect;
     [SerializeField] private Sprite feedbackWrong;
     [SerializeField] private GameObject feedbackObject;
     [SerializeField] private float feedbackChangeTime;
+
+    void Start(){
+        isTextBased = gameObject.GetComponent<Policy>().isTextProblems();
+    }
 
     public void concatinateSolution(int value){
         solution += value.ToString();
@@ -113,7 +120,10 @@ public class InputObject : MonoBehaviour
     }
 
     private void PushTextObject(string value){
-        textObject.GetComponent<Text>().text = value;
+        if(isTextBased)
+            textBasedSolutionText.GetComponent<Text>().text = value;
+        else
+            defaultSolutionText.GetComponent<Text>().text = value;
     }
 
     public void ClearEverything(){
