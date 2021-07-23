@@ -14,7 +14,7 @@ public class XmlHandler : MonoBehaviour
     {
         Xdoc = new XmlDocument(); //Instantiate
         
-        Xdoc.Load(Path.Combine(Application.dataPath, "Text/TextQuestions.xml"));//load XML file
+        Xdoc.Load(Path.Combine(Application.streamingAssetsPath, "TextQuestions.xml")); //load XML file from streaming assets
 
         XmlElement root = Xdoc.DocumentElement;
     }
