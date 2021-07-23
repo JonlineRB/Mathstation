@@ -27,12 +27,6 @@ public class TextManager : MonoBehaviour
             string textProblem = gameObject.GetComponent<TextQuestions>().ToTextProblem(this.problem);
             textBasedTextObject.GetComponentInParent<Text>().text = textProblem;
             return;
-
-            // Deprecated
-            // string textProblem = "This is long, a text based problem. This is long, a text based problem. This is long, a text based problem. This is long, a text based problem. ";
-            // textProblem += this.problem.ToString(false);
-            // textBasedTextObject.GetComponentInParent<Text>().text = textProblem;
-            // return;
         }
         TextBasedMaster.SetActive(false);
         NoTextBasedMaster.SetActive(true);
