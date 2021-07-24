@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 // Math policies that dictate problem generation
 public class Policy : MonoBehaviour
@@ -15,6 +16,8 @@ public class Policy : MonoBehaviour
     [SerializeField] private bool singleOperation;
     [SerializeField] private bool simplifyFractions;
     [SerializeField] private GameObject policyTextObject;
+    private string configFile = Path.Combine(Application.streamingAssetsPath, "MathConfig.json"); 
+    private PolicyObject configPolicies;
 
     public bool isSingleOperation()
     {
@@ -95,6 +98,24 @@ public class Policy : MonoBehaviour
     public void setSimplifyFractions(bool simplifyFractions)
     {
         this.simplifyFractions = simplifyFractions;
+    }
+
+    void Awake(){
+        // Get the math config info from the config file MathConfig.json in streaming assets
+        if(File.Exists(configFile)){
+            string configFileContent = File.ReadAllText(configFile);
+            configPolicies = JsonUtility.FromJson<PolicyObject>(configFileContent);
+
+            // Set all policies
+            remainderDivision = configPolicies.remainderDivision;
+            negativeValues = configPolicies.negativeValues;
+            textProblems = configPolicies.textProblems;
+            includeMultiplication = configPolicies.includeMultiplication;
+            includeDivision = configPolicies.includeDivision;
+            includeFractions = configPolicies.includeFractions;
+            singleOperation = configPolicies.singleOperation;
+            simplifyFractions = configPolicies.simplifyFractions;
+        }
     }
 
     void Start()

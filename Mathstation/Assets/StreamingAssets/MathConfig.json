@@ -1,0 +1,10 @@
+{
+    "remainderDivision": false,
+    "negativeValues": false,
+    "textProblems": true,
+    "includeMultiplication": false,
+    "includeDivision": false,
+    "includeFractions": false,
+    "singleOperation": true,
+    "simplifyFractions": false
+}
