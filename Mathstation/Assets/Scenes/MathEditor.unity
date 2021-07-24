@@ -492,6 +492,43 @@ PrefabInstance:
       propertyPath: isStandalone
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3375082379840148488, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: m_Text
+      value: 'Please use the keyboard or on screen buttons to write your answer.
+
+        Use
+        the Enter Key or Go button to submit. Use the Escape key or CE button to
+        clear your answer.
+
+
+        The lightbulb will flash a green color if the
+        answer was correct, red for wrong.
+
+
+        Remainders: Please use the R
+        key or Rem button to add a remainder value.  Example: 0 with a remainder
+        of 1 is 0R1
+
+
+        Negative values: If enabled, use the - key or the Neg
+        button to toggle your answer between positive and negative.
+
+
+        Fractions: 
+        Use the F key or the Frac button to use the fraction symbol "/".
+
+        Example:
+        1/2 is one half.
+
+        1/1/2 is one and a half.
+
+        Fractions of
+        equal value are accepted if they have different forms, 1/4 = 2/8.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375082380253608877, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6340798705914388710, guid: 9db1e68fa898cd048b750652310532d5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
