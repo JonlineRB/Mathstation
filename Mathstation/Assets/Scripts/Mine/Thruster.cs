@@ -6,8 +6,6 @@ public class Thruster : ClickLockedObject
 {
     [SerializeField]
     private GameObject engine;
-    // [SerializeField]
-    // private float boostValue;
 
     [SerializeField]
     private Sprite engineOn;
@@ -17,7 +15,6 @@ public class Thruster : ClickLockedObject
     void OnMouseDown(){
         if(IsLocked())
             return;
-        // engine.GetComponent<Engine>().Boost(boostValue);
         engine.GetComponent<Engine>().StartStopEngine();
     }
 

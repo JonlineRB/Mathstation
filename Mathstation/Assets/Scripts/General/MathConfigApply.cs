@@ -40,16 +40,6 @@ public class MathConfigApply : MonoBehaviour
 
         File.WriteAllText(mathConfigFile, JsonUtility.ToJson(policy, true));
 
-        // Set policies to math editor prefab
-        // mathEditorPrefab.GetComponent<Policy>().setRemainderDivision(remainderDivision.isOn);
-        // mathEditorPrefab.GetComponent<Policy>().setNegativeValues(negativeValues.isOn);
-        // mathEditorPrefab.GetComponent<Policy>().setTextProblems(textProblems.isOn);
-        // mathEditorPrefab.GetComponent<Policy>().setIncludeMultiplication(multiplication.isOn);
-        // mathEditorPrefab.GetComponent<Policy>().setIncludeDivision(division.isOn);
-        // mathEditorPrefab.GetComponent<Policy>().setIncludeFractions(fraction.isOn);
-        // mathEditorPrefab.GetComponent<Policy>().setSingleOperation(singleOperation.isOn);
-        // mathEditorPrefab.GetComponent<Policy>().setSimplifyFractions(simplifyFractions.isOn);
-
         // Close window
         settingsWindow.SetActive(false);
     }
