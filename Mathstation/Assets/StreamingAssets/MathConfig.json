@@ -1,7 +1,7 @@
 {
     "remainderDivision": false,
     "negativeValues": false,
-    "textProblems": true,
+    "textProblems": false,
     "includeMultiplication": false,
     "includeDivision": false,
     "includeFractions": false,
