@@ -23,6 +23,12 @@ Implementing new gadgets and obstacle types will require more asset creation and
 
 In the explore game, you may freely add prefab objects for the player to interact with in order to construct a new level. The only important setting is the field TargetObjectives in the script Objective.CS of the prefab Player. This int value needs to match the amount of anomalies that the player has to resolve in order to make the goal ring appear. It needs a minimum value of 1.
 
+Math Questions:
+
+The questions are stored in the file StreamingAssets/TextQuestions.xml. When solving math problems with the text questions rule in place, a random question will be taken from the tag corresponding to the question's math operation, such as addition, subtraction etc.
+
+Adding questions: Add a  tag in the relevant operation. The body of the  will be used. Be sure to add VAL_A and VAL_B as placeholders for number values.
+
 #############################################################################
 
 For further inquiries, do not hesitate to contact:
