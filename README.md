@@ -17,7 +17,7 @@ When adding new levels to the games:
 
 In the fight game, new bosses will need to be implemented from scratch. Please make sure to duplicate the existing scenes for essential scripts and UI elements.
 
-In the mine game, a new level can be created by simply modifying the fields Evemts, Occourences of the script Obstacles.cs of the object MineGame, which is in the scene. Using these, you may specify which kind of obstacles can appear, and their planned appearence measured in the percentage of the journey.
+In mine game, a new level can be created by simply modifying the fields Events, Occurences of the script Obstacles.cs of the object MineGame, which is in the scene. Using these, you may specify which kind of obstacles can appear, and their planned appearence measured in the percentage of the journey.
 
 Implementing new gadgets and obstacle types will require more asset creation and scripting.
 
