@@ -4693,6 +4693,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dac586225acc6c4d83d8aef915c88c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionQuestions:
+  - The ship must plan a journey that consists of two legs. The first leg is VAL_A
+    lightyears long, and the second leg is VAL_B lightyears long. What is the length
+    of the total journey in lightyears?
+  - You have recieved bonus vacation days! How many vacation days do you have in
+    total, if you had VAL_A, and recieve a bonus of VAL_B?
+  - We are able to call two groups for backup. Group A consists of VAL_A ships, group
+    B consists of VAL_B ships. How many ships do both groups have combined?
+  subtractionQuestions:
+  - We have VAL_A shield generators on board. VAL_B of them are damaged. How many
+    shield generators are left?
+  - Our fuel reserves allow us to travel a distance of VAL_A units. We have already
+    traveled VAL_B. In units, how much longer can we travel?
+  - Our journey requires us to visit VAL_A planets, of which we have already visitied
+    VAL_B. How many more planets must we visit?
+  multiplicationQuestions:
+  - The ship needs to visit VAL_A sectors to find all artifacts. Each sector contains
+    VAL_B artifacts. How many artifacts does the ship need to find in total?
+  - The ship's central computer has VAL_A processors, each VAL_B cores each. How
+    many processor cores does the ship's central computer in total?
+  - There are a total of VAL_A coalitions in the known universe, each consisting
+    of VAL_B factions. How many factions are there in the known universe?
+  divisionQuestions:
+  - There are VAL_A ships in the fleet. How many ships would be in each division,
+    if there were VAL_B divisions of equal size?
+  - Our weapon system is damaged! It used to boast VAL_A power units. Now it is equal
+    to that value divided by VAL_B. How much power units is that?
+  - We are about to split some loot with our partners. There is a total of VAL_A
+    units, and each group gets a share of VAL_B. How much is that?
 --- !u!1 &6506244658625272309
 GameObject:
   m_ObjectHideFlags: 0

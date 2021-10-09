@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class TextQuestions : MonoBehaviour
 {
+
+    [SerializeField] string[] additionQuestions;
+    [SerializeField] string[] subtractionQuestions;
+    [SerializeField] string[] multiplicationQuestions;
+    [SerializeField] string[] divisionQuestions;
+    
     // Pulls a text based problem from the text problem XML file
     public string ToTextProblem(Problem problem){
         // Break the problem string into tokens
@@ -18,19 +24,23 @@ public class TextQuestions : MonoBehaviour
         switch(problemString.Split(' ')[1]){
         case "Add":
             // result = addition_questions[0];
-            result = gameObject.GetComponent<XmlHandler>().FetchQuestion("addition");
+            // result = gameObject.GetComponent<XmlHandler>().FetchQuestion("addition");
+            result = additionQuestions[Random.Range(0,additionQuestions.Length)];
             break;
         case "Sub":
             // result = subtraction_questions[0];
-            result = gameObject.GetComponent<XmlHandler>().FetchQuestion("subtraction");
+            // result = gameObject.GetComponent<XmlHandler>().FetchQuestion("subtraction");
+            result = subtractionQuestions[Random.Range(0,subtractionQuestions.Length)];
             break;
         case "Mul":
             // result = multiplication_questions[0];
-            result = gameObject.GetComponent<XmlHandler>().FetchQuestion("multiplication");
+            // result = gameObject.GetComponent<XmlHandler>().FetchQuestion("multiplication");
+            result = multiplicationQuestions[Random.Range(0,multiplicationQuestions.Length)];
             break;
         case "Div":
             // result = division_questions[0];
-            result = gameObject.GetComponent<XmlHandler>().FetchQuestion("division");
+            // result = gameObject.GetComponent<XmlHandler>().FetchQuestion("division");
+            result = divisionQuestions[Random.Range(0,divisionQuestions.Length)];
             break;
         }
 

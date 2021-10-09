@@ -1,8 +1,8 @@
 {
     "remainderDivision": false,
-    "negativeValues": false,
-    "textProblems": false,
-    "includeMultiplication": false,
+    "negativeValues": true,
+    "textProblems": true,
+    "includeMultiplication": true,
     "includeDivision": false,
     "includeFractions": false,
     "singleOperation": true,

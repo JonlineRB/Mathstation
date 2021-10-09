@@ -16,7 +16,6 @@ public class Policy : MonoBehaviour
     [SerializeField] private bool singleOperation;
     [SerializeField] private bool simplifyFractions;
     [SerializeField] private GameObject policyTextObject;
-    private string configFile = Path.Combine(Application.streamingAssetsPath, "MathConfig.json"); 
     private PolicyObject configPolicies;
 
     public bool isSingleOperation()
@@ -101,21 +100,34 @@ public class Policy : MonoBehaviour
     }
 
     void Awake(){
-        // Get the math config info from the config file MathConfig.json in streaming assets
-        if(File.Exists(configFile)){
-            string configFileContent = File.ReadAllText(configFile);
-            configPolicies = JsonUtility.FromJson<PolicyObject>(configFileContent);
+        // Get the math config info from the config file MathConfig.json in persistentDataPath
+
+        // string configFile = Path.Combine(Application.persistentDataPath, "MathConfig.json");
+        
+        // if(File.Exists(configFile)){
+        //     string configFileContent = File.ReadAllText(configFile);
+        //     configPolicies = JsonUtility.FromJson<PolicyObject>(configFileContent);
 
             // Set all policies
-            remainderDivision = configPolicies.remainderDivision;
-            negativeValues = configPolicies.negativeValues;
-            textProblems = configPolicies.textProblems;
-            includeMultiplication = configPolicies.includeMultiplication;
-            includeDivision = configPolicies.includeDivision;
-            includeFractions = configPolicies.includeFractions;
-            singleOperation = configPolicies.singleOperation;
-            simplifyFractions = configPolicies.simplifyFractions;
-        }
+            // remainderDivision = configPolicies.remainderDivision;
+            // negativeValues = configPolicies.negativeValues;
+            // textProblems = configPolicies.textProblems;
+            // includeMultiplication = configPolicies.includeMultiplication;
+            // includeDivision = configPolicies.includeDivision;
+            // includeFractions = configPolicies.includeFractions;
+            // singleOperation = configPolicies.singleOperation;
+            // simplifyFractions = configPolicies.simplifyFractions;
+        // }
+
+        remainderDivision = PlayerPrefs.GetInt("remainderDivision")==1;
+        negativeValues = PlayerPrefs.GetInt("negativeValues")==1;
+        textProblems = PlayerPrefs.GetInt("textProblems")==1;
+        includeMultiplication = PlayerPrefs.GetInt("includeMultiplication")==1;
+        includeDivision = PlayerPrefs.GetInt("includeDivision")==1;
+        includeFractions = PlayerPrefs.GetInt("includeFractions")==1;
+        singleOperation = PlayerPrefs.GetInt("singleOperation")==1;
+        simplifyFractions = PlayerPrefs.GetInt("simplifyFractions")==1;
+
     }
 
     void Start()

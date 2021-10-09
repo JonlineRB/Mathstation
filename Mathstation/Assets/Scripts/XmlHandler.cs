@@ -3,23 +3,57 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml;
 using System.IO;
+using UnityEngine.Networking;
 
 // XML interfacing script
 public class XmlHandler : MonoBehaviour
 {
 
-    XmlDocument Xdoc = null;
+    private bool loaded = false;
+
+    XmlDocument Xdoc = new XmlDocument(); //Instantiate
+
+    string Nothing(){
+        return "nothing";
+    }
+
+    IEnumerator LoadFileText(string fileName){        
+        string filepath = Path.Combine(Application.streamingAssetsPath, fileName);
+
+        string result;
+
+        // Check if the current version is WebGL
+        if(filepath.Contains("://") || filepath.Contains(":///")){
+             WWW www = new WWW(filepath);
+             yield return www;
+             result = www.text;
+        }
+        else
+            result = File.ReadAllText(filepath);
+        
+        Xdoc.LoadXml(result);
+
+        XmlElement root = Xdoc.DocumentElement;
+
+        // return result;
+    }
     
     void Awake()
     {
-        Xdoc = new XmlDocument(); //Instantiate
-        
-        Xdoc.Load(Path.Combine(Application.streamingAssetsPath, "TextQuestions.xml")); //load XML file from streaming assets
+        // Xdoc = new XmlDocument(); //Instantiate
 
-        XmlElement root = Xdoc.DocumentElement;
+        StartCoroutine(LoadFileText("TextQuestions.xml"));
+
+        // Xdoc.LoadXml(HandleWebGL("TextQuestions.xml"));
+        
+        // Xdoc.Load(Path.Combine(Application.streamingAssetsPath, "TextQuestions.xml")); //load XML file from streaming assets
     }
 
-    public string FetchQuestion(string type){
+    void Start(){
+        // XmlElement root = Xdoc.DocumentElement;
+    }
+
+    public string FetchQuestion(string type){ // <-
 
         XmlElement root = Xdoc.DocumentElement;
 
