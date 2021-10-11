@@ -22,18 +22,6 @@ public class MathConfigApply : MonoBehaviour
 
     public void Execute(){
 
-        // Write the policies to a configuration file
-        // PolicyObject policy = new PolicyObject();
-
-        // policy.remainderDivision = remainderDivision.isOn;
-        // policy.negativeValues = negativeValues.isOn;
-        // policy.textProblems = textProblems.isOn;
-        // policy.includeMultiplication = multiplication.isOn;
-        // policy.includeDivision = division.isOn;
-        // policy.includeFractions = fraction.isOn;
-        // policy.singleOperation = singleOperation.isOn;
-        // policy.simplifyFractions = simplifyFractions.isOn;
-
         PlayerPrefs.SetInt("remainderDivision", ((remainderDivision.isOn) ? 1:0));
         PlayerPrefs.SetInt("negativeValues", ((negativeValues.isOn) ? 1:0));
         PlayerPrefs.SetInt("textProblems", ((textProblems.isOn) ? 1:0));
@@ -43,13 +31,6 @@ public class MathConfigApply : MonoBehaviour
         PlayerPrefs.SetInt("singleOperation", ((singleOperation.isOn) ? 1:0));
         PlayerPrefs.SetInt("simplifyFractions", ((simplifyFractions.isOn) ? 1:0));
 
-        // if(!File.Exists(mathConfigFile)){
-        //     File.Create(mathConfigFile);
-        // }
-
-        // File.WriteAllText(mathConfigFile, JsonUtility.ToJson(policy, true));
-
-        // Close window
         settingsWindow.SetActive(false);
     }
 
@@ -69,28 +50,8 @@ public class MathConfigApply : MonoBehaviour
     }
 
     void Awake(){
-        // mathConfigFile = Path.Combine(Application.persistentDataPath, "MathConfig.json");
-
-        // If a config file exists, read from it and apply it's values to the toggles managed here as fields.
-
-        // if(!File.Exists(mathConfigFile))
-        //     return;
-
-        // PolicyObject configPolicies;
-
-        // string configContent = File.ReadAllText(mathConfigFile);
-        // configPolicies = JsonUtility.FromJson<PolicyObject>(configContent);
 
         // Apply to toggle values
-
-        // remainderDivision.isOn = configPolicies.remainderDivision;
-        // negativeValues.isOn = configPolicies.negativeValues;
-        // textProblems.isOn = configPolicies.textProblems;
-        // multiplication.isOn = configPolicies.includeMultiplication;
-        // division.isOn = configPolicies.includeDivision;
-        // fraction.isOn = configPolicies.includeFractions;
-        // singleOperation.isOn = configPolicies.singleOperation;
-        // simplifyFractions.isOn = configPolicies.simplifyFractions;
 
         remainderDivision.isOn = PlayerPrefs.GetInt("remainderDivision")==1;
         negativeValues.isOn = PlayerPrefs.GetInt("negativeValues")==1;

@@ -35,25 +35,16 @@ public class XmlHandler : MonoBehaviour
 
         XmlElement root = Xdoc.DocumentElement;
 
-        // return result;
     }
     
     void Awake()
     {
-        // Xdoc = new XmlDocument(); //Instantiate
 
         StartCoroutine(LoadFileText("TextQuestions.xml"));
 
-        // Xdoc.LoadXml(HandleWebGL("TextQuestions.xml"));
-        
-        // Xdoc.Load(Path.Combine(Application.streamingAssetsPath, "TextQuestions.xml")); //load XML file from streaming assets
     }
 
-    void Start(){
-        // XmlElement root = Xdoc.DocumentElement;
-    }
-
-    public string FetchQuestion(string type){ // <-
+    public string FetchQuestion(string type){
 
         XmlElement root = Xdoc.DocumentElement;
 

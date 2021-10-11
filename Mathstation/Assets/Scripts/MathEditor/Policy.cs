@@ -100,24 +100,7 @@ public class Policy : MonoBehaviour
     }
 
     void Awake(){
-        // Get the math config info from the config file MathConfig.json in persistentDataPath
-
-        // string configFile = Path.Combine(Application.persistentDataPath, "MathConfig.json");
-        
-        // if(File.Exists(configFile)){
-        //     string configFileContent = File.ReadAllText(configFile);
-        //     configPolicies = JsonUtility.FromJson<PolicyObject>(configFileContent);
-
-            // Set all policies
-            // remainderDivision = configPolicies.remainderDivision;
-            // negativeValues = configPolicies.negativeValues;
-            // textProblems = configPolicies.textProblems;
-            // includeMultiplication = configPolicies.includeMultiplication;
-            // includeDivision = configPolicies.includeDivision;
-            // includeFractions = configPolicies.includeFractions;
-            // singleOperation = configPolicies.singleOperation;
-            // simplifyFractions = configPolicies.simplifyFractions;
-        // }
+        // Get the math config info from player prefs
 
         remainderDivision = PlayerPrefs.GetInt("remainderDivision")==1;
         negativeValues = PlayerPrefs.GetInt("negativeValues")==1;
