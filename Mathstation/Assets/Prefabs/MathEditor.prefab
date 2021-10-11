@@ -4647,7 +4647,7 @@ MonoBehaviour:
   problemCount: 2
   problemCountObject: {fileID: 1757521047}
   reportsTo: {fileID: 0}
-  isStandalone: 1
+  isStandalone: 0
 --- !u!114 &108031871
 MonoBehaviour:
   m_ObjectHideFlags: 0
