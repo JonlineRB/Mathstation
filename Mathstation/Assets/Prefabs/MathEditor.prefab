@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.5801887, b: 0.5801887, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1557,7 +1557,7 @@ RectTransform:
   m_GameObject: {fileID: 756663212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children:
   - {fileID: 1112801383}
   - {fileID: 793570816}
@@ -1580,7 +1580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -15, y: 61}
+  m_AnchoredPosition: {x: -15, y: 70}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &793570815
@@ -2672,7 +2672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9528302, g: 0.93867004, b: 0.48989856, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4647,7 +4647,7 @@ MonoBehaviour:
   problemCount: 2
   problemCountObject: {fileID: 1757521047}
   reportsTo: {fileID: 0}
-  isStandalone: 0
+  isStandalone: 1
 --- !u!114 &108031871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4888,7 +4888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 224.81, y: -50}
   m_SizeDelta: {x: 220, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3213344894221436354
@@ -4990,20 +4990,21 @@ PrefabInstance:
       value: 'Please use the keyboard or on screen buttons to write your answer.
 
         Use
-        the Enter Key or Go button to submit.
+        the Enter Key or Go button to submit. Use the Escape key or CE button to
+        clear your answer.
 
 
-        The lightbulb will flash
-        a green color if the answer was correct, red for wrong.
+        The lightbulb will flash a green color if the
+        answer was correct, red for wrong.
 
 
-        Remainders:
-        Please use the R key or Rem button to add a remainder value.  Example: 0
-        with a remainder of 1 is 0R1
+        Remainders: Please use the R
+        key or Rem button to add a remainder value.  Example: 0 with a remainder
+        of 1 is 0R1
 
 
-        Negative values: If enabled, use the
-        - key or the Neg button to toggle your answer between positive and negative.
+        Negative values: If enabled, use the - key or the Neg
+        button to toggle your answer between positive and negative.
 
 
         Fractions: 
