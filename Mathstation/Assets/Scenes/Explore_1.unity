@@ -5754,30 +5754,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3028714352686738094, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028714352686738094, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028714352686738129, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 626
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028714352686738129, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 175
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028714352686738129, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028714353024103543, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5766256713251117473, guid: 3e3dd66161a84f14ea293881970efc8f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
